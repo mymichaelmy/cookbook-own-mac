@@ -1,0 +1,274 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+// parameters go here
+$widthOfList: 1130;
+
+@mixin clearfix
+{
+	&:after
+	{
+		content:"";
+		display: table;
+		clear:both;
+	}
+}
+
+html,body
+{
+	height:100%;
+	font-size:10px;
+	font-family:Helvetica,Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	vertical-align:middle;
+	line-height:1.2;
+}
+
+a:link,a:visited
+{
+	text-decoration:none;
+	color:inherit;
+}
+header
+{
+	position:fixed;
+	width:100%;
+	top:0;
+	left:0;
+	padding-top:2.4rem;
+	padding-bottom:2.4rem;
+	padding-left: 6.6rem;
+	z-index:99;
+	font-size:2.7rem;
+	background-color:#000000;
+	color:#ffffff;
+	
+
+	nav
+	{
+		li
+		{
+			display:inline;
+			padding:0.5rem 0.8rem;
+			margin-right: 4rem;
+			text-transform:uppercase;
+
+			&.current
+			{
+				border-bottom-style:solid;
+				border-bottom-width:2px;
+			}
+
+
+		
+		}
+	}
+}
+
+.head-slide
+{
+	height:672px;
+	background-color:#D8D8D8;
+}
+
+.section-list
+{
+	width:$widthOfList+px;
+	margin:0 auto;
+	padding:48px 35px;
+	// text-align:center;
+	font-size:0;
+	border-bottom-style:solid;
+	border-bottom-color:#666666;
+
+
+	h1
+	{
+		
+		font-size:3.6rem;
+		text-align:left;
+		text-transform: uppercase;
+	}
+	.card
+	{
+		float:left;
+		margin-top:3.4rem;
+		margin-left:70px;
+		width: 330px;
+		font-size: 2rem;
+		text-align: left;
+
+		&:first-of-type
+		{
+			margin-left:0
+		}
+
+		.bg-image
+		{
+
+			position:relative;
+			// margin-bottom:1.4rem;
+			// height:225px;
+			width:100%;
+			
+			
+
+			img
+			{
+				// margin-bottom:1.4rem; //for vertical center of the title, stop doing
+				width:100%;
+				height:225px;
+				background-color:#999999;
+			}
+
+		}
+
+
+
+		p
+		{
+			color:#686868;
+			margin-bottom:12px;
+		}
+
+		a   /*read more*/
+		{
+			color:#989898;
+		}
+		
+	}
+
+	.ratings
+	{
+		display: inline-block;
+		margin:15px 0;
+		vertical-align: middle;
+	}
+
+	.label-video
+	{
+		display: inline-block;
+		margin-left: 8px;
+		background-color:#999999;
+		font-size:1.4rem;
+		padding: 3px 8px;
+		vertical-align:middle;
+		border-radius: (8px);
+		color: #ffffff;
+
+	}
+	h2   //to be overrided by .section-method h2
+	{
+		display: inline-block;
+		// margin-top:1.4rem;
+		font-size: 2.7rem;
+		font-weight: bold;
+		vertical-align:middle;
+	}
+
+}
+
+.section-method
+{
+	h2    /*to overlay h2 on image in method cards*/
+	{
+
+		position:absolute;
+		width:100%;
+		padding:0 10px;
+		box-sizing:border-box;
+		top:50%;
+		margin-top:0;
+		text-align:center;
+		font-size: 2.4rem;
+		font-weight: 300;
+		letter-spacing: 0.05rem;
+		text-transform:uppercase;
+		@include translateY (-50%);
+		color:#ffffff;
+
+	}
+}
+
+i
+{
+	display:inline-block;
+	vertical-align:middle;
+
+	&.star
+	{
+		width:23px;
+		height:19px;
+	}
+	&.solid
+	{
+		background-image:image-url('Star-solid.png');
+		background-size:100%;
+	}
+
+	&.hollow
+	{
+		background-image:image-url('Star-hollow.png');
+		background-size:100%;
+	}
+}
+
+
+/* below for version 3 */
+.section-list
+{
+	.right  /* blocks float to the right*/
+	{
+		float:right;
+		margin-left:38px;
+		width: 500px;
+		height: 360px;
+
+		background-color:grey;
+
+	}
+	p
+	{
+		font-size: 2.4rem;
+		margin-top:3.4rem;
+		line-height:1.5;
+	}
+
+	button
+	{
+		margin-top:26px;
+		padding: 12px 16px;
+		font-size: 2.6rem;
+		text-transform:uppercase;
+		color: #666666;
+		background-color:transparent;
+		border-style:solid;
+		
+	}
+}
+.clearfix
+{
+	@include clearfix;
+}
+
+.section-methods-1
+{
+	border-bottom-style:solid;
+	border-bottom-width:2px;
+	border-bottom-color:#dddddd;
+}
+
+.section-lessons
+{
+	div.title
+	{
+		margin-top:1.4rem;
+	}
+}
+

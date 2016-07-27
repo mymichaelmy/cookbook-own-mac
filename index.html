@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cookbook">
+<head>
+	<meta charset="UTF-8">
+	<title>Cookbook</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="js/cookbook.js"></script>
+    <script src="js/routes.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="current"><a href="#/notes">Home</a></li>
+				<li><a href="#/notes">Methods</a></li>
+				<li><a href="#/notes">Lessons</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div ng-view>
+	</div>
+</body>
+</html>
