@@ -56,10 +56,10 @@
 		<!-- list of lessons -->
 		<section class="section-list section-lessons clearfix">
 			<h1>Lessons</h1>
-			<div class="card">
+			<div class="card" ng-repeat="card in cards">
 				<div class="bg-image">
-					<img src="images/Brainstorming.jpg" alt="">
-					<div class="title"><h2>Brainstorming</h2><span class="label-video">VIDEO</span>
+					<img ng-src="{{card.card_image.src}}" alt="">
+					<div class="title"><h2>{{card.title}}<span class="label-video">VIDEO</span></h2>
 					</div>
 				</div>
 				<div>
@@ -73,10 +73,10 @@
 						<i class="hollow star"></i>	
 					</span>
 				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at commodo ante</p>
+				<p>{{card.summary}}</p>
 				<a href="">Read more &gt; <i class="icon-right-arrow"></i></a>
 			</div>
-			<div class="card">
+			<!-- <div class="card">
 				<div class="bg-image">
 					<img src="images/Synthesis.jpg" alt="">
 					<div class="title">
@@ -115,7 +115,7 @@
 				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at commodo ante</p>
 				<a href="">Read more &gt; <i class="icon-right-arrow"></i></a>
-			</div>
+			</div> -->
 		</section>
 
 	</div>
