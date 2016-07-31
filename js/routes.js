@@ -9,6 +9,10 @@ angular.module('cookbook')
         templateUrl: 'templates/index-template.html',
         controller: 'cardsController'
         })
+        .when('/methods/:cardUid', {
+        templateUrl: 'templates/methods-template.html',
+        controller: 'cardDetailController'
+        })
         .otherwise({
             redirectTo: "/"
         });
@@ -26,5 +30,14 @@ angular.module('cookbook').controller('cardsController',  function($scope, $http
             return data.nodes;
 
         }());
+    });
+});
+
+angular.module('cookbook').controller('cardDetailController',  function($scope, $http,$routeParams) {
+
+  // $scope.order_id = $routeParams.orderId;
+    $http.get('/drupal/rest/node/'+$routeParams.cardUid).success(function(data)
+    {
+        $scope.card=data;   //good
     });
 });
