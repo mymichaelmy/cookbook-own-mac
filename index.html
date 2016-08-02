@@ -4,10 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Cookbook</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    <script src="js/cookbook.js"></script>
-    <script src="js/routes.js"></script>
+	
 </head>
 <body>
 	<header>
@@ -18,6 +15,12 @@
 				<li><a href="#/notes">Lessons</a></li>
 			</ul>
 		</nav>
+
+		<form class="search" name="searchForm" ng-controller="searchController as search" ng-submit="search.searchSubmit()">
+			<input type="search" ng-model="search.searchTerm" name="searchInput"> 
+			<button type="submit">search</button>
+			
+		</form>
 	</header>
 	
 	<div ng-view>
@@ -49,5 +52,12 @@
 	<!-- disque ends here-->
 	<script id="dsq-count-scr" src="//cookbook-2.disqus.com/count.js" async></script>
 	<!-- disque comment count ends here-->
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="js/cookbook.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="search/search.js"></script>
 </body>
 </html>

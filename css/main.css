@@ -92,32 +92,38 @@ header {
   left: 0;
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
-  padding-left: 6.6rem;
   z-index: 99;
   font-size: 2.7rem;
   background-color: #000000;
   color: #ffffff;
 }
-/* line 55, ../sass/main.scss */
+/* line 53, ../sass/main.scss */
+header nav {
+  display: inline-block;
+  /* for spare the right place for search*/
+  margin-left: 6.6rem;
+  /* for the left margin to the window*/
+}
+/* line 59, ../sass/main.scss */
 header nav li {
   display: inline;
   padding: 0.5rem 0.8rem;
   margin-right: 4rem;
   text-transform: uppercase;
 }
-/* line 62, ../sass/main.scss */
+/* line 66, ../sass/main.scss */
 header nav li.current {
   border-bottom-style: solid;
   border-bottom-width: 2px;
 }
 
-/* line 74, ../sass/main.scss */
+/* line 78, ../sass/main.scss */
 .head-slide {
   height: 672px;
   background-color: #D8D8D8;
 }
 
-/* line 80, ../sass/main.scss */
+/* line 84, ../sass/main.scss */
 .section-list {
   width: 1130px;
   margin: 0 auto;
@@ -126,13 +132,13 @@ header nav li.current {
   border-bottom-style: solid;
   border-bottom-color: #666666;
 }
-/* line 91, ../sass/main.scss */
+/* line 95, ../sass/main.scss */
 .section-list h1 {
   font-size: 3.6rem;
   text-align: left;
   text-transform: uppercase;
 }
-/* line 98, ../sass/main.scss */
+/* line 102, ../sass/main.scss */
 .section-list .card {
   float: left;
   margin-top: 3.4rem;
@@ -141,37 +147,37 @@ header nav li.current {
   font-size: 2rem;
   text-align: left;
 }
-/* line 107, ../sass/main.scss */
+/* line 111, ../sass/main.scss */
 .section-list .card:first-of-type {
   margin-left: 0;
 }
-/* line 112, ../sass/main.scss */
+/* line 116, ../sass/main.scss */
 .section-list .card .bg-image {
   position: relative;
   width: 100%;
 }
-/* line 122, ../sass/main.scss */
+/* line 126, ../sass/main.scss */
 .section-list .card .bg-image img {
   width: 100%;
   height: 225px;
   background-color: #999999;
 }
-/* line 134, ../sass/main.scss */
+/* line 138, ../sass/main.scss */
 .section-list .card p {
   color: #686868;
   margin-bottom: 12px;
 }
-/* line 140, ../sass/main.scss */
+/* line 144, ../sass/main.scss */
 .section-list .card a {
   color: #989898;
 }
-/* line 147, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .section-list .ratings {
   display: inline-block;
   margin: 15px 0;
   vertical-align: middle;
 }
-/* line 154, ../sass/main.scss */
+/* line 158, ../sass/main.scss */
 .section-list .label-video {
   display: inline-block;
   margin-left: 8px;
@@ -182,7 +188,7 @@ header nav li.current {
   border-radius: 8px;
   color: #ffffff;
 }
-/* line 166, ../sass/main.scss */
+/* line 170, ../sass/main.scss */
 .section-list h2 {
   display: inline-block;
   font-size: 2.7rem;
@@ -190,7 +196,7 @@ header nav li.current {
   vertical-align: middle;
 }
 
-/* line 179, ../sass/main.scss */
+/* line 183, ../sass/main.scss */
 .section-method h2 {
   position: absolute;
   width: 100%;
@@ -210,29 +216,29 @@ header nav li.current {
   color: #ffffff;
 }
 
-/* line 199, ../sass/main.scss */
+/* line 203, ../sass/main.scss */
 i {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 204, ../sass/main.scss */
+/* line 208, ../sass/main.scss */
 i.star {
   width: 23px;
   height: 19px;
 }
-/* line 209, ../sass/main.scss */
+/* line 213, ../sass/main.scss */
 i.solid {
   background-image: url('/images/Star-solid.png?1467834586');
   background-size: 100%;
 }
-/* line 215, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 i.hollow {
   background-image: url('/images/Star-hollow.png?1467834598');
   background-size: 100%;
 }
 
 /* below for version 3 */
-/* line 226, ../sass/main.scss */
+/* line 230, ../sass/main.scss */
 .section-list .right {
   float: right;
   margin-left: 38px;
@@ -240,13 +246,13 @@ i.hollow {
   height: 360px;
   background-color: grey;
 }
-/* line 236, ../sass/main.scss */
+/* line 240, ../sass/main.scss */
 .section-list p {
   font-size: 2.4rem;
   margin-top: 3.4rem;
   line-height: 1.5;
 }
-/* line 243, ../sass/main.scss */
+/* line 247, ../sass/main.scss */
 .section-list button {
   margin-top: 26px;
   padding: 12px 16px;
@@ -264,14 +270,48 @@ i.hollow {
   clear: both;
 }
 
-/* line 260, ../sass/main.scss */
+/* line 264, ../sass/main.scss */
 .section-methods-1 {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #dddddd;
 }
 
-/* line 269, ../sass/main.scss */
+/* line 273, ../sass/main.scss */
 .section-lessons div.title {
   margin-top: 1.4rem;
 }
+
+/* search part starts*/
+/* line 282, ../sass/main.scss */
+form.search {
+  display: inline-block;
+  float: right;
+  margin-right: 6.6rem;
+}
+
+/*search part ends*/
+/* recipes style start  */
+/* line 293, ../sass/main.scss */
+.methods-wrapper {
+  margin: 84px auto;
+  padding-top: 42px;
+  width: 1130px;
+  line-height: 1.5;
+}
+/* line 299, ../sass/main.scss */
+.methods-wrapper h1 {
+  font-size: 3.4rem;
+  font-weight: bold;
+}
+/* line 305, ../sass/main.scss */
+.methods-wrapper h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+/* line 311, ../sass/main.scss */
+.methods-wrapper p {
+  font-size: 2rem;
+}
+
+/* recipes style end  */
