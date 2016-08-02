@@ -51,7 +51,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
 
 //search resutl controller
-angular.module('cookbook').controller('searchResultController',  function($scope, $http,$routeParams) {
+angular.module('cookbook').controller('searchResultController',  function($scope, $http,$routeParams,$sce) {
 
     var url="http://127.0.0.1:8983/solr/drupal/select?q="+$routeParams.searchTerm+"&wt=json&indent=true&hl=true&fq=ss_language:und";
     $http.get(url).success(function(data)
@@ -59,4 +59,9 @@ angular.module('cookbook').controller('searchResultController',  function($scope
         $scope.results=data.response.docs;
         $scope.highlighting=data.highlighting;
     });
+
+    $scope.toTrustedHTML=function (html)   //this function is to trust the html that returned by solr
+    {
+        return $sce.trustAsHtml(html);
+    };
 });

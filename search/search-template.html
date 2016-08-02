@@ -2,6 +2,6 @@
 	<div class="search-result" ng-repeat="result in results">
 		<h2>{{result.label[0]}}</h2>
 		<p>{{highlighting[result.id].content[0]}}</p>
-
+		<p ng-bind-html="toTrustedHTML(highlighting[result.id].content[0])"></p>
 	</div>
 </div>
