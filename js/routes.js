@@ -53,9 +53,10 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 //search resutl controller
 angular.module('cookbook').controller('searchResultController',  function($scope, $http,$routeParams) {
 
-    var url="/:8983/solr/drupal/select?q="+$routeParams.searchTerm+"&wt=json&indent=true&hl=true&fq=ss_language:und";
+    var url="http://127.0.0.1:8983/solr/drupal/select?q="+$routeParams.searchTerm+"&wt=json&indent=true&hl=true&fq=ss_language:und";
     $http.get(url).success(function(data)
     {
-        $scope.results=data;
+        $scope.results=data.response.docs;
+        $scope.highlighting=data.highlighting;
     });
 });
