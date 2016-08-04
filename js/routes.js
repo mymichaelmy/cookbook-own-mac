@@ -1,22 +1,22 @@
-var rootURL="127.0.0.1";   //save root url
+
 
 angular.module('cookbook')
 .config(['$routeProvider',function($routeProvider){
     $routeProvider.
         when('/notes', {
-            templateUrl: 'templates/index-template.html',
+            templateUrl: '/templates/index-template.html',
             controller: 'cardsController'
         })
         .when('/', {
-            templateUrl: 'templates/index-template.html',
+            templateUrl: '/templates/index-template.html',
             controller: 'cardsController'
         })
-        .when('/methods/:cardUid', {
-            templateUrl: 'templates/methods-template.html',
+        .when('/method_card/:cardUid', {
+            templateUrl: '/templates/methods-template.html',
             controller: 'cardDetailController'
         })
         .when('/search/:searchTerm', {
-            templateUrl: 'search/search-template.html',
+            templateUrl: '/search/search-template.html',
             controller: 'searchResultController'
 
         })
@@ -46,22 +46,9 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
     $http.get('/drupal/rest/node/'+$routeParams.cardUid).success(function(data)
     {
         $scope.card=data;
+        $scope.disIdentifier=data.type+data.nid;   //temperarily put here but it's hard to pass parameter before the next controller is loaded
+        
     });
 });
 
 
-//search resutl controller
-angular.module('cookbook').controller('searchResultController',  function($scope, $http,$routeParams,$sce) {
-
-    var url="http://127.0.0.1:8983/solr/drupal/select?q="+$routeParams.searchTerm+"&wt=json&indent=true&hl=true&fq=ss_language:und";
-    $http.get(url).success(function(data)
-    {
-        $scope.results=data.response.docs;
-        $scope.highlighting=data.highlighting;
-    });
-
-    $scope.toTrustedHTML=function (html)   //this function is to trust the html that returned by solr
-    {
-        return $sce.trustAsHtml(html);
-    };
-});

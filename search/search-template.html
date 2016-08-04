@@ -1,7 +1,20 @@
 <div class="search-result-wrapper">
-	<div class="search-result" ng-repeat="result in results">
-		<h2>{{result.label[0]}}</h2>
-		<p>{{highlighting[result.id].content[0]}}</p>
+	
+	<ul class="search-categories">
+		<li ng-click="setCategory('all')">
+			<span>all</span>
+			<span>({{totalNumber}})</span>
+		</li>
+		<li ng-repeat="category in categories" ng-click="setCategory(category[0])">
+			<span class="category-title">{{category[0]|noDash}}</span>
+			<span class="category-count">({{category[1]}})</span>
+		</li>
+	</ul>
+	<div class="search-result" ng-repeat="result in results" ng-show="currentCategory==='all'||currentCategory===result.bundle">
+		<a ng-href="#!{{result.bundle}}/{{result.entity_id}}"><h2>{{result.label[0]}}</h2></a>
+
+		<!-- orginal html -->
+		<!-- <p>{{highlighting[result.id].content[0]}}</p> -->
 		<p ng-bind-html="toTrustedHTML(highlighting[result.id].content[0])"></p>
 	</div>
 </div>

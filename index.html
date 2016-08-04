@@ -4,15 +4,15 @@
 	<meta charset="UTF-8">
 	<title>Cookbook</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	
+	<base href="/">
 </head>
 <body>
 	<header>
 		<nav>
 			<ul>
-				<li class="current"><a href="#/notes">Home</a></li>
-				<li><a href="#/notes">Methods</a></li>
-				<li><a href="#/notes">Lessons</a></li>
+				<li class="current"><a href="#!notes">Home</a></li>
+				<li><a href="#!notes">Methods</a></li>
+				<li><a href="#!notes">Lessons</a></li>
 			</ul>
 		</nav>
 
@@ -27,7 +27,7 @@
 	</div>
 
 	<!-- disque start from here-->
-	<div id="disqus_thread"></div>
+	<!-- <div id="disqus_thread"></div>
 	<script>
 
 		/**
@@ -48,16 +48,21 @@
 	</script>
 	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>	
 	
-	<a href="/#disqus_thread">Link</a>
+	<a href="/#disqus_thread">Link</a> -->
 	<!-- disque ends here-->
-	<script id="dsq-count-scr" src="//cookbook-2.disqus.com/count.js" async></script>
+	<!--<script id="dsq-count-scr" src="//cookbook-2.disqus.com/count.js" async></script>-->
 	<!-- disque comment count ends here-->
 
 
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    
+    
     <script src="js/cookbook.js"></script>
+    <script type="text/javascript" src="disqus/dirDisqus.js"></script>
+    <script type="text/javascript" src="disqus/disqusController.js"></script>
     <script src="js/routes.js"></script>
     <script src="search/search.js"></script>
+    
 </body>
 </html>
