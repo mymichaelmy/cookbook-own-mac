@@ -22,3 +22,23 @@ function getCookie(cname)
     }
     return "";
 }
+
+
+//check if card added
+function cardIfAdded(cardType, cardID)
+{
+	var cardArray=JSON.parse(getCookie('cardCollection'));
+	
+
+	for(var i=0;i<cardArray.length;i++)
+	{
+		if(cardArray[i].cardID===cardID)
+		{
+			return true;
+		}
+
+	}
+	
+
+	return false;
+}

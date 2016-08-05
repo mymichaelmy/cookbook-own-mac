@@ -9,6 +9,8 @@
 // parameters go here
 $widthOfList: 1130;      //width of the desktop wrapper 
 
+$columnsInRow: "3n";        //cards in a row
+
 @mixin clearfix
 {
 	&:after
@@ -131,14 +133,14 @@ header
 	{
 		float:left;
 		margin-top:3.4rem;
-		margin-left:70px;
+		margin-right:70px;
 		width: 330px;
 		font-size: 2rem;
 		text-align: left;
 
-		&:first-of-type
+		&:nth-of-type(#{$columnsInRow})
 		{
-			margin-left:0
+			margin-right:0;
 		}
 
 		.bg-image

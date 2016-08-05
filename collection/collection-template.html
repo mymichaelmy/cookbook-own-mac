@@ -1,0 +1,15 @@
+<div class="collection-wrapper section-list">
+	<!-- should judge if exist -->
+	<div class="card" ng-repeat="card in cards">
+			<div class="bg-image">
+				<img ng-src="{{card.imgSrc}}" alt="">
+				<div class="title"><h2>{{card.title}}</h2>
+				</div>
+			</div>
+			
+			<p>{{card.summary}}</p>
+			<a href="#!method_card/{{card.nid}}">Read more &gt; <i class="icon-right-arrow"></i></a>
+	</div>
+
+
+</div>

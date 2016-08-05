@@ -34,7 +34,7 @@ var searchFragsize=200;
 //init cookie
 (function()
 {
-	if(getCookie('totalNumber')===undefined)
+	if(getCookie('totalNumber')==="")
 	{
 		setCookie('totalNumber',0,60);
 		

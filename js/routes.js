@@ -18,7 +18,10 @@ angular.module('cookbook')
         .when('/search/:searchTerm', {
             templateUrl: '/search/search-template.html',
             controller: 'searchResultController'
-
+        })
+        .when('/collection',{
+            templateUrl:'/collection/collection-template.html',
+            controller:'collectionController'
         })
         .otherwise({
             redirectTo: "/"
@@ -51,19 +54,23 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
         $scope.addToCollection=function(cardType, cardID)
         {
             //should check if added
-            var newCard={'cardType':cardType,'cardID':cardID};
-            var currentNumber=Number(getCookie('totalNumber'))+1;
-            var currentCollection=JSON.parse(getCookie('cardCollection'));
+            if(cardIfAdded(cardType,cardID)===false)
+            {
+            //
+                var newCard={'cardType':cardType,'cardID':cardID};
+                var currentNumber=Number(getCookie('totalNumber'))+1;
+                var currentCollection=JSON.parse(getCookie('cardCollection'));
 
 
-            currentCollection.push(newCard);
-            var collectionString=JSON.stringify(currentCollection);
-            console.log(currentNumber);
-            console.log(currentCollection);
-            setCookie('totalNumber',currentNumber,60,'/');
-            setCookie('cardCollection',collectionString,60,'/');
+                currentCollection.push(newCard);
+                var collectionString=JSON.stringify(currentCollection);
+                console.log(currentNumber);
+                console.log(currentCollection);
+                setCookie('totalNumber',currentNumber,60,'/');
+                setCookie('cardCollection',collectionString,60,'/');
 
             // setCookie(totalNumber,document.cookie,10,'/');
+            }
         };
         
     });
