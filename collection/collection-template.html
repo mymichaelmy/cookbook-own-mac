@@ -10,6 +10,10 @@
 			<p>{{card.summary}}</p>
 			<a href="#!method_card/{{card.nid}}">Read more &gt; <i class="icon-right-arrow"></i></a>
 	</div>
-
-
+	
+	<form name="zips" action="/" method="post">
+		<input ng-repeat="card in cards" type="checkbox" name="files[]" value="{{card.zipName}}"/>
+		<button type="submit">download</button>
+	</form>
+	
 </div>
