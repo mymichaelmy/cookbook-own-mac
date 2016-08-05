@@ -47,6 +47,18 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
     {
         $scope.card=data;
         $scope.disIdentifier=data.type+data.nid;   //temperarily put here but it's hard to pass parameter before the next controller is loaded
+
+        $scope.addToCollection=function(cardType, cardID)
+        {
+            //check if added
+            var newCard={'cardType':cardType,'cardID':cardID};
+            var currentNumber=document.cookie.totalNumber;
+            var currentColleciton=document.cookie.cardCollection;
+            currentCollection.push(newCard);
+            console.log(cardType+cardID);
+            console.log(currentNumber);
+            // setCookie(totalNumber,document.cookie,10,'/');
+        };
         
     });
 });

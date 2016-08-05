@@ -27,3 +27,18 @@ angular.module('cookbook').config(['$locationProvider',function ($locationProvid
 
 var rootURL="http://127.0.0.1";   //save root url
 var searchFragsize=200;
+
+
+/*init part*/
+
+//init cookie
+(function()
+{
+	if(document.cookie.totalNumber===undefined)
+	{
+		setCookie('totalNumber',0,60,'/');
+		
+		var array=[];
+		setCookie('cardCollection',array,60,'/');
+	}
+}());

@@ -1,13 +1,15 @@
 <div class="methods-wrapper">
 
 	<h1>{{card.title}}</h1>
-	<span>{{card.title}}</span>
+	<button ng-click="addToCollection(card.type,card.nid)">add this to your collection</button></br>
 	<img src="" alt="" ng-src="/drupal/sites/default/files/{{card.field_card_image.und[0].filename}}">
 	<h2>Overview</h2>
 	<p>{{card.field_activity_description.und[0].value}}</p>
+	<!-- <a ng-href="/drupal/sites/default/files/{{card.field_arsenal_files.und[0].filename}}">{{card.field_arsenal_files.und[0].description}}</a> -->
 
+	<div class="file-link" ng-repeat="link in card.field_arsenal_files.und" ><i></i><a href="">{{link.description}}</a></div>
 
-
+	
 	<div ng-controller="DisqusController as disqus" identifier="disIdentifier">
 		<dir-disqus config="disqusConfig"></dir-disqus>
 	</div>
