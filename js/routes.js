@@ -50,13 +50,19 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
         $scope.addToCollection=function(cardType, cardID)
         {
-            //check if added
+            //should check if added
             var newCard={'cardType':cardType,'cardID':cardID};
-            var currentNumber=document.cookie.totalNumber;
-            var currentColleciton=document.cookie.cardCollection;
+            var currentNumber=Number(getCookie('totalNumber'))+1;
+            var currentCollection=JSON.parse(getCookie('cardCollection'));
+
+
             currentCollection.push(newCard);
-            console.log(cardType+cardID);
+            var collectionString=JSON.stringify(currentCollection);
             console.log(currentNumber);
+            console.log(currentCollection);
+            setCookie('totalNumber',currentNumber,60,'/');
+            setCookie('cardCollection',collectionString,60,'/');
+
             // setCookie(totalNumber,document.cookie,10,'/');
         };
         

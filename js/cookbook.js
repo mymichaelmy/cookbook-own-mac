@@ -34,11 +34,12 @@ var searchFragsize=200;
 //init cookie
 (function()
 {
-	if(document.cookie.totalNumber===undefined)
+	if(getCookie('totalNumber')===undefined)
 	{
-		setCookie('totalNumber',0,60,'/');
+		setCookie('totalNumber',0,60);
 		
 		var array=[];
-		setCookie('cardCollection',array,60,'/');
+		var string=JSON.stringify(array);
+		setCookie('cardCollection',string,60);
 	}
 }());
