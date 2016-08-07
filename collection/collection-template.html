@@ -11,9 +11,15 @@
 			<a href="#!method_card/{{card.nid}}">Read more &gt; <i class="icon-right-arrow"></i></a>
 	</div>
 	
-	<form name="zips" action="/" method="post">
+	<form name="zips" action="/action.php" method="post">
 		<input ng-repeat="card in cards" type="checkbox" name="files[]" value="{{card.zipName}}"/>
-		<button type="submit">download</button>
+		<input type="submit" id="submit" name="createzip" value="Download All Seleted Files" >
 	</form>
+
+	<form name="zips" action="/action.php" method="post">
+<input type="checkbox" name="files[]" value="SampleFile.pdf"/><label>PDF File</label><br />
+<input type="checkbox" name="files[]" value="SampleFile.docx"/><label>Word File</label><br />
+<input type="checkbox" name="files[]" value="HTML5.png"/><label>Image File</label><br />
+<input type="submit" id="submit" name="createzip" value="Download All Seleted Files" >
 	
 </div>
