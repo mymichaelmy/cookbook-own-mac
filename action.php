@@ -8,7 +8,7 @@ if(isset($_POST['files']))
 	if(isset($_POST['createzip']))
 	{
 		$post = $_POST; 
-		$file_folder = "php/files/"; // folder to load files
+		// $file_folder = "files/"; // folder to load files
 		if(extension_loaded('zip'))
 		{ 
 			// Checking ZIP extension is available
@@ -24,7 +24,14 @@ if(isset($_POST['files']))
 				}
 				foreach($post['files'] as $file)
 				{ 
-					$zip->addFile($file_folder.$file); // Adding files into zip
+
+					// $zip->addFile($file_folder.$file); // Adding files into zip
+					// $zip->addFromString(basename($file),$download_file);
+
+					$download_file = file_get_contents($file);
+
+   					#add it to the zip
+    				$zip->addFromString(basename($file),$download_file);
 				}
 				$zip->close();
 				if(file_exists($zip_name))
