@@ -119,8 +119,14 @@ header
 
 .head-slide
 {
-	height:672px;
+	
 	background-color:#D8D8D8;
+
+	.row
+	{
+		padding-top:250px;
+		padding-bottom:250px;
+	}
 }
 
 .section-list
@@ -128,7 +134,8 @@ header
 	//when no bootstrap
 	// width:$widthOfList+px;
 	// margin:0 auto;
-	padding:100px 0;
+	padding-top:100px;
+	padding-bottom:100px;
 	
 
 	// text-align:center;

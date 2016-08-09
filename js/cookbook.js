@@ -25,7 +25,9 @@ angular.module('cookbook').config(['$locationProvider',function ($locationProvid
 
 	}]);
 
-var rootURL="http://127.0.0.1:8080";   //save root url
+var rootURL="http://127.0.0.1";   //save root url
+var mainPort=":8080";
+var solrPort=":8983";
 var searchFragsize=200;
 
 

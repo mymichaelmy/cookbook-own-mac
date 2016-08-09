@@ -16,7 +16,7 @@ angular.module('cookbook').controller('searchController',function($scope,$locati
 //search resutl controller
 angular.module('cookbook').controller('searchResultController',  function($scope, $http,$routeParams,$sce) {
 
-    var url=rootURL+":8983/solr/drupal/select?q="+$routeParams.searchTerm+"&wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle";
+    var url=rootURL+solrPort+"/solr/drupal/select?q="+$routeParams.searchTerm+"&wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle";
 		//ss_language used to remove duplicated results
 		//json.nl is for a proper format for json for facet
     $http.get(url).success(function(data)
