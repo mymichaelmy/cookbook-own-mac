@@ -11,6 +11,8 @@ $widthOfList: 1130;      //width of the desktop wrapper
 
 $columnsInRow: "3n";        //cards in a row
 
+$iconSize: 18;
+$marginOfNavbar:42;
 @mixin clearfix
 {
 	&:after
@@ -37,7 +39,7 @@ h2
 
 p
 {
-	font-size:2rem;
+	font-size:1.8rem;
 
 }
 
@@ -84,7 +86,7 @@ header
 	nav
 	{
 		display: inline-block;   /* for spare the right place for search*/
-		margin-left:4.2rem;     /* for the left margin to the window*/
+		margin-left:$marginOfNavbar+px;     /* for the left margin to the window*/
 		height:100%;
 		
 		ul
@@ -113,22 +115,6 @@ header
 		
 	}
 
-	.search
-	{
-		margin-top:19px;
-		input[type=search]
-		{
-			
-			padding:0 20px;
-			width:464px;
-			height:4.6rem;
-			font-size:1.8rem;
-			@include border-radius(30px, 30px);
-			border-style:solid;
-			border-width:1px;
-			border-color:#979797;
-		}
-	}
 }
 
 .head-slide
@@ -139,9 +125,12 @@ header
 
 .section-list
 {
-	width:$widthOfList+px;
-	margin:0 auto;
-	padding:48px 35px;
+	//when no bootstrap
+	// width:$widthOfList+px;
+	// margin:0 auto;
+	padding:100px 0;
+	
+
 	// text-align:center;
 	font-size:0;
 	border-bottom-style:solid;
@@ -157,11 +146,11 @@ header
 	}
 	.card
 	{
-		float:left;
-		margin-top:3.4rem;
-		margin-right:70px;
-		width: 330px;
-		font-size: 2rem;
+		// float:left;
+		// margin-top:3.4rem;
+		// margin-right:70px;
+		// width: 330px;
+		font-size: 1.8rem;
 		text-align: left;
 
 		&:nth-of-type(#{$columnsInRow})
@@ -227,7 +216,7 @@ header
 	{
 		display: inline-block;
 		// margin-top:1.4rem;
-		font-size: 2.7rem;
+		font-size: 2rem;
 		font-weight: bold;
 		vertical-align:middle;
 	}
@@ -246,7 +235,7 @@ header
 		top:50%;
 		margin-top:0;
 		text-align:center;
-		font-size: 2.4rem;
+		
 		font-weight: 300;
 		letter-spacing: 0.05rem;
 		text-transform:uppercase;
@@ -295,7 +284,7 @@ i
 	}
 	p
 	{
-		font-size: 2.4rem;
+		
 		margin-top:3.4rem;
 		line-height:1.5;
 	}
@@ -339,7 +328,33 @@ form.search
 {
 	display:inline-block;
 	float:right;
-	margin-right:6.6rem;
+	margin-right:$marginOfNavbar+px;
+	position:relative;
+	margin-top:19px;
+
+		input[type=search]
+		{
+			
+			padding:0 20px;
+			width:464px;
+			height:4.6rem;
+			font-size:1.8rem;
+			@include border-radius(30px, 30px);
+			border-style:solid;
+			border-width:1px;
+			border-color:#979797;
+		}
+
+		label i
+		{
+			position: absolute;
+			right:20px;
+			top:50%;
+			margin-top: -$iconSize/2+px;
+			cursor:pointer;
+			
+
+		}
 }
 
 /*search part ends*/

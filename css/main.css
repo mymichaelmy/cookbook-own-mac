@@ -68,30 +68,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /*collection of shared styles*/
-/* line 26, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 h1 {
   font-size: 3.6rem;
   font-weight: bold;
 }
 
-/* line 32, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 h2 {
   font-size: 2.8rem;
   font-weight: bold;
 }
 
-/* line 38, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 p {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
-/* line 44, ../sass/main.scss */
+/* line 46, ../sass/main.scss */
 button {
   cursor: pointer;
 }
 
 /* end of collection of shared styles*/
-/* line 52, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 html, body {
   height: 100%;
   font-size: 10px;
@@ -102,13 +102,13 @@ html, body {
   line-height: 1.2;
 }
 
-/* line 63, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 a:link, a:visited {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 68, ../sass/main.scss */
+/* line 70, ../sass/main.scss */
 header {
   position: fixed;
   width: 100%;
@@ -120,19 +120,19 @@ header {
   background-color: #ffffff;
   color: #000000;
 }
-/* line 84, ../sass/main.scss */
+/* line 86, ../sass/main.scss */
 header nav {
   display: inline-block;
   /* for spare the right place for search*/
-  margin-left: 4.2rem;
+  margin-left: 42px;
   /* for the left margin to the window*/
   height: 100%;
 }
-/* line 90, ../sass/main.scss */
+/* line 92, ../sass/main.scss */
 header nav ul {
   height: 100%;
 }
-/* line 94, ../sass/main.scss */
+/* line 96, ../sass/main.scss */
 header nav li {
   display: inline;
   height: 100%;
@@ -141,17 +141,180 @@ header nav li {
   text-transform: uppercase;
   line-height: 84px;
 }
-/* line 103, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 header nav li.current {
   border-bottom-style: solid;
   border-bottom-width: 2px;
 }
-/* line 116, ../sass/main.scss */
-header .search {
+
+/* line 120, ../sass/main.scss */
+.head-slide {
+  height: 672px;
+  background-color: #D8D8D8;
+}
+
+/* line 126, ../sass/main.scss */
+.section-list {
+  padding: 100px 0;
+  font-size: 0;
+  border-bottom-style: solid;
+  border-bottom-color: #666666;
+}
+/* line 140, ../sass/main.scss */
+.section-list h1 {
+  font-size: 3.6rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+/* line 147, ../sass/main.scss */
+.section-list .card {
+  font-size: 1.8rem;
+  text-align: left;
+}
+/* line 156, ../sass/main.scss */
+.section-list .card:nth-of-type(3n) {
+  margin-right: 0;
+}
+/* line 161, ../sass/main.scss */
+.section-list .card .bg-image {
+  position: relative;
+  width: 100%;
+}
+/* line 171, ../sass/main.scss */
+.section-list .card .bg-image img {
+  width: 100%;
+  height: 225px;
+  background-color: #999999;
+}
+/* line 183, ../sass/main.scss */
+.section-list .card p {
+  color: #686868;
+  margin-bottom: 12px;
+}
+/* line 189, ../sass/main.scss */
+.section-list .card a {
+  color: #989898;
+}
+/* line 196, ../sass/main.scss */
+.section-list .ratings {
+  display: inline-block;
+  margin: 15px 0;
+  vertical-align: middle;
+}
+/* line 203, ../sass/main.scss */
+.section-list .label-video {
+  display: inline-block;
+  margin-left: 8px;
+  background-color: #999999;
+  font-size: 1.4rem;
+  padding: 3px 8px;
+  vertical-align: middle;
+  border-radius: 8px;
+  color: #ffffff;
+}
+/* line 215, ../sass/main.scss */
+.section-list h2 {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+/* line 228, ../sass/main.scss */
+.section-method h2 {
+  position: absolute;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  top: 50%;
+  margin-top: 0;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+/* line 248, ../sass/main.scss */
+i {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 253, ../sass/main.scss */
+i.star {
+  width: 23px;
+  height: 19px;
+}
+/* line 258, ../sass/main.scss */
+i.solid {
+  background-image: url('/images/Star-solid.png?1467834586');
+  background-size: 100%;
+}
+/* line 264, ../sass/main.scss */
+i.hollow {
+  background-image: url('/images/Star-hollow.png?1467834598');
+  background-size: 100%;
+}
+
+/* below for version 3 */
+/* line 275, ../sass/main.scss */
+.section-list .right {
+  float: right;
+  margin-left: 38px;
+  width: 500px;
+  height: 360px;
+  background-color: grey;
+}
+/* line 285, ../sass/main.scss */
+.section-list p {
+  margin-top: 3.4rem;
+  line-height: 1.5;
+}
+/* line 292, ../sass/main.scss */
+.section-list button {
+  margin-top: 26px;
+  padding: 12px 16px;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  color: #666666;
+  background-color: transparent;
+  border-style: solid;
+}
+
+/* line 18, ../sass/main.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 309, ../sass/main.scss */
+.section-methods-1 {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #dddddd;
+}
+
+/* line 318, ../sass/main.scss */
+.section-lessons div.title {
+  margin-top: 1.4rem;
+}
+
+/* search part starts*/
+/* line 327, ../sass/main.scss */
+form.search {
+  display: inline-block;
+  float: right;
+  margin-right: 42px;
+  position: relative;
   margin-top: 19px;
 }
-/* line 119, ../sass/main.scss */
-header .search input[type=search] {
+/* line 335, ../sass/main.scss */
+form.search input[type=search] {
   padding: 0 20px;
   width: 464px;
   height: 4.6rem;
@@ -163,229 +326,64 @@ header .search input[type=search] {
   border-width: 1px;
   border-color: #979797;
 }
-
-/* line 134, ../sass/main.scss */
-.head-slide {
-  height: 672px;
-  background-color: #D8D8D8;
-}
-
-/* line 140, ../sass/main.scss */
-.section-list {
-  width: 1130px;
-  margin: 0 auto;
-  padding: 48px 35px;
-  font-size: 0;
-  border-bottom-style: solid;
-  border-bottom-color: #666666;
-}
-/* line 151, ../sass/main.scss */
-.section-list h1 {
-  font-size: 3.6rem;
-  text-align: left;
-  text-transform: uppercase;
-}
-/* line 158, ../sass/main.scss */
-.section-list .card {
-  float: left;
-  margin-top: 3.4rem;
-  margin-right: 70px;
-  width: 330px;
-  font-size: 2rem;
-  text-align: left;
-}
-/* line 167, ../sass/main.scss */
-.section-list .card:nth-of-type(3n) {
-  margin-right: 0;
-}
-/* line 172, ../sass/main.scss */
-.section-list .card .bg-image {
-  position: relative;
-  width: 100%;
-}
-/* line 182, ../sass/main.scss */
-.section-list .card .bg-image img {
-  width: 100%;
-  height: 225px;
-  background-color: #999999;
-}
-/* line 194, ../sass/main.scss */
-.section-list .card p {
-  color: #686868;
-  margin-bottom: 12px;
-}
-/* line 200, ../sass/main.scss */
-.section-list .card a {
-  color: #989898;
-}
-/* line 207, ../sass/main.scss */
-.section-list .ratings {
-  display: inline-block;
-  margin: 15px 0;
-  vertical-align: middle;
-}
-/* line 214, ../sass/main.scss */
-.section-list .label-video {
-  display: inline-block;
-  margin-left: 8px;
-  background-color: #999999;
-  font-size: 1.4rem;
-  padding: 3px 8px;
-  vertical-align: middle;
-  border-radius: 8px;
-  color: #ffffff;
-}
-/* line 226, ../sass/main.scss */
-.section-list h2 {
-  display: inline-block;
-  font-size: 2.7rem;
-  font-weight: bold;
-  vertical-align: middle;
-}
-
-/* line 239, ../sass/main.scss */
-.section-method h2 {
+/* line 348, ../sass/main.scss */
+form.search label i {
   position: absolute;
-  width: 100%;
-  padding: 0 10px;
-  box-sizing: border-box;
+  right: 20px;
   top: 50%;
-  margin-top: 0;
-  text-align: center;
-  font-size: 2.4rem;
-  font-weight: 300;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  color: #ffffff;
-}
-
-/* line 259, ../sass/main.scss */
-i {
-  display: inline-block;
-  vertical-align: middle;
-}
-/* line 264, ../sass/main.scss */
-i.star {
-  width: 23px;
-  height: 19px;
-}
-/* line 269, ../sass/main.scss */
-i.solid {
-  background-image: url('/images/Star-solid.png?1467834586');
-  background-size: 100%;
-}
-/* line 275, ../sass/main.scss */
-i.hollow {
-  background-image: url('/images/Star-hollow.png?1467834598');
-  background-size: 100%;
-}
-
-/* below for version 3 */
-/* line 286, ../sass/main.scss */
-.section-list .right {
-  float: right;
-  margin-left: 38px;
-  width: 500px;
-  height: 360px;
-  background-color: grey;
-}
-/* line 296, ../sass/main.scss */
-.section-list p {
-  font-size: 2.4rem;
-  margin-top: 3.4rem;
-  line-height: 1.5;
-}
-/* line 303, ../sass/main.scss */
-.section-list button {
-  margin-top: 26px;
-  padding: 12px 16px;
-  font-size: 2.6rem;
-  text-transform: uppercase;
-  color: #666666;
-  background-color: transparent;
-  border-style: solid;
-}
-
-/* line 16, ../sass/main.scss */
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 320, ../sass/main.scss */
-.section-methods-1 {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #dddddd;
-}
-
-/* line 329, ../sass/main.scss */
-.section-lessons div.title {
-  margin-top: 1.4rem;
-}
-
-/* search part starts*/
-/* line 338, ../sass/main.scss */
-form.search {
-  display: inline-block;
-  float: right;
-  margin-right: 6.6rem;
+  margin-top: -9px;
+  cursor: pointer;
 }
 
 /*search part ends*/
 /* recipes style start  */
-/* line 349, ../sass/main.scss */
+/* line 364, ../sass/main.scss */
 .methods-wrapper {
   margin: 84px auto;
   padding-top: 42px;
   width: 1130px;
   line-height: 1.5;
 }
-/* line 355, ../sass/main.scss */
+/* line 370, ../sass/main.scss */
 .methods-wrapper h1 {
   font-size: 3.4rem;
   font-weight: bold;
 }
-/* line 361, ../sass/main.scss */
+/* line 376, ../sass/main.scss */
 .methods-wrapper h2 {
   font-size: 2.8rem;
   font-weight: bold;
 }
-/* line 367, ../sass/main.scss */
+/* line 382, ../sass/main.scss */
 .methods-wrapper p {
   font-size: 2rem;
 }
 
 /* recipes style end  */
 /*search page start */
-/* line 383, ../sass/main.scss */
+/* line 398, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
   width: 1130px;
 }
 
-/* line 390, ../sass/main.scss */
+/* line 405, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 395, ../sass/main.scss */
+/* line 410, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 402, ../sass/main.scss */
+/* line 417, ../sass/main.scss */
 .search-categories li {
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 407, ../sass/main.scss */
+/* line 422, ../sass/main.scss */
 .search-categories li:hover {
   color: #666666;
 }
