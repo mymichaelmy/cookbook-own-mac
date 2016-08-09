@@ -13,7 +13,7 @@
 	
 	<!-- take into account the url will change when hosted online, remember to modify it -->
 	<form name="zips" action="/action.php" method="post">
-		<input ng-repeat="card in cards" type="checkbox" name="files[]" value="http://127.0.0.1:8080/drupal/sites/default/files/{{card.zipName}}"/>
+		<input ng-repeat="card in cards" type="checkbox" name="files[]" value="{{card.fileURL}}"/>
 		<input type="submit" id="submit" name="createzip" value="Download All Seleted Files" >
 	</form>
 
