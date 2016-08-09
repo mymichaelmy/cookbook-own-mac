@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Cookbook</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
 	<base href="/">
 </head>
@@ -19,8 +21,9 @@
 		</nav>
 
 		<form class="search" name="searchForm" ng-controller="searchController as search" ng-submit="search.searchSubmit()">
-			<input type="search" ng-model="search.searchTerm" name="searchInput"> 
-			<button type="submit">search</button>
+			<input type="search" ng-model="search.searchTerm" name="searchInput">
+			<label for="search-submit"><i></i></label> 
+			<button type="submit" id="search-submit">search</button>
 			
 		</form>
 	</header>
@@ -60,12 +63,14 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     
     <script src="js/utility.js"></script>
+
     <script src="js/cookbook.js"></script>
     <script type="text/javascript" src="disqus/dirDisqus.js"></script>
     <script type="text/javascript" src="disqus/disqusController.js"></script>
     <script src="js/routes.js"></script>
     <script src="search/search.js"></script>
     <script src="collection/collection.js"></script>
+    
     
 </body>
 </html>
