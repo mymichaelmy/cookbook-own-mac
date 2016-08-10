@@ -195,18 +195,19 @@ header nav li.current {
 .section-list .card p {
   color: #686868;
   margin-bottom: 12px;
+  height: 200px;
 }
-/* line 196, ../sass/main.scss */
+/* line 197, ../sass/main.scss */
 .section-list .card a {
   color: #989898;
 }
-/* line 203, ../sass/main.scss */
+/* line 204, ../sass/main.scss */
 .section-list .ratings {
   display: inline-block;
   margin: 15px 0;
   vertical-align: middle;
 }
-/* line 210, ../sass/main.scss */
+/* line 211, ../sass/main.scss */
 .section-list .label-video {
   display: inline-block;
   margin-left: 8px;
@@ -217,7 +218,7 @@ header nav li.current {
   border-radius: 8px;
   color: #ffffff;
 }
-/* line 222, ../sass/main.scss */
+/* line 223, ../sass/main.scss */
 .section-list h2 {
   display: inline-block;
   font-size: 2rem;
@@ -225,7 +226,7 @@ header nav li.current {
   vertical-align: middle;
 }
 
-/* line 235, ../sass/main.scss */
+/* line 236, ../sass/main.scss */
 .section-method h2 {
   position: absolute;
   width: 100%;
@@ -244,29 +245,29 @@ header nav li.current {
   color: #ffffff;
 }
 
-/* line 255, ../sass/main.scss */
+/* line 256, ../sass/main.scss */
 i {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 260, ../sass/main.scss */
+/* line 261, ../sass/main.scss */
 i.star {
   width: 23px;
   height: 19px;
 }
-/* line 265, ../sass/main.scss */
+/* line 266, ../sass/main.scss */
 i.solid {
   background-image: url('/images/Star-solid.png?1467834586');
   background-size: 100%;
 }
-/* line 271, ../sass/main.scss */
+/* line 272, ../sass/main.scss */
 i.hollow {
   background-image: url('/images/Star-hollow.png?1467834598');
   background-size: 100%;
 }
 
 /* below for version 3 */
-/* line 282, ../sass/main.scss */
+/* line 283, ../sass/main.scss */
 .section-list .right {
   float: right;
   margin-left: 38px;
@@ -274,20 +275,23 @@ i.hollow {
   height: 360px;
   background-color: grey;
 }
-/* line 292, ../sass/main.scss */
+/* line 293, ../sass/main.scss */
 .section-list p {
   margin-top: 3.4rem;
   line-height: 1.5;
 }
-/* line 299, ../sass/main.scss */
+/* line 300, ../sass/main.scss */
 .section-list button {
   margin-top: 26px;
   padding: 12px 16px;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
-  color: #666666;
-  background-color: transparent;
-  border-style: solid;
+  color: #ffffff;
+  background-color: #4a4a4a;
+  border-style: none;
+  -moz-border-radius: 6px / 6px;
+  -webkit-border-radius: 6px 6px;
+  border-radius: 6px / 6px;
 }
 
 /* line 18, ../sass/main.scss */
@@ -297,20 +301,20 @@ i.hollow {
   clear: both;
 }
 
-/* line 316, ../sass/main.scss */
+/* line 319, ../sass/main.scss */
 .section-methods-1 {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #dddddd;
 }
 
-/* line 325, ../sass/main.scss */
+/* line 328, ../sass/main.scss */
 .section-lessons div.title {
   margin-top: 1.4rem;
 }
 
 /* search part starts*/
-/* line 334, ../sass/main.scss */
+/* line 337, ../sass/main.scss */
 form.search {
   display: inline-block;
   float: right;
@@ -318,7 +322,7 @@ form.search {
   position: relative;
   margin-top: 19px;
 }
-/* line 342, ../sass/main.scss */
+/* line 345, ../sass/main.scss */
 form.search input[type=search] {
   padding: 0 20px;
   width: 464px;
@@ -331,7 +335,7 @@ form.search input[type=search] {
   border-width: 1px;
   border-color: #979797;
 }
-/* line 355, ../sass/main.scss */
+/* line 358, ../sass/main.scss */
 form.search label i {
   position: absolute;
   right: 20px;
@@ -342,53 +346,53 @@ form.search label i {
 
 /*search part ends*/
 /* recipes style start  */
-/* line 371, ../sass/main.scss */
+/* line 374, ../sass/main.scss */
 .methods-wrapper {
   margin: 84px auto;
   padding-top: 42px;
   width: 1130px;
   line-height: 1.5;
 }
-/* line 377, ../sass/main.scss */
+/* line 380, ../sass/main.scss */
 .methods-wrapper h1 {
   font-size: 3.4rem;
   font-weight: bold;
 }
-/* line 383, ../sass/main.scss */
+/* line 386, ../sass/main.scss */
 .methods-wrapper h2 {
   font-size: 2.8rem;
   font-weight: bold;
 }
-/* line 389, ../sass/main.scss */
+/* line 392, ../sass/main.scss */
 .methods-wrapper p {
   font-size: 2rem;
 }
 
 /* recipes style end  */
 /*search page start */
-/* line 405, ../sass/main.scss */
+/* line 408, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
   width: 1130px;
 }
 
-/* line 412, ../sass/main.scss */
+/* line 415, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 417, ../sass/main.scss */
+/* line 420, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 424, ../sass/main.scss */
+/* line 427, ../sass/main.scss */
 .search-categories li {
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 429, ../sass/main.scss */
+/* line 432, ../sass/main.scss */
 .search-categories li:hover {
   color: #666666;
 }

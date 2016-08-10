@@ -34,7 +34,27 @@ angular.module('cookbook').controller('cardsController',  function($scope, $http
   // $scope.order_id = $routeParams.orderId;
     $http.get('/drupal/content/method-cards-homepage').success(function(data)
     {
-        $scope.cards=(function()
+        $scope.methods=(function()
+        {
+        
+            return data.nodes;
+
+        }());
+    });
+
+    $http.get('/drupal/content/class-tips-homepage').success(function(data)
+    {
+        $scope.tips=(function()
+        {
+        
+            return data.nodes;
+
+        }());
+    });
+
+    $http.get('/drupal/content/course-examples-homepage').success(function(data)
+    {
+        $scope.examples=(function()
         {
         
             return data.nodes;
