@@ -4,6 +4,7 @@ angular.module('cookbook').directive('cardOnHomepage',function()
 		restrict: 'E',
 		scope:
 		{
+			categoryurl:'@',
 			category:'@',
 			title:'@'
 
@@ -16,7 +17,7 @@ angular.module('cookbook').directive('cardOnHomepage',function()
 
 angular.module('cookbook').controller('homeCardsController',function($http,$scope)
 {
-	$http.get('/drupal/content/'+$scope.category).success(function(data)
+	$http.get('/drupal/content/'+$scope.categoryurl).success(function(data)
     {
         $scope.cards=(function()
         {
