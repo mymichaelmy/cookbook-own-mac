@@ -370,56 +370,81 @@ form.search label i {
   position: fixed;
   top: 84px;
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: #999999;
   z-index: 9;
 }
-/* line 413, ../sass/main.scss */
+/* line 415, ../sass/main.scss */
 .card-detail-wrapper .lower-content {
   position: relative;
-  margin: 200px auto 0;
-  width: 1130px;
+  margin-top: 230px;
 }
-/* line 419, ../sass/main.scss */
+/* line 422, ../sass/main.scss */
 .card-detail-wrapper .lower-content .left-sidebar {
   position: fixed;
   width: 200px;
   height: 100%;
-  padding-left: 20px;
   padding-right: 20px;
   line-height: 1.5;
   font-size: 1.6rem;
 }
-/* line 431, ../sass/main.scss */
+/* line 432, ../sass/main.scss */
+.card-detail-wrapper .lower-content .left-sidebar li {
+  position: relative;
+  cursor: pointer;
+}
+/* line 437, ../sass/main.scss */
+.card-detail-wrapper .lower-content .left-sidebar li:hover:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 4px;
+  top: 0;
+  bottom: 0;
+  margin-left: -8px;
+  background-color: #333333;
+}
+/* line 453, ../sass/main.scss */
 .card-detail-wrapper .lower-content .right-content {
   margin-left: 200px;
   padding-left: 20px;
+  line-height: 1.5;
+}
+/* line 459, ../sass/main.scss */
+.card-detail-wrapper .lower-content .right-content h2 {
+  font-size: 2rem;
+}
+/* line 463, ../sass/main.scss */
+.card-detail-wrapper .lower-content .right-content div + div {
+  margin-top: 26px;
 }
 
 /* recipes style end  */
 /*search page start */
-/* line 448, ../sass/main.scss */
+/* line 480, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
   width: 1130px;
 }
 
-/* line 455, ../sass/main.scss */
+/* line 487, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 460, ../sass/main.scss */
+/* line 492, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 467, ../sass/main.scss */
+/* line 499, ../sass/main.scss */
 .search-categories li {
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 472, ../sass/main.scss */
+/* line 504, ../sass/main.scss */
 .search-categories li:hover {
   color: #666666;
 }

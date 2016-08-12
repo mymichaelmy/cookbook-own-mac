@@ -1,16 +1,18 @@
 <div class="card-detail-wrapper">
 	<div class="heading">
-		<h1>{{card.title}}</h1>
-		<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)">recommend this</button></br>
-		<button ng-click="addToCollection(card.type,card.nid)">add this to your collection</button></br>
+		<div class="container">
+			<h1>{{card.title}}</h1>
+			<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)">recommend this</button></br>
+			<button ng-click="addToCollection(card.type,card.nid)">add this to your collection</button></br>
+		</div>
 	</div>
-	<div class="lower-content">
+	<div class="lower-content container">
 		<div class="left-sidebar">
 			<ul>
-				<li><a scroll-on-click="about">About</a></li>
-				<li><a scroll-on-click="goals">Learning Goals</a></li>
-				<li><a scroll-on-click="consider">Things to consider</a></li>
-				<li><a scroll-on-click="discussion">Discussion</a></li>
+				<li scroll-on-click="about">About</li>
+				<li scroll-on-click="goals">Learning Goals</li>
+				<li scroll-on-click="consider">Things to consider</li>
+				<li scroll-on-click="discussion">Discussion</li>
 			</ul>
 		</div>
 		<div class="right-content">

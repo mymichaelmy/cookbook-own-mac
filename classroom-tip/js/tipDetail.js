@@ -75,10 +75,11 @@ angular.module('cookbook').directive('scrollOnClick', function($document) {
     restrict: 'A',
     link: function(scope, element,attr)
     {
-        target = document.getElementById(attr.scrollOnClick);
+        var target = document.getElementById(attr.scrollOnClick);
         element.on('click', function() {
         // $document.find('body').animate({scrollTop: target.getBoundingClientRect().top}, "slow");
-        window.scrollBy(0,target.getBoundingClientRect().top);
+        window.scrollTo(0,window.scrollY+target.getBoundingClientRect().top-200);
+        //160 is the total height of
       });
     }
   };

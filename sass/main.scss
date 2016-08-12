@@ -404,6 +404,8 @@ form.search
 		position:fixed;
 		top:84px;
 		width:100%;
+		padding-top:20px;
+		padding-bottom:20px;
 
 		background-color: #999999;
 		z-index:9;
@@ -413,18 +415,38 @@ form.search
 	.lower-content
 	{
 		position:relative;
-		margin:200px auto 0;
-		width:$widthOfList+px;
+		// margin:200px auto 0;
+		// width:$widthOfList+px;
+		margin-top: 230px;
 
 		.left-sidebar
 		{
 			position:fixed;
 			width:200px;
 			height:100%;
-			padding-left:20px;
+			
 			padding-right:20px;
 			line-height: 1.5;
 			font-size: 1.6rem;
+
+			li
+			{
+				position:relative;
+				cursor:pointer;
+
+				&:hover:before
+				{
+					content:'';
+					position: absolute;
+					display: inline-block;
+					width:4px;
+					top:0;
+					bottom:0;
+					margin-left: -8px;
+					background-color: #333333;
+
+				}
+			}
 
 		}
 
@@ -432,6 +454,16 @@ form.search
 		{
 			margin-left:200px;
 			padding-left:20px;
+			line-height: 1.5;
+
+			h2
+			{
+				font-size:2rem;
+			}
+			div+div
+			{
+				margin-top:26px;
+			}
 		}
 	}
 
