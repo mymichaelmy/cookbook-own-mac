@@ -427,29 +427,39 @@ form.search label i {
   margin: 84px auto;
   padding-top: 42px;
 }
+/* line 488, ../sass/main.scss */
+.search-result-wrapper .my-pager li {
+  display: inline;
+  margin-right: 6px;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  border-style: solid;
+  border-width: 1px;
+}
 
-/* line 487, ../sass/main.scss */
+/* line 501, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 492, ../sass/main.scss */
+/* line 506, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 499, ../sass/main.scss */
+/* line 513, ../sass/main.scss */
 .search-categories li {
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 504, ../sass/main.scss */
+/* line 518, ../sass/main.scss */
 .search-categories li:hover {
   color: #666666;
 }
 
 /*search page end*/
-/* line 516, ../sass/main.scss */
+/* line 530, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }

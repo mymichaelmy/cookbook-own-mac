@@ -19,6 +19,19 @@ angular.module('cookbook').controller('searchResultController',  function($scope
     var url=rootURL+solrPort+"/solr/drupal/select?q="+$routeParams.searchTerm+"&wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle";
 		//ss_language used to remove duplicated results
 		//json.nl is for a proper format for json for facet
+		//
+	
+	//function to refresh pagers every time
+	function refreshPagers(totalNumber)
+	{
+		$scope.pagers=[];
+		for(var i=1;i<=(totalNumber-1)/10+1;i++)
+		{
+			$scope.pagers.push(i);
+		}
+	}
+
+	//function to init search result
     $http.get(url).success(function(data)
     {
 		$scope.totalNumber=data.response.numFound;
@@ -30,7 +43,41 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 
        
         $scope.categories=data.facet_counts.facet_fields.bundle;
+
+        refreshPagers($scope.totalNumber);
+
+        $scope.currentPage=1;
     });
+
+    
+    //function to go to a certain page
+    $scope.goToPage=function(num)
+    {
+		if($scope.currentPage!==num)
+		{
+			var url=rootURL+solrPort+"/solr/drupal/select?q="+$routeParams.searchTerm+"&wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle";
+
+			if($scope.currentCategory!=='all')
+			{
+				url+=('&fq=bundle:'+$scope.currentCategory);
+			}
+
+			url+=('&start='+(num-1)*10);
+
+			$http.get(url).success(function(data)
+			{
+				
+
+				$scope.results=data.response.docs;
+
+				$scope.highlighting=data.highlighting;
+
+				$scope.currentPage=num;
+       
+			});
+
+		}
+    };
 
     $scope.currentCategory="all";
 
@@ -39,7 +86,8 @@ angular.module('cookbook').controller('searchResultController',  function($scope
         return $sce.trustAsHtml(html);
     };
 
-    $scope.setCategory=function(category)
+    //function to set category
+    $scope.setCategory=function(category,numberInCategory)
     {
 		if(category!=$scope.currentCategory)
 		{
@@ -53,6 +101,11 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 				url+=("&fq=bundle:"+category);
 			}
 
+			else
+			{
+				numberInCategory=$scope.totalNumber;
+			}
+
 			$http.get(url).success(function(data)
 			{
 				
@@ -60,8 +113,10 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 				$scope.results=data.response.docs;
 
 				$scope.highlighting=data.highlighting;
+
+				refreshPagers(numberInCategory);  //refresh pager on bottom
        
-				
+				$scope.currentPage=1;
 			});
 		}
 	};
@@ -78,3 +133,4 @@ angular.module('cookbook').filter('noDash',function() {
         }
     };
 });
+
