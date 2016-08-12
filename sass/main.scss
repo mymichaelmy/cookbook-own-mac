@@ -481,7 +481,7 @@ form.search
 {
 	margin:84px auto;
 	padding-top:42px;
-	width:$widthOfList+px;
+	// width:$widthOfList+px;
 }
 
 strong
@@ -510,5 +510,13 @@ strong
 
 /*search page end*/
 
+// collection page start
+.collection-wrapper
+{
+	.card:nth-of-type(4n+1)
+	{
+		clear:both;
+	}
+}
 
-
+// collection ends

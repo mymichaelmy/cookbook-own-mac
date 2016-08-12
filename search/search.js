@@ -45,6 +45,24 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 		{
 			$scope.currentCategory=category;
 			// console.log($scope.currentCategory); for testing
+			// 
+			var url=rootURL+solrPort+"/solr/drupal/select?q="+$routeParams.searchTerm+"&wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle";
+
+			if(category!=='all')
+			{
+				url+=("&fq=bundle:"+category);
+			}
+
+			$http.get(url).success(function(data)
+			{
+				
+
+				$scope.results=data.response.docs;
+
+				$scope.highlighting=data.highlighting;
+       
+				
+			});
 		}
 	};
 });

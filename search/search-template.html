@@ -1,4 +1,4 @@
-<div class="search-result-wrapper">
+<div class="search-result-wrapper container">
 	
 	<ul class="search-categories">
 		<li ng-click="setCategory('all')">
@@ -10,7 +10,7 @@
 			<span class="category-count">({{category[1]}})</span>
 		</li>
 	</ul>
-	<div class="search-result" ng-repeat="result in results" ng-show="currentCategory==='all'||currentCategory===result.bundle">
+	<div class="search-result" ng-repeat="result in results" >
 		<a ng-href="#!{{result.bundle}}/{{result.entity_id}}"><h2>{{result.label[0]}}</h2></a>
 
 		<!-- orginal html -->
@@ -18,3 +18,7 @@
 		<p ng-bind-html="toTrustedHTML(highlighting[result.id].content[0])"></p>
 	</div>
 </div>
+
+
+
+<!-- ng-show="currentCategory==='all'||currentCategory===result.bundle" -->

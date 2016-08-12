@@ -426,7 +426,6 @@ form.search label i {
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
-  width: 1130px;
 }
 
 /* line 487, ../sass/main.scss */
@@ -450,3 +449,7 @@ strong {
 }
 
 /*search page end*/
+/* line 516, ../sass/main.scss */
+.collection-wrapper .card:nth-of-type(4n+1) {
+  clear: both;
+}
