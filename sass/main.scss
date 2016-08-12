@@ -346,7 +346,7 @@ form.search
 		{
 			
 			padding:0 20px;
-			width:464px;
+			width:300px;
 			height:4.6rem;
 			font-size:1.8rem;
 			@include border-radius(30px, 30px);
@@ -397,6 +397,46 @@ form.search
 
 }
 
+.card-detail-wrapper
+{
+	.heading
+	{
+		position:fixed;
+		top:84px;
+		width:100%;
+
+		background-color: #999999;
+		z-index:9;
+
+	}
+
+	.lower-content
+	{
+		position:relative;
+		margin:200px auto 0;
+		width:$widthOfList+px;
+
+		.left-sidebar
+		{
+			position:fixed;
+			width:200px;
+			height:100%;
+			padding-left:20px;
+			padding-right:20px;
+			line-height: 1.5;
+			font-size: 1.6rem;
+
+		}
+
+		.right-content
+		{
+			margin-left:200px;
+			padding-left:20px;
+		}
+	}
+
+
+}
 
 
 
@@ -437,4 +477,6 @@ strong
 }
 
 /*search page end*/
+
+
 

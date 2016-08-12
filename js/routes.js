@@ -5,19 +5,19 @@ angular.module('cookbook')
     $routeProvider.
         when('/notes', {
             templateUrl: '/templates/index-template.html',
-            controller: 'cardsController'
+            // controller: 'cardsController'
         })
         .when('/', {
             templateUrl: '/templates/index-template.html',
-            controller: 'cardsController'
+            // controller: 'cardsController'
         })
         .when('/method_card/:cardUid', {
             templateUrl: '/templates/methods-template.html',
             controller: 'cardDetailController'
         })
         .when('/classroom_tip/:cardUid', {
-            templateUrl: '/templates/methods-template.html',
-            controller: 'cardDetailController'
+            templateUrl: '/classroom-tip/templates/classroom-tip-template.html',
+            controller: 'tipDetailController'
         })
         .when('/course/:cardUid', {
             templateUrl: '/templates/methods-template.html',

@@ -322,7 +322,7 @@ form.search {
 /* line 345, ../sass/main.scss */
 form.search input[type=search] {
   padding: 0 20px;
-  width: 464px;
+  width: 300px;
   height: 4.6rem;
   font-size: 1.8rem;
   -moz-border-radius: 30px / 30px;
@@ -365,31 +365,61 @@ form.search label i {
   font-size: 2rem;
 }
 
+/* line 402, ../sass/main.scss */
+.card-detail-wrapper .heading {
+  position: fixed;
+  top: 84px;
+  width: 100%;
+  background-color: #999999;
+  z-index: 9;
+}
+/* line 413, ../sass/main.scss */
+.card-detail-wrapper .lower-content {
+  position: relative;
+  margin: 200px auto 0;
+  width: 1130px;
+}
+/* line 419, ../sass/main.scss */
+.card-detail-wrapper .lower-content .left-sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+/* line 431, ../sass/main.scss */
+.card-detail-wrapper .lower-content .right-content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
 /* recipes style end  */
 /*search page start */
-/* line 408, ../sass/main.scss */
+/* line 448, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
   width: 1130px;
 }
 
-/* line 415, ../sass/main.scss */
+/* line 455, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 420, ../sass/main.scss */
+/* line 460, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 427, ../sass/main.scss */
+/* line 467, ../sass/main.scss */
 .search-categories li {
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 432, ../sass/main.scss */
+/* line 472, ../sass/main.scss */
 .search-categories li:hover {
   color: #666666;
 }

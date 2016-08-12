@@ -1,4 +1,4 @@
-angular.module('cookbook').controller('cardDetailController',  function($scope, $http,$routeParams) {
+angular.module('cookbook').controller('tipDetailController',  function($scope, $http,$routeParams,$location,$anchorScroll) {
 
   // $scope.order_id = $routeParams.orderId;
     $http.get('/drupal/rest/node/'+$routeParams.cardUid).success(function(data)
@@ -58,6 +58,28 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
                 });
             }
         };
+
+        // $scope.scrollTo=function(id)
+        // {
+        //      $location.hash(id);
+        //      $anchorScroll();
+        // };
         
     });
+});
+
+
+
+angular.module('cookbook').directive('scrollOnClick', function($document) {
+  return {
+    restrict: 'A',
+    link: function(scope, element,attr)
+    {
+        target = document.getElementById(attr.scrollOnClick);
+        element.on('click', function() {
+        // $document.find('body').animate({scrollTop: target.getBoundingClientRect().top}, "slow");
+        window.scrollBy(0,target.getBoundingClientRect().top);
+      });
+    }
+  };
 });

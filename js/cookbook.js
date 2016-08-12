@@ -36,12 +36,19 @@ var searchFragsize=200;
 //init cookie
 (function()
 {
-	if(getCookie('totalNumber')==="")
+	if(getCookie('totalNumber')==='')
 	{
 		setCookie('totalNumber',0,60);
 		
 		var array=[];
 		var string=JSON.stringify(array);
 		setCookie('cardCollection',string,60);
+	}
+
+	if(getCookie('recommend')==='')
+	{
+		var array1=[];
+		var string1=JSON.stringify(array1);
+		setCookie('recommend',string1,60);
 	}
 }());

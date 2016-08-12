@@ -25,9 +25,9 @@ function getCookie(cname)
 
 
 //check if card added
-function cardIfAdded(cardType, cardID)
+function cardIfAdded(cookieName,cardType, cardID)
 {
-	var cardArray=JSON.parse(getCookie('cardCollection'));
+	var cardArray=JSON.parse(getCookie(cookieName));
 	
 
 	for(var i=0;i<cardArray.length;i++)

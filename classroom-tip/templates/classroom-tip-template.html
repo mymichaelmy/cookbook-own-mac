@@ -1,0 +1,43 @@
+<div class="card-detail-wrapper">
+	<div class="heading">
+		<h1>{{card.title}}</h1>
+		<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)">recommend this</button></br>
+		<button ng-click="addToCollection(card.type,card.nid)">add this to your collection</button></br>
+	</div>
+	<div class="lower-content">
+		<div class="left-sidebar">
+			<ul>
+				<li><a scroll-on-click="about">About</a></li>
+				<li><a scroll-on-click="goals">Learning Goals</a></li>
+				<li><a scroll-on-click="consider">Things to consider</a></li>
+				<li><a scroll-on-click="discussion">Discussion</a></li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<div>
+				<h2>Provided By</h2>
+				<p><strong>{{card.field_author.und[0].value}}</strong>{{card.field_author_title.und[0].value}}</p>
+			</div>
+			<div>
+				<h2 id="about">About</h2>
+				<p>{{card.field_about.und[0].value}}</p>
+			</div>
+			<div>
+				<h2 id="goals">Learning goals</h2>
+				<p>{{card.field_learning_goals.und[0].value}}</p>
+			</div>
+
+			<div>
+				<h2 id="consider">Things to consider</h2>
+				<p>{{card.field_things_to_consider.und[0].value}}</p>
+			</div>
+
+			<div ng-controller="DisqusController as disqus" identifier="disIdentifier" id="discussion">
+				<dir-disqus config="disqusConfig"></dir-disqus>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
