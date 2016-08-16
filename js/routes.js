@@ -15,11 +15,11 @@ angular.module('cookbook')
             templateUrl: '/templates/methods-template.html',
             controller: 'cardDetailController'
         })
-        .when('/classroom_tip/:cardUid', {
+        .when('/class_tip/:cardUid', {
             templateUrl: '/classroom-tip/templates/classroom-tip-template.html',
             controller: 'tipDetailController'
         })
-        .when('/course/:cardUid', {
+        .when('/course_example/:cardUid', {
             templateUrl: '/templates/methods-template.html',
             controller: 'cardDetailController'
         })
