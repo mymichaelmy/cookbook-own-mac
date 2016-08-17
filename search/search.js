@@ -128,14 +128,14 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 		var addString='';
 		if($scope.filter.sm_field_author)
 		{
-			addString=toTitleCase($scope.filter.sm_field_author);
-			addString=replaceSpaceForSolr(addString);
+			// addString=toTitleCase($scope.filter.sm_field_author);//not needed because solr has changed to case insensitive
+			addString=replaceSpaceForSolr($scope.filter.sm_field_author);
 			$scope.currentUrl+='&fq=sm_field_author:'+addString;
 		}
 		if($scope.filter.sm_field_endorse)
 		{
-			addString=toTitleCase($scope.filter.sm_field_endorse);
-			addString=replaceSpaceForSolr(addString);
+			// addString=toTitleCase($scope.filter.sm_field_endorse);//not needed because solr has changed to case insensitive
+			addString=replaceSpaceForSolr($scope.filter.sm_field_endorse);
 			$scope.currentUrl+='&fq=sm_field_endorse:'+addString;
 		}
 
@@ -144,7 +144,7 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 				
 			$scope.totalNumber=data.response.numFound;
 			$scope.results=data.response.docs;
-
+			$scope.categories=data.facet_counts.facet_fields.bundle;  //renew category
 			$scope.highlighting=data.highlighting;
 
 			refreshPagers($scope.totalNumber);  //refresh pager on bottom
