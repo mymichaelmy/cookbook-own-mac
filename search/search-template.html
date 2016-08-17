@@ -10,6 +10,12 @@
 			<span class="category-count">({{category[1]}})</span>
 		</li>
 	</ul>
+
+	<form ng-submit="submitFilter()">
+		Professor:<input type="text" ng-model="filter.sm_field_author" name="sm_field_author" value=""><br/>
+		Endorse:<input type="text" ng-model="filter.sm_field_endorse" name="sm_field_endorse" value=""><br/>
+		<button type="submit">filter</button>
+	</form>
 	<div class="search-result" ng-repeat="result in results" >
 		<a ng-href="#!{{result.bundle}}/{{result.entity_id}}"><h2>{{result.label[0]}}</h2></a>
 
