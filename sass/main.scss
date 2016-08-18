@@ -496,6 +496,15 @@ form.search
 			border-width:1px;
 		}
 	}
+
+	h3
+	{
+		padding:20px 8px;
+		font-size:2rem;
+		font-weight: bold;
+		border-bottom-style:solid;
+		border-bottom-width:1px;
+	}
 }
 
 strong
@@ -510,14 +519,36 @@ strong
 
 .search-categories
 {	
+	padding:20px 8px;
+	
 	li
 	{
+		display: inline;
+		padding:4px 2px 4px 8px;
 		font-size:1.6rem;
 		cursor:pointer;
+		
+		&.current
+		{
+			color:#ffffff;
+			background-color:#333;
+			border-radius: (4px);
+		}
 
 		&:hover
 		{
 			color:#666666;
+		}
+
+		// &+li:before
+		// {
+		// 	content: '•';
+		// 	display: inline;
+		// }
+		// 
+		&+li
+		{
+			margin-left:10px;
 		}
 	}
 }
