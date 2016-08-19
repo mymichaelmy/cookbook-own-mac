@@ -162,7 +162,10 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 	{
 		
 		$scope.currentUrl=$scope.currentUrl.replace(/&sort.*desc/g,'');
-		$scope.currentUrl=$scope.currentUrl+'&sort='+$scope.sort+'%20desc';
+		if($scope.sort)
+		{
+			$scope.currentUrl=$scope.currentUrl+'&sort='+$scope.sort+'%20desc';
+		}
 		
 
 		$http.get($scope.currentUrl).success(function(data)
