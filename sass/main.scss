@@ -519,6 +519,7 @@ strong
 
 .search-categories
 {	
+	display:inline-block;
 	padding:20px 8px;
 	
 	li
@@ -553,6 +554,12 @@ strong
 	}
 }
 
+.search-sort
+{
+	display:inline-block;
+	margin-left:16px;
+	font-size:1.8rem;
+}
 /*search page end*/
 
 // collection page start

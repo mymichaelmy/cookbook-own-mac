@@ -458,32 +458,40 @@ strong {
 
 /* line 520, ../sass/main.scss */
 .search-categories {
+  display: inline-block;
   padding: 20px 8px;
 }
-/* line 524, ../sass/main.scss */
+/* line 525, ../sass/main.scss */
 .search-categories li {
   display: inline;
   padding: 4px 2px 4px 8px;
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 531, ../sass/main.scss */
+/* line 532, ../sass/main.scss */
 .search-categories li.current {
   color: #ffffff;
   background-color: #333;
   border-radius: 4px;
 }
-/* line 538, ../sass/main.scss */
+/* line 539, ../sass/main.scss */
 .search-categories li:hover {
   color: #666666;
 }
-/* line 549, ../sass/main.scss */
+/* line 550, ../sass/main.scss */
 .search-categories li + li {
   margin-left: 10px;
 }
 
+/* line 557, ../sass/main.scss */
+.search-sort {
+  display: inline-block;
+  margin-left: 16px;
+  font-size: 1.8rem;
+}
+
 /*search page end*/
-/* line 561, ../sass/main.scss */
+/* line 568, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }

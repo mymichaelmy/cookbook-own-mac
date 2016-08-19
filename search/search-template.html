@@ -11,7 +11,12 @@
 			<span class="category-count">({{category[1]}})</span>
 		</li>
 	</ul>
-
+	<form class="search-sort">
+		<select ng-model="sort" ng-change="sortResult()">
+			<option value="its_field_recommended">Most recommended</option>
+			<option value="timestamp">Most recent</option>
+		</select>
+	</form>
 	<form ng-submit="submitFilter()">
 		Professor:<input type="text" ng-model="filter.sm_field_author" name="sm_field_author" value=""><br/>
 		Endorse:<input type="text" ng-model="filter.sm_field_endorse" name="sm_field_endorse" value=""><br/>

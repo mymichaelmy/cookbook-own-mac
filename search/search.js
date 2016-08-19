@@ -66,7 +66,7 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 
 			url+=('&start='+(num-1)*10);
 
-			$http.get(url).success(function(data)
+			$http.get($scope.currentUrl).success(function(data)
 			{
 				
 
@@ -154,6 +154,23 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 		});
 
 
+	};
+
+	//sorting funciton
+	$scope.sort='';
+	$scope.sortResult=function()
+	{
+		
+		$scope.currentUrl=$scope.currentUrl.replace(/&sort.*desc/g,'');
+		$scope.currentUrl=$scope.currentUrl+'&sort='+$scope.sort+'%20desc';
+		
+
+		$http.get($scope.currentUrl).success(function(data)
+		{
+			$scope.results=data.response.docs;
+			$scope.highlighting=data.highlighting;
+			$scope.currentPage=1;
+		});
 	};
 
 });
