@@ -1,17 +1,19 @@
 <div class="collection-wrapper section-list container">
 	<!-- should judge if exist -->
-	<div class="card col-md-3" ng-repeat="card in cards">
-			<div class="bg-image">
-				<img ng-src="{{card.imgSrc}}" alt="">
-				<div class="title"><h2>{{card.title}}</h2>
+	<div class="clearfix">
+		<div class="card col-md-3" ng-repeat="card in cards">
+				<div class="bg-image">
+					<img ng-src="{{card.imgSrc}}" alt="">
+					<div class="title"><h2>{{card.title}}</h2>
+					</div>
 				</div>
-			</div>
-			
-			<p>{{card.summary}}</p>
-			<a href="#!method_card/{{card.nid}}">Read more &gt; <i class="icon-right-arrow"></i></a>
+				
+				<p>{{card.summary}}</p>
+				<a href="#!method_card/{{card.nid}}">Read more &gt; <i class="icon-right-arrow"></i></a>
+		</div>
 	</div>
-	
 	<!-- take into account the url will change when hosted online, remember to modify it -->
+	</br>
 	<form name="zips" action="/action.php" method="post">
 		<input ng-repeat="card in cards" type="checkbox" name="files[]" value="{{card.fileURL}}"/>
 		<!-- <input type="submit" id="submit" name="createzip" value="Download All Seleted Files" > -->
