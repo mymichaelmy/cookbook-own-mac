@@ -463,8 +463,8 @@ strong {
 }
 /* line 525, ../sass/main.scss */
 .search-categories li {
-  display: inline;
-  padding: 4px 2px 4px 8px;
+  display: inline-block;
+  padding: 4px;
   font-size: 1.6rem;
   cursor: pointer;
 }
@@ -494,4 +494,18 @@ strong {
 /* line 568, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
+}
+
+/* line 582, ../sass/main.scss */
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: white;
+  padding: 6px 8px;
+  font-size: 1.6rem;
+}
+/* line 593, ../sass/main.scss */
+form select::-ms-expand {
+  display: none;
 }

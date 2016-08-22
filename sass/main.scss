@@ -524,8 +524,8 @@ strong
 	
 	li
 	{
-		display: inline;
-		padding:4px 2px 4px 8px;
+		display: inline-block;
+		padding:4px;
 		font-size:1.6rem;
 		cursor:pointer;
 		
@@ -574,3 +574,35 @@ strong
 }
 
 // collection ends
+
+
+//form style
+form
+{
+	select
+	{
+	
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		
+		background-color:white;
+		padding:6px 8px;
+		font-size: 1.6rem;
+		
+		&::-ms-expand
+		{
+			display: none;
+		}
+
+		option
+		{
+			// display:none;
+		}
+
+	}
+}
+
+
+
+//form style ends

@@ -57,7 +57,7 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 		if($scope.currentPage!==num)
 		{
 			var url=$scope.currentUrl;
-
+			//don't need to store status of page, so don't modify currentUrl
 
 			if($scope.currentCategory!=='all')
 			{
@@ -66,7 +66,7 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 
 			url+=('&start='+(num-1)*10);
 
-			$http.get($scope.currentUrl).success(function(data)
+			$http.get(url).success(function(data)
 			{
 				
 

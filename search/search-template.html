@@ -13,10 +13,11 @@
 	</ul>
 	<form class="search-sort">
 		<select ng-model="sort" ng-change="sortResult()">
-			<option value="">default</option>
-			<option value="its_field_recommended">Most recommended</option>
-			<option value="timestamp">Most recent</option>
+			<option id="option-relevance" value="">relevance</option>
+			<option id="option-recommended" value="its_field_recommended">Most recommended</option>
+			<option id="option-recent" value="timestamp">Most recent</option>
 		</select>
+		
 	</form>
 	<form ng-submit="submitFilter()">
 		Professor:<input type="text" ng-model="filter.sm_field_author" name="sm_field_author" value=""><br/>
