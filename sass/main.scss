@@ -134,8 +134,8 @@ header
 	//when no bootstrap
 	// width:$widthOfList+px;
 	// margin:0 auto;
-	padding-top:100px;
-	padding-bottom:100px;
+	padding-top:20px;
+	padding-bottom:20px;
 	
 
 	// text-align:center;
@@ -159,6 +159,10 @@ header
 		// width: 330px;
 		font-size: 1.8rem;
 		text-align: left;
+
+		
+		margin-top: 20px;
+		
 
 		&:nth-of-type(#{$columnsInRow})
 		{
@@ -421,13 +425,7 @@ form.search
 
 		.left-sidebar
 		{
-			position:fixed;
-			width:200px;
-			height:100%;
 			
-			padding-right:20px;
-			line-height: 1.5;
-			font-size: 1.6rem;
 
 			li
 			{
@@ -452,9 +450,6 @@ form.search
 
 		.right-content
 		{
-			margin-left:200px;
-			padding-left:20px;
-			line-height: 1.5;
 
 			h2
 			{
@@ -471,9 +466,52 @@ form.search
 }
 
 
-
 /* recipes style end  */
 
+
+
+/*for left sidebar and right content*/
+.left-sidebar
+{
+	position:fixed;
+	width:200px;
+	height:100%;
+			
+	padding-right:20px;
+	line-height: 1.5;
+	font-size: 1.6rem;
+}
+
+.right-content
+{
+	margin-left:200px;
+	padding-left:20px;
+	line-height: 1.5;
+
+}
+
+.explore-wrapper
+{
+	&.lower-content
+	{
+		position:relative;
+		// margin:200px auto 0;
+		// width:$widthOfList+px;
+		margin-top: 100px;
+	}
+
+	.card:nth-of-type(3n+1)
+	{
+		clear:both;
+	}
+
+	.explore-sort
+	{
+		display: inline-block;
+	}
+}
+
+/*for left sidebar and right content ended*/
 
 
 /*search page start */
@@ -483,8 +521,20 @@ form.search
 	padding-top:42px;
 	// width:$widthOfList+px;
 	
-	.my-pager
+	
+
+	h3
 	{
+		padding:20px 8px;
+		font-size:2rem;
+		font-weight: bold;
+		border-bottom-style:solid;
+		border-bottom-width:1px;
+	}
+}
+
+.my-pager
+{
 		li
 		{
 			display: inline;
@@ -495,16 +545,6 @@ form.search
 			border-style:solid;
 			border-width:1px;
 		}
-	}
-
-	h3
-	{
-		padding:20px 8px;
-		font-size:2rem;
-		font-weight: bold;
-		border-bottom-style:solid;
-		border-bottom-width:1px;
-	}
 }
 
 strong
@@ -517,7 +557,7 @@ strong
 	margin-bottom:20px;
 }
 
-.search-categories
+.search-categories,.explore-categories
 {	
 	display:inline-block;
 	padding:20px 8px;
