@@ -2,7 +2,13 @@
 
 	<div class="left-sidebar">
 		<ul>
-			<li></li>
+			<h3>Endorsed by</h3>
+			<li ng-repeat="endorsement in endorsements">{{endorsement[0]}}</li>
+		</ul>
+
+		<ul>
+			<h3>Professor</h3>
+			<li ng-repeat="professor in professors">{{professor[0]}}</li>
 		</ul>
 	</div>
 	

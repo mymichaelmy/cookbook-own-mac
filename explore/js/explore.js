@@ -2,7 +2,7 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 {
 
 	//init
-	var url=$scope.currentUrl=rootURL+solrPort+"/solr/drupal/select?"+"wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle";
+	var url=$scope.currentUrl=rootURL+solrPort+"/solr/drupal/select?"+"wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle&facet.field=sm_field_author&facet.field=sm_field_endorse";
 	$scope.currentCategory="all";
 
 
@@ -13,6 +13,9 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
         $scope.results=data.response.docs;
        
         $scope.categories=data.facet_counts.facet_fields.bundle;
+
+        $scope.professors=data.facet_counts.facet_fields.sm_field_author;
+        $scope.endorsements=data.facet_counts.facet_fields.sm_field_endorse;
 
         refreshPagers($scope.totalNumber);
 
