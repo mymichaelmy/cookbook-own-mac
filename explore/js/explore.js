@@ -20,6 +20,7 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
     });
 	//init ends
 
+	//uitility functions
 	function refreshPagers(totalNumber)
 	{
 		$scope.pagers=[];
@@ -28,6 +29,37 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 			$scope.pagers.push(i);
 		}
 	}
+
+
+	$scope.goToPage=function(num)
+    {
+		if($scope.currentPage!==num)
+		{
+			var url=$scope.currentUrl;
+			//don't need to store status of page, so don't modify currentUrl
+
+			if($scope.currentCategory!=='all')
+			{
+				url+=('&fq=bundle:'+$scope.currentCategory);
+			}
+
+			url+=('&start='+(num-1)*10);
+
+			$http.get(url).success(function(data)
+			{
+				
+
+				$scope.results=data.response.docs;
+
+				$scope.highlighting=data.highlighting;
+
+				$scope.currentPage=num;
+       
+			});
+
+		}
+    };
+
 
 	//set category
 	$scope.setCategory=function(category,numberInCategory)
@@ -60,5 +92,26 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 				$scope.currentPage=1;
 			});
 		}
+	};
+
+
+
+	$scope.sort='';
+	$scope.sortResult=function()
+	{
+		
+		$scope.currentUrl=$scope.currentUrl.replace(/&sort.*desc/g,'');
+		if($scope.sort)
+		{
+			$scope.currentUrl=$scope.currentUrl+'&sort='+$scope.sort+'%20desc';
+		}
+		
+
+		$http.get($scope.currentUrl).success(function(data)
+		{
+			$scope.results=data.response.docs;
+			$scope.highlighting=data.highlighting;
+			$scope.currentPage=1;
+		});
 	};
 });
