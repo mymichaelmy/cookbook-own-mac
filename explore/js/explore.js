@@ -5,6 +5,7 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 	var url=$scope.currentUrl=rootURL+solrPort+"/solr/drupal/select?"+"wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle&facet.field=sm_field_author&facet.field=sm_field_endorse";
 	$scope.currentCategory="all";
 
+	$scope.filterStatus={};
 
 	$http.get(url).success(function(data)
     {
@@ -54,7 +55,7 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 
 				$scope.results=data.response.docs;
 
-				$scope.highlighting=data.highlighting;
+				// $scope.highlighting=data.highlighting;
 
 				$scope.currentPage=num;
        
@@ -65,36 +66,53 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 
 
 	//set category
-	$scope.setCategory=function(category,numberInCategory)
+	$scope.setCategory=function(categoryTitle,categoryValue,numberInCategory)
     {
-		if(category!=$scope.currentCategory)
-		{
-			$scope.currentCategory=category;
-			// console.log($scope.currentCategory); for testing
-			// 
-			var url=$scope.currentUrl;
-
-			if(category!=='all')
+		if((categoryValue!=$scope.currentCategory)||($scope.filterStatus[categoryTitle]!=categoryValue))
 			{
-				url+=("&fq=bundle:"+category);
-			}
-
-			else
-			{
-				numberInCategory=$scope.totalNumber;
-			}
-
-			$http.get(url).success(function(data)
-			{
+				$scope.currentCategory=categoryValue;
+				// console.log($scope.currentCategory); for testing
+				// 
+				// 
+				//need modify the currentUrl which is different from search.js
 				
+				
+				//format the name of professors
+				var stringWithSlash=replaceSpaceForSolr(categoryValue);
+				
+				var regObj=new RegExp('&fq='+categoryTitle+'(.*?)(&|$)','g');
+				$scope.currentUrl=$scope.currentUrl.replace(regObj,'');
+				$scope.currentUrl=$scope.currentUrl.replace('&fq=bundle','');
 
-				$scope.results=data.response.docs;
+				if(categoryValue!=='all')
+				{
+					$scope.currentUrl+=('&fq='+categoryTitle+':'+stringWithSlash);
+				}
 
-				refreshPagers(numberInCategory);  //refresh pager on bottom
-       
-				$scope.currentPage=1;
-			});
-		}
+
+				$http.get($scope.currentUrl).success(function(data)
+				{
+					
+
+					//update filter status
+					$scope.filterStatus[categoryTitle]=categoryValue;
+					//
+					$scope.results=data.response.docs;
+
+					if(categoryTitle!='bundle')
+					{
+						//update the bundle tab
+						$scope.totalNumber=data.response.numFound;
+						$scope.categories=data.facet_counts.facet_fields.bundle;
+						$scope.currentCategory='all';
+					}
+					refreshPagers(numberInCategory);  //refresh pager on bottom
+					
+					$scope.currentPage=1;
+					
+
+				});
+			}
 	};
 
 

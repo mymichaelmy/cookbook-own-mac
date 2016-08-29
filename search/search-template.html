@@ -2,7 +2,7 @@
 	
 	<h3>{{totalNumber}} Match for {{searchTerm}}</h3>
 	<ul class="search-categories">
-		<li ng-click="setCategory('all')" ng-class="{'current':currentCategory=='all'}">
+		<li ng-click="setCategory('all',totalNumber)" ng-class="{'current':currentCategory=='all'}">
 			<span>all</span>
 			<span>({{totalNumber}})</span>
 		</li>

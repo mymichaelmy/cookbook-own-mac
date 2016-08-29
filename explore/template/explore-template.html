@@ -3,23 +3,23 @@
 	<div class="left-sidebar">
 		<ul>
 			<h3>Endorsed by</h3>
-			<li ng-repeat="endorsement in endorsements">{{endorsement[0]}}</li>
+			<li ng-repeat="endorsement in endorsements" ng-click="setCategory('sm_field_endorse',endorsement[0],endorsement[1])" ng-class="{'current':filterStatus.sm_field_endorse==endorsement[0]}">{{endorsement[0]}}</li>
 		</ul>
 
 		<ul>
 			<h3>Professor</h3>
-			<li ng-repeat="professor in professors">{{professor[0]}}</li>
+			<li ng-repeat="professor in professors" ng-click="setCategory('sm_field_author',professor[0],professor[1])" ng-class="{'current':filterStatus.sm_field_author==professor[0]}">{{professor[0]}}</li>
 		</ul>
 	</div>
 	
 
 	<div class="right-content">
 		<ul class="search-categories">
-			<li ng-click="setCategory('all')" ng-class="{'current':currentCategory=='all'}">
+			<li ng-click="setCategory('bundle','all',totalNumber)" ng-class="{'current':currentCategory=='all'}">
 				<span>all</span>
 				<span>({{totalNumber}})</span>
 			</li>
-			<li ng-repeat="category in categories" ng-click="setCategory(category[0],category[1])" ng-class="{'current':currentCategory==category[0]}">
+			<li ng-repeat="category in categories" ng-click="setCategory('bundle',category[0],category[1])" ng-class="{'current':currentCategory==category[0]}">
 				<span class="category-title"> {{category[0]|noDash}}</span>
 				<span class="category-count">({{category[1]}})</span>
 			</li>

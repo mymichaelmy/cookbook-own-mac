@@ -515,6 +515,32 @@ form.search
 		float: right;
 		margin-bottom: 100px;
 	}
+
+
+	ul
+	{
+		h3
+		{
+			font-weight:bold;
+		}
+
+		li
+		{
+			cursor:pointer;
+			text-transform: capitalize;
+			&:hover
+			{
+				color:#666666;
+			}
+
+			&.current
+			{
+				color:#ffffff;
+				background-color:#333;
+				border-radius: (4px);
+			}
+		}
+	}
 }
 
 /*for left sidebar and right content ended*/

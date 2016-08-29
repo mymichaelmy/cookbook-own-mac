@@ -24,24 +24,7 @@ function getCookie(cname)
 }
 
 
-//check if card added
-function cardIfAdded(cookieName,cardType, cardID)
-{
-	var cardArray=JSON.parse(getCookie(cookieName));
-	
 
-	for(var i=0;i<cardArray.length;i++)
-	{
-		if(cardArray[i].cardID===cardID)
-		{
-			return true;
-		}
-
-	}
-	
-
-	return false;
-}
 
 function toTitleCase(str)
 {

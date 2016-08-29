@@ -443,15 +443,34 @@ form.search label i {
   float: right;
   margin-bottom: 100px;
 }
+/* line 522, ../sass/main.scss */
+.explore-wrapper ul h3 {
+  font-weight: bold;
+}
+/* line 527, ../sass/main.scss */
+.explore-wrapper ul li {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+/* line 531, ../sass/main.scss */
+.explore-wrapper ul li:hover {
+  color: #666666;
+}
+/* line 536, ../sass/main.scss */
+.explore-wrapper ul li.current {
+  color: #ffffff;
+  background-color: #333;
+  border-radius: 4px;
+}
 
 /*for left sidebar and right content ended*/
 /*search page start */
-/* line 524, ../sass/main.scss */
+/* line 550, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
 }
-/* line 532, ../sass/main.scss */
+/* line 558, ../sass/main.scss */
 .search-result-wrapper h3 {
   padding: 20px 8px;
   font-size: 2rem;
@@ -460,7 +479,7 @@ form.search label i {
   border-bottom-width: 1px;
 }
 
-/* line 544, ../sass/main.scss */
+/* line 570, ../sass/main.scss */
 .my-pager li {
   display: inline;
   margin-right: 6px;
@@ -471,44 +490,44 @@ form.search label i {
   border-width: 1px;
 }
 
-/* line 556, ../sass/main.scss */
+/* line 582, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 561, ../sass/main.scss */
+/* line 587, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 566, ../sass/main.scss */
+/* line 592, ../sass/main.scss */
 .search-categories, .explore-categories {
   display: inline-block;
   padding: 20px 8px;
 }
-/* line 571, ../sass/main.scss */
+/* line 597, ../sass/main.scss */
 .search-categories li, .explore-categories li {
   display: inline-block;
   padding: 4px;
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 578, ../sass/main.scss */
+/* line 604, ../sass/main.scss */
 .search-categories li.current, .explore-categories li.current {
   color: #ffffff;
   background-color: #333;
   border-radius: 4px;
 }
-/* line 585, ../sass/main.scss */
+/* line 611, ../sass/main.scss */
 .search-categories li:hover, .explore-categories li:hover {
   color: #666666;
 }
-/* line 596, ../sass/main.scss */
+/* line 622, ../sass/main.scss */
 .search-categories li + li, .explore-categories li + li {
   margin-left: 10px;
 }
 
-/* line 603, ../sass/main.scss */
+/* line 629, ../sass/main.scss */
 .search-sort {
   display: inline-block;
   margin-left: 16px;
@@ -516,12 +535,12 @@ strong {
 }
 
 /*search page end*/
-/* line 614, ../sass/main.scss */
+/* line 640, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
 
-/* line 628, ../sass/main.scss */
+/* line 654, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -530,7 +549,7 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 639, ../sass/main.scss */
+/* line 665, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }

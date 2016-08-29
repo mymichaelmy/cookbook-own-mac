@@ -14,7 +14,12 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             //
                 var newCard={'cardType':cardType,'cardID':cardID};
                 var currentNumber=Number(getCookie('totalNumber'))+1;
-                var currentCollection=JSON.parse(getCookie('cardCollection'));
+                var currentCollection=[];
+                if(getCookie('cardCollection')!=='')
+                {
+                    currentCollection=JSON.parse(getCookie('cardCollection'));
+                }
+                   
 
 
                 currentCollection.push(newCard);
@@ -61,3 +66,27 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
         
     });
 });
+
+
+//check if card added
+function cardIfAdded(cookieName,cardType, cardID)
+{
+    var cardArray=[];
+    if(getCookie(cookieName)!=='')
+    {
+        cardArray=JSON.parse(getCookie(cookieName));
+    }
+    
+
+    for(var i=0;i<cardArray.length;i++)
+    {
+        if(cardArray[i].cardID===cardID)
+        {
+            return true;
+        }
+
+    }
+    
+
+    return false;
+}
