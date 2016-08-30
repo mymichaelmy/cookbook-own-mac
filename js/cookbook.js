@@ -1,21 +1,11 @@
-angular.module('cookbook',['ngRoute','angularUtils.directives.dirDisqus']).controller('testController',function($scope, $http)
+angular.module('cookbook',['ngRoute','angularUtils.directives.dirDisqus']).controller('indexController',function($scope, $http)
 	{
-		$scope.foobar='angular loaded';
-		$http.get('/drupal/json/recipes').success(function(data)  //should make sure the path is correct before migration
+		$scope.currentTab="home";
+
+		$scope.tabClick=function(newTab)
 		{
-
-			
-			$scope.recipes = (function()
-			{
-			
-				return data.nodes;
-
-			}());
-
-			// {
-			//return data.notes;
-			// })();
-		});
+			$scope.currentTab=newTab;
+		};
 	});
 angular.module('cookbook').config(['$locationProvider',function ($locationProvider)
 	{

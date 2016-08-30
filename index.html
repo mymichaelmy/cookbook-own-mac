@@ -9,13 +9,13 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
 	<!-- <base href="/"> -->
 </head>
-<body ng-controller="">
+<body ng-controller="indexController">
 	<header>
 		<nav>
 			<ul>
-				<li class="current"><a href="#!home">Home</a></li>
-				<li><a href="#!explore">Explore</a></li>
-				<li><a href="#!collection">Collection</a></li>
+				<li ng-class="{'current':currentTab==='home'}" ng-click="tabClick('home')"><a href="#!home">Home</a></li>
+				<li ng-class="{'current':currentTab==='explore'}"><a href="#!explore" ng-click="tabClick('explore')">Explore</a></li>
+				<li ng-class="{'current':currentTab==='collection'}"><a href="#!collection" ng-click="tabClick('collection')">Collection</a></li>
 			</ul>
 		</nav>
 
@@ -58,8 +58,10 @@
 	<!-- disque comment count ends here-->
 
 
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script>window.angular || document.write('<script src="/angular-1.5.8.min.js"><\/script> <script src="/angular-route-1.5.8.min.js"><\/script>');</script>
+
     
     <script src="js/utility.js"></script>
 
