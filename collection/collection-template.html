@@ -14,7 +14,7 @@
 	</div>
 	<!-- take into account the url will change when hosted online, remember to modify it -->
 	</br>
-	<form name="zips" action="/action.php" method="post">
+	<form name="zips" action="/php/action.php" method="post">
 		<input ng-repeat="card in cards" type="checkbox" name="files[]" value="{{card.fileURL}}"/>
 		<!-- <input type="submit" id="submit" name="createzip" value="Download All Seleted Files" > -->
 		<button type="submit" id="submit" name="createzip" value="Download All Seleted Files">Download All Seleted Files</button>
@@ -22,10 +22,10 @@
 
 
 
-	<form name="zips" action="php/action.php" method="post">
+	<!-- <form name="zips" action="php/action.php" method="post">
 <input type="checkbox" name="files[]" value="SampleFile.pdf"/><label>PDF File</label><br />
 <input type="checkbox" name="files[]" value="SampleFile.docx"/><label>Word File</label><br />
 <input type="checkbox" name="files[]" value="HTML5.png"/><label>Image File</label><br />
 <input type="submit" id="submit" name="createzip" value="Download All Seleted Files" >
 	
-</div>
+</div> -->

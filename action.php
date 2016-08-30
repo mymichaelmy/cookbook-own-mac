@@ -1,6 +1,6 @@
 <?php
 
-$fileDir="http://127.0.0.1:8080/drupal/sites/default/files/";
+// $fileDir="http://127.0.0.1:8080/drupal/sites/default/files/";
 
 if(isset($_POST['files']))
 {
