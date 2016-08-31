@@ -1,0 +1,42 @@
+<div class="search-result-wrapper container">
+	
+	<h3>{{totalNumber}} Match for {{searchTerm}}</h3>
+	<ul class="search-categories">
+		<li ng-click="setCategory('all',totalNumber)" ng-class="{'current':currentCategory=='all'}">
+			<span>all</span>
+			<span>({{totalNumber}})</span>
+		</li>
+		<li ng-repeat="category in categories" ng-click="setCategory(category[0],category[1])" ng-class="{'current':currentCategory==category[0]}">
+			<span class="category-title"> {{category[0]|noDash}}</span>
+			<span class="category-count">({{category[1]}})</span>
+		</li>
+	</ul>
+	<form class="search-sort">
+		<select ng-model="sort" ng-change="sortResult()">
+			<option id="option-relevance" value="">relevance</option>
+			<option id="option-recommended" value="its_field_recommended">Most recommended</option>
+			<option id="option-recent" value="timestamp">Most recent</option>
+		</select>
+		
+	</form>
+	<form ng-submit="submitFilter()">
+		Professor:<input type="text" ng-model="filter.sm_field_author" name="sm_field_author" value=""><br/>
+		Endorse:<input type="text" ng-model="filter.sm_field_endorse" name="sm_field_endorse" value=""><br/>
+		<button type="submit">filter</button>
+	</form>
+	<div class="search-result" ng-repeat="result in results" >
+		<a ng-href="#!{{result.bundle}}/{{result.entity_id}}"><h2>{{result.label[0]}}</h2></a>
+
+		<!-- orginal html -->
+		<!-- <p>{{highlighting[result.id].content[0]}}</p> -->
+		<p ng-bind-html="toTrustedHTML(highlighting[result.id].content[0])"></p>
+	</div>
+
+	<ul class="my-pager">
+		<li ng-repeat="pager in pagers" ng-click="goToPage($index+1)">{{$index+1}}</li>
+	</ul>
+</div>
+
+
+
+<!-- ng-show="currentCategory==='all'||currentCategory===result.bundle" -->
