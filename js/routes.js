@@ -4,35 +4,35 @@ angular.module('cookbook')
 .config(['$routeProvider',function($routeProvider){
     $routeProvider.
         when('/notes', {
-            templateUrl: '/templates/index-template.html',
+            templateUrl: '/app/index/templates/index-template.html',
             // controller: 'cardsController'
         })
         .when('/', {
-            templateUrl: '/templates/index-template.html',
+            templateUrl: '/app/index/templates/index-template.html',
             // controller: 'cardsController'
         })
         .when('/method_card/:cardUid', {
-            templateUrl: '/templates/methods-template.html',
+            templateUrl: '/app/method_card/templates/methods-template.html',
             controller: 'cardDetailController'
         })
         .when('/class_tip/:cardUid', {
-            templateUrl: '/classroom-tip/templates/classroom-tip-template.html',
+            templateUrl: '/app/classroom-tip/templates/classroom-tip-template.html',
             controller: 'tipDetailController'
         })
         .when('/course_example/:cardUid', {
-            templateUrl: '/templates/methods-template.html',
+            templateUrl: '/app/method_card/templates/methods-template.html',
             controller: 'cardDetailController'
         })
         .when('/search/:searchTerm', {
-            templateUrl: '/search/search-template.html',
+            templateUrl: '/app/search/search-template.html',
             controller: 'searchResultController'
         })
         .when('/collection',{
-            templateUrl:'/collection/collection-template.html',
+            templateUrl:'/app/collection/collection-template.html',
             controller:'collectionController'
         })
         .when('/explore',{
-            templateUrl:'/explore/template/explore-template.html',
+            templateUrl:'/app/explore/templates/explore-template.html',
             controller:'exploreController'
         })
         .otherwise({
