@@ -31,7 +31,11 @@ angular.module('cookbook')
             templateUrl:'/app/collection/collection-template.html',
             controller:'collectionController'
         })
-        .when('/explore',{
+        .when('/explore/',{
+            templateUrl:'/app/explore/templates/explore-template.html',
+            controller:'exploreController'
+        })
+        .when('/explore/:category',{
             templateUrl:'/app/explore/templates/explore-template.html',
             controller:'exploreController'
         })

@@ -1,4 +1,4 @@
-angular.module('cookbook').controller('exploreController',  function($scope, $http)
+angular.module('cookbook').controller('exploreController',  function($scope, $http,$routeParams)
 {
 
 	//init
@@ -8,6 +8,13 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 	$scope.currentCategory="all";
 
 	$scope.filterStatus={};
+
+	//check if there are existing category
+	if($routeParams.category)
+	{
+		$scope.currentCategory=$routeParams.category;
+		$scope.currentUrl+=('&fq=bundle:'+$scope.currentCategory);
+	}
 
 	$http.get(url).success(function(data)
     {
