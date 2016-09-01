@@ -27,27 +27,44 @@ $marginOfNavbar:42;
 /*collection of shared styles*/
 h1
 {
-	font-size:3.6rem;
+	font-size:4.8rem;
 	font-weight:bold;
 }
 
 h2
 {
-	font-size:2.8rem;
+	font-size:3.2rem;
 	font-weight:bold;
 }
 
+h4
+{
+	font-size:2rem;
+	font-weight:normal;
+}
 p
 {
-	font-size:1.8rem;
+	font-size:1.6rem;
+	line-height:1.5;
 
 }
 
 button
 {
+	font-size:1.6rem;
 	cursor:pointer;
 }
 
+.hyperlink
+{
+	font-size:1.6rem;
+	color:#3d87d2;
+
+	&:link,:hover,:visited
+	{
+		color:#3d87d2;
+	}
+}
 /* end of collection of shared styles*/
 
 
@@ -65,7 +82,6 @@ html,body
 a:link,a:visited
 {
 	text-decoration:none;
-	color:inherit;
 }
 header
 {
@@ -79,7 +95,7 @@ header
 	
 	z-index:99;
 	font-size:1.8rem;
-	background-color:#ffffff;
+	background-color:#F4F4F4;
 	color:#000000;
 	
 
@@ -120,12 +136,74 @@ header
 .head-slide
 {
 	
-	background-color:#D8D8D8;
-
+	background-color:#ffffff;
+	padding-top:200px;
+	padding-bottom:100px;
 	.row
 	{
-		padding-top:250px;
-		padding-bottom:250px;
+		button
+		{
+			margin-left:15px;
+			padding:10px 18px;
+
+			color:#ffffff;
+			background-color:#3D87D2;
+			border-style:none;
+			@include border-radius(6px);
+			
+		}
+
+		h1
+		{
+			margin-top: 30px;
+			margin-bottom:60px;
+		}
+	}
+}
+
+//for the explanation of homepage
+.text-align-center
+{
+	
+	text-align:center;
+
+}
+
+.index-intro
+{
+	img
+	{
+		width: 100%;
+	}
+
+	.col-md-4
+	{
+		padding:0 30px;
+	}
+
+	h2,h4
+	{
+		margin:30px 0 20px;
+	}
+
+	.what-is-recipe
+	{
+		p
+		{
+			margin-bottom:50px;
+		}
+	}
+
+	text-align:center;  //for align alink to the center
+
+	h4+p
+	{
+		text-align:left;
+		margin-bottom:20px;
+	}
+	p+a
+	{
+		display: inline-block;
 	}
 }
 
