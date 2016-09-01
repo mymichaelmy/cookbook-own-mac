@@ -261,7 +261,7 @@ header nav li.current {
   -moz-box-shadow: #aaaaaa 0px 1px 6px;
   -webkit-box-shadow: #aaaaaa 0px 1px 6px;
   box-shadow: #aaaaaa 0px 1px 6px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   padding-bottom: 20px;
 }
 /* line 266, ../sass/main.scss */
@@ -530,17 +530,12 @@ form.search label i {
 .explore-wrapper .explore-sort {
   display: inline-block;
 }
-/* line 615, ../sass/main.scss */
-.explore-wrapper .my-pager {
-  float: right;
-  margin-bottom: 100px;
-}
-/* line 624, ../sass/main.scss */
+/* line 619, ../sass/main.scss */
 .explore-wrapper ul h3 {
   font-weight: bold;
   margin: 26px 0 10px;
 }
-/* line 630, ../sass/main.scss */
+/* line 625, ../sass/main.scss */
 .explore-wrapper ul .options-block {
   height: 100px;
   overflow: auto;
@@ -551,17 +546,17 @@ form.search label i {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 640, ../sass/main.scss */
+/* line 635, ../sass/main.scss */
 .explore-wrapper ul li {
   cursor: pointer;
   padding: 0 5px;
   text-transform: capitalize;
 }
-/* line 645, ../sass/main.scss */
+/* line 640, ../sass/main.scss */
 .explore-wrapper ul li:hover {
   color: #666666;
 }
-/* line 650, ../sass/main.scss */
+/* line 645, ../sass/main.scss */
 .explore-wrapper ul li.current {
   color: #ffffff;
   background-color: #333;
@@ -572,12 +567,12 @@ form.search label i {
 
 /*for left sidebar and right content ended*/
 /*search page start */
-/* line 664, ../sass/main.scss */
+/* line 659, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
 }
-/* line 672, ../sass/main.scss */
+/* line 667, ../sass/main.scss */
 .search-result-wrapper h3 {
   padding: 20px 8px;
   font-size: 2rem;
@@ -586,55 +581,72 @@ form.search label i {
   border-bottom-width: 1px;
 }
 
-/* line 684, ../sass/main.scss */
-.my-pager li {
+/* line 677, ../sass/main.scss */
+ul.my-pager {
+  text-align: right;
+  padding-right: 20px;
+  margin: 20px 0 10px;
+}
+/* line 682, ../sass/main.scss */
+ul.my-pager li {
   display: inline;
   margin-right: 6px;
-  padding: 3px 6px;
+  padding: 2px 9px;
   cursor: pointer;
   font-size: 1.6rem;
   border-style: solid;
   border-width: 1px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+}
+/* line 695, ../sass/main.scss */
+ul.my-pager li.current {
+  background-color: #333333;
+  color: #ffffff;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
 }
 
-/* line 696, ../sass/main.scss */
+/* line 704, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 701, ../sass/main.scss */
+/* line 709, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 706, ../sass/main.scss */
+/* line 714, ../sass/main.scss */
 .search-categories, .explore-categories {
   display: inline-block;
   padding: 20px 8px;
 }
-/* line 711, ../sass/main.scss */
+/* line 719, ../sass/main.scss */
 .search-categories li, .explore-categories li {
   display: inline-block;
   padding: 4px;
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 718, ../sass/main.scss */
+/* line 726, ../sass/main.scss */
 .search-categories li.current, .explore-categories li.current {
   color: #ffffff;
   background-color: #333;
   border-radius: 4px;
 }
-/* line 725, ../sass/main.scss */
+/* line 733, ../sass/main.scss */
 .search-categories li:hover, .explore-categories li:hover {
   color: #666666;
 }
-/* line 736, ../sass/main.scss */
+/* line 744, ../sass/main.scss */
 .search-categories li + li, .explore-categories li + li {
   margin-left: 10px;
 }
 
-/* line 743, ../sass/main.scss */
+/* line 751, ../sass/main.scss */
 .search-sort {
   display: inline-block;
   margin-left: 16px;
@@ -642,12 +654,12 @@ strong {
 }
 
 /*search page end*/
-/* line 754, ../sass/main.scss */
+/* line 762, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
 
-/* line 768, ../sass/main.scss */
+/* line 776, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -656,7 +668,7 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 779, ../sass/main.scss */
+/* line 787, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }

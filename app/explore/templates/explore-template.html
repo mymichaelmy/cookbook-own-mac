@@ -40,6 +40,9 @@
 				
 			</form>
 			
+			<ul class="my-pager">
+				<li ng-class="{'current':currentPage===($index+1)}" ng-repeat="pager in pagers" ng-click="goToPage($index+1)">{{$index+1}}</li>
+			</ul>
 			<div class="section-list section-method clearfix">
 				<div class="col-md-4" ng-repeat="result in results" >
 					<div class="card">
@@ -61,9 +64,7 @@
 				</div>
 			</div>
 
-			<ul class="my-pager">
-				<li ng-repeat="pager in pagers" ng-click="goToPage($index+1)">{{$index+1}}</li>
-			</ul>
+			
 
 		</div>
 	</div>
