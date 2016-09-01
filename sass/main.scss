@@ -256,9 +256,11 @@ header
 		// width: 330px;
 		font-size: 1.8rem;
 		text-align: left;
-
+		@include border-radius(4px,4px);
+		@include box-shadow(#aaaaaa 0px 1px 6px);
 		
 		margin-top: 20px;
+		padding-bottom:20px;
 		
 
 		&:nth-of-type(#{$columnsInRow})
@@ -282,6 +284,7 @@ header
 				width:100%;
 				height:225px;
 				background-color:#999999;
+				@include border-radius(4px 4px 0 0);
 			}
 
 		}
@@ -291,6 +294,7 @@ header
 		p
 		{
 			color:#686868;
+			padding: 0 10px;
 			//margin-bottom:12px;
 
 		}
@@ -570,7 +574,8 @@ form.search
 /*for left sidebar and right content*/
 .left-sidebar
 {
-	position:fixed;
+	position:relative;
+	float:left;
 	width:200px;
 	height:100%;
 			
@@ -619,11 +624,23 @@ form.search
 		h3
 		{
 			font-weight:bold;
+			margin: 26px 0 10px;
+		}
+		
+		.options-block
+		{
+			height:100px;
+			overflow: auto;
+			border-style:solid;
+			border-color:#aaaaaa;
+			border-width:1px;
+			@include border-radius(4px);
 		}
 
 		li
 		{
 			cursor:pointer;
+			padding:0 5px;
 			text-transform: capitalize;
 			&:hover
 			{
@@ -634,7 +651,7 @@ form.search
 			{
 				color:#ffffff;
 				background-color:#333;
-				border-radius: (4px);
+				@include border-radius(4px);
 			}
 		}
 	}

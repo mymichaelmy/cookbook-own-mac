@@ -255,38 +255,49 @@ header nav li.current {
 .section-list .card {
   font-size: 1.8rem;
   text-align: left;
+  -moz-border-radius: 4px / 4px;
+  -webkit-border-radius: 4px 4px;
+  border-radius: 4px / 4px;
+  -moz-box-shadow: #aaaaaa 0px 1px 6px;
+  -webkit-box-shadow: #aaaaaa 0px 1px 6px;
+  box-shadow: #aaaaaa 0px 1px 6px;
   margin-top: 20px;
+  padding-bottom: 20px;
 }
-/* line 264, ../sass/main.scss */
+/* line 266, ../sass/main.scss */
 .section-list .card:nth-of-type(3n) {
   margin-right: 0;
 }
-/* line 269, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 .section-list .card .bg-image {
   position: relative;
   width: 100%;
 }
-/* line 279, ../sass/main.scss */
+/* line 281, ../sass/main.scss */
 .section-list .card .bg-image img {
   width: 100%;
   height: 225px;
   background-color: #999999;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 4px 0 0;
 }
-/* line 291, ../sass/main.scss */
+/* line 294, ../sass/main.scss */
 .section-list .card p {
   color: #686868;
+  padding: 0 10px;
 }
-/* line 298, ../sass/main.scss */
+/* line 302, ../sass/main.scss */
 .section-list .card a {
   color: #989898;
 }
-/* line 305, ../sass/main.scss */
+/* line 309, ../sass/main.scss */
 .section-list .ratings {
   display: inline-block;
   margin: 15px 0;
   vertical-align: middle;
 }
-/* line 312, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 .section-list .label-video {
   display: inline-block;
   margin-left: 8px;
@@ -297,7 +308,7 @@ header nav li.current {
   border-radius: 8px;
   color: #ffffff;
 }
-/* line 324, ../sass/main.scss */
+/* line 328, ../sass/main.scss */
 .section-list h2 {
   display: inline-block;
   font-size: 2rem;
@@ -305,7 +316,7 @@ header nav li.current {
   vertical-align: middle;
 }
 
-/* line 337, ../sass/main.scss */
+/* line 341, ../sass/main.scss */
 .section-method h2 {
   position: absolute;
   width: 100%;
@@ -324,29 +335,29 @@ header nav li.current {
   color: #ffffff;
 }
 
-/* line 357, ../sass/main.scss */
+/* line 361, ../sass/main.scss */
 i {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 362, ../sass/main.scss */
+/* line 366, ../sass/main.scss */
 i.star {
   width: 23px;
   height: 19px;
 }
-/* line 367, ../sass/main.scss */
+/* line 371, ../sass/main.scss */
 i.solid {
   background-image: url('/images/Star-solid.png?1467834586');
   background-size: 100%;
 }
-/* line 373, ../sass/main.scss */
+/* line 377, ../sass/main.scss */
 i.hollow {
   background-image: url('/images/Star-hollow.png?1467834598');
   background-size: 100%;
 }
 
 /* below for version 3 */
-/* line 384, ../sass/main.scss */
+/* line 388, ../sass/main.scss */
 .section-list .right {
   float: right;
   margin-left: 38px;
@@ -354,11 +365,11 @@ i.hollow {
   height: 360px;
   background-color: grey;
 }
-/* line 394, ../sass/main.scss */
+/* line 398, ../sass/main.scss */
 .section-list p {
   line-height: 1.5;
 }
-/* line 401, ../sass/main.scss */
+/* line 405, ../sass/main.scss */
 .section-list button {
   margin-top: 26px;
   padding: 12px 16px;
@@ -379,20 +390,20 @@ i.hollow {
   clear: both;
 }
 
-/* line 420, ../sass/main.scss */
+/* line 424, ../sass/main.scss */
 .section-methods-1 {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #dddddd;
 }
 
-/* line 429, ../sass/main.scss */
+/* line 433, ../sass/main.scss */
 .section-lessons div.title {
   margin-top: 1.4rem;
 }
 
 /* search part starts*/
-/* line 438, ../sass/main.scss */
+/* line 442, ../sass/main.scss */
 form.search {
   display: inline-block;
   float: right;
@@ -400,7 +411,7 @@ form.search {
   position: relative;
   margin-top: 16px;
 }
-/* line 446, ../sass/main.scss */
+/* line 450, ../sass/main.scss */
 form.search input[type=search] {
   padding: 0 20px;
   width: 300px;
@@ -413,7 +424,7 @@ form.search input[type=search] {
   border-width: 1px;
   border-color: #979797;
 }
-/* line 459, ../sass/main.scss */
+/* line 463, ../sass/main.scss */
 form.search label i {
   position: absolute;
   right: 20px;
@@ -424,29 +435,29 @@ form.search label i {
 
 /*search part ends*/
 /* recipes style start  */
-/* line 475, ../sass/main.scss */
+/* line 479, ../sass/main.scss */
 .methods-wrapper {
   margin: 84px auto;
   padding-top: 42px;
   width: 1130px;
   line-height: 1.5;
 }
-/* line 481, ../sass/main.scss */
+/* line 485, ../sass/main.scss */
 .methods-wrapper h1 {
   font-size: 3.4rem;
   font-weight: bold;
 }
-/* line 487, ../sass/main.scss */
+/* line 491, ../sass/main.scss */
 .methods-wrapper h2 {
   font-size: 2.8rem;
   font-weight: bold;
 }
-/* line 493, ../sass/main.scss */
+/* line 497, ../sass/main.scss */
 .methods-wrapper p {
   font-size: 2rem;
 }
 
-/* line 503, ../sass/main.scss */
+/* line 507, ../sass/main.scss */
 .card-detail-wrapper .heading {
   position: fixed;
   top: 84px;
@@ -456,17 +467,17 @@ form.search label i {
   background-color: #999999;
   z-index: 9;
 }
-/* line 516, ../sass/main.scss */
+/* line 520, ../sass/main.scss */
 .card-detail-wrapper .lower-content {
   position: relative;
   margin-top: 230px;
 }
-/* line 527, ../sass/main.scss */
+/* line 531, ../sass/main.scss */
 .card-detail-wrapper .lower-content .left-sidebar li {
   position: relative;
   cursor: pointer;
 }
-/* line 532, ../sass/main.scss */
+/* line 536, ../sass/main.scss */
 .card-detail-wrapper .lower-content .left-sidebar li:hover:before {
   content: '';
   position: absolute;
@@ -477,20 +488,21 @@ form.search label i {
   margin-left: -8px;
   background-color: #333333;
 }
-/* line 551, ../sass/main.scss */
+/* line 555, ../sass/main.scss */
 .card-detail-wrapper .lower-content .right-content h2 {
   font-size: 2rem;
 }
-/* line 555, ../sass/main.scss */
+/* line 559, ../sass/main.scss */
 .card-detail-wrapper .lower-content .right-content div + div {
   margin-top: 26px;
 }
 
 /* recipes style end  */
 /*for left sidebar and right content*/
-/* line 571, ../sass/main.scss */
+/* line 575, ../sass/main.scss */
 .left-sidebar {
-  position: fixed;
+  position: relative;
+  float: left;
   width: 200px;
   height: 100%;
   padding-right: 20px;
@@ -498,59 +510,74 @@ form.search label i {
   font-size: 1.6rem;
 }
 
-/* line 582, ../sass/main.scss */
+/* line 587, ../sass/main.scss */
 .right-content {
   margin-left: 200px;
   padding-left: 20px;
   line-height: 1.5;
 }
 
-/* line 592, ../sass/main.scss */
+/* line 597, ../sass/main.scss */
 .explore-wrapper.lower-content {
   position: relative;
   margin-top: 100px;
 }
-/* line 600, ../sass/main.scss */
+/* line 605, ../sass/main.scss */
 .explore-wrapper .card:nth-of-type(3n+1) {
   clear: both;
 }
-/* line 605, ../sass/main.scss */
+/* line 610, ../sass/main.scss */
 .explore-wrapper .explore-sort {
   display: inline-block;
 }
-/* line 610, ../sass/main.scss */
+/* line 615, ../sass/main.scss */
 .explore-wrapper .my-pager {
   float: right;
   margin-bottom: 100px;
 }
-/* line 619, ../sass/main.scss */
+/* line 624, ../sass/main.scss */
 .explore-wrapper ul h3 {
   font-weight: bold;
+  margin: 26px 0 10px;
 }
-/* line 624, ../sass/main.scss */
+/* line 630, ../sass/main.scss */
+.explore-wrapper ul .options-block {
+  height: 100px;
+  overflow: auto;
+  border-style: solid;
+  border-color: #aaaaaa;
+  border-width: 1px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 640, ../sass/main.scss */
 .explore-wrapper ul li {
   cursor: pointer;
+  padding: 0 5px;
   text-transform: capitalize;
 }
-/* line 628, ../sass/main.scss */
+/* line 645, ../sass/main.scss */
 .explore-wrapper ul li:hover {
   color: #666666;
 }
-/* line 633, ../sass/main.scss */
+/* line 650, ../sass/main.scss */
 .explore-wrapper ul li.current {
   color: #ffffff;
   background-color: #333;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   border-radius: 4px;
 }
 
 /*for left sidebar and right content ended*/
 /*search page start */
-/* line 647, ../sass/main.scss */
+/* line 664, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
 }
-/* line 655, ../sass/main.scss */
+/* line 672, ../sass/main.scss */
 .search-result-wrapper h3 {
   padding: 20px 8px;
   font-size: 2rem;
@@ -559,7 +586,7 @@ form.search label i {
   border-bottom-width: 1px;
 }
 
-/* line 667, ../sass/main.scss */
+/* line 684, ../sass/main.scss */
 .my-pager li {
   display: inline;
   margin-right: 6px;
@@ -570,44 +597,44 @@ form.search label i {
   border-width: 1px;
 }
 
-/* line 679, ../sass/main.scss */
+/* line 696, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 684, ../sass/main.scss */
+/* line 701, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 689, ../sass/main.scss */
+/* line 706, ../sass/main.scss */
 .search-categories, .explore-categories {
   display: inline-block;
   padding: 20px 8px;
 }
-/* line 694, ../sass/main.scss */
+/* line 711, ../sass/main.scss */
 .search-categories li, .explore-categories li {
   display: inline-block;
   padding: 4px;
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 701, ../sass/main.scss */
+/* line 718, ../sass/main.scss */
 .search-categories li.current, .explore-categories li.current {
   color: #ffffff;
   background-color: #333;
   border-radius: 4px;
 }
-/* line 708, ../sass/main.scss */
+/* line 725, ../sass/main.scss */
 .search-categories li:hover, .explore-categories li:hover {
   color: #666666;
 }
-/* line 719, ../sass/main.scss */
+/* line 736, ../sass/main.scss */
 .search-categories li + li, .explore-categories li + li {
   margin-left: 10px;
 }
 
-/* line 726, ../sass/main.scss */
+/* line 743, ../sass/main.scss */
 .search-sort {
   display: inline-block;
   margin-left: 16px;
@@ -615,12 +642,12 @@ strong {
 }
 
 /*search page end*/
-/* line 737, ../sass/main.scss */
+/* line 754, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
 
-/* line 751, ../sass/main.scss */
+/* line 768, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -629,7 +656,7 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 762, ../sass/main.scss */
+/* line 779, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }

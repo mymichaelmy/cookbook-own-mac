@@ -1,10 +1,10 @@
 angular.module('cookbook',['ngRoute','angularUtils.directives.dirDisqus']).controller('indexController',function($scope, $http)
 	{
-		$scope.currentTab="home";
+		$scope.currentTab={'name':'home'};
 
 		$scope.tabClick=function(newTab)
 		{
-			$scope.currentTab=newTab;
+			$scope.currentTab.name=newTab;
 		};
 	});
 angular.module('cookbook').config(['$locationProvider',function ($locationProvider)

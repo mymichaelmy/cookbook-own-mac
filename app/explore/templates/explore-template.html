@@ -9,12 +9,13 @@
 		<div class="left-sidebar">
 			<ul>
 				<h3>Endorsed by</h3>
-				<li ng-repeat="endorsement in endorsements" ng-click="setCategory('sm_field_endorse',endorsement[0],endorsement[1])" ng-class="{'current':filterStatus.sm_field_endorse==endorsement[0]}">{{endorsement[0]}}</li>
+
+				<div class="options-block"><li ng-repeat="endorsement in endorsements" ng-click="setCategory('sm_field_endorse',endorsement[0],endorsement[1])" ng-class="{'current':filterStatus.sm_field_endorse==endorsement[0]}">{{endorsement[0]}}</li></div>
 			</ul>
 
 			<ul>
 				<h3>Professor</h3>
-				<li ng-repeat="professor in professors" ng-click="setCategory('sm_field_author',professor[0],professor[1])" ng-class="{'current':filterStatus.sm_field_author==professor[0]}">{{professor[0]}}</li>
+				<div class="options-block"><li ng-repeat="professor in professors" ng-click="setCategory('sm_field_author',professor[0],professor[1])" ng-class="{'current':filterStatus.sm_field_author==professor[0]}">{{professor[0]}}</li></div>
 			</ul>
 		</div>
 		
@@ -40,20 +41,22 @@
 			</form>
 			
 			<div class="section-list section-method clearfix">
-				<div class="card col-md-4" ng-repeat="result in results" >
-					<a ng-href="#!{{result.bundle}}/{{result.entity_id}}">
-						<div class="bg-image">
-							<img src="" alt="">
-							<h2>{{result.label[0]}}</h2>
-						</div>
-					</a>	
-						<!-- <p>{{card.summary}}</p> -->
-						<p>Posted by <strong>{{result.sm_field_author}}</strong></p>
-						<p>{{result.its_field_recommended}} recommend this recipe</p>
-						<p>Endorsed by <span>{{result.sm_field_endorse}}</span></p>
-										
-					<!-- orginal html -->
-					<!-- <p>{{highlighting[result.id].content[0]}}</p> -->
+				<div class="col-md-4" ng-repeat="result in results" >
+					<div class="card">
+						<a ng-href="#!{{result.bundle}}/{{result.entity_id}}">
+							<div class="bg-image">
+								<img src="" alt="">
+								<h2>{{result.label[0]}}</h2>
+							</div>
+						</a>	
+							<!-- <p>{{card.summary}}</p> -->
+							<p>Posted by <strong>{{result.sm_field_author}}</strong></p>
+							<p>{{result.its_field_recommended}} recommend this recipe</p>
+							<p>Endorsed by <span>{{result.sm_field_endorse}}</span></p>
+											
+						<!-- orginal html -->
+						<!-- <p>{{highlighting[result.id].content[0]}}</p> -->
+					</div>
 					
 				</div>
 			</div>
