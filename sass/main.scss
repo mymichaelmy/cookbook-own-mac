@@ -196,13 +196,7 @@ header
 		margin:30px 0 20px;
 	}
 
-	.what-is-recipe
-	{
-		p
-		{
-			margin-bottom:50px;
-		}
-	}
+	
 
 	text-align:center;  //for align alink to the center
 
@@ -216,6 +210,21 @@ header
 		display: inline-block;
 	}
 }
+
+
+//for all explaination
+.explain-section
+{
+	text-align:center;
+		p
+		{
+			margin-top: 20px;
+			margin-bottom:60px;
+		}
+}
+
+
+
 
 .section-list
 {
