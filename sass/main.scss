@@ -289,7 +289,14 @@ header
 
 		}
 
-
+		h2   //to be overrided by .section-method h2
+		{
+			display: inline-block;
+			// margin-top:1.4rem;
+			font-size: 2rem;
+			
+			vertical-align:middle;
+		}
 
 		p
 		{
@@ -325,14 +332,7 @@ header
 		color: #ffffff;
 
 	}
-	h2   //to be overrided by .section-method h2
-	{
-		display: inline-block;
-		// margin-top:1.4rem;
-		font-size: 2rem;
-		font-weight: bold;
-		vertical-align:middle;
-	}
+	
 
 }
 
@@ -759,6 +759,7 @@ strong
 // collection page start
 .collection-wrapper
 {
+	padding-top:100px;
 	.card:nth-of-type(4n+1)
 	{
 		clear:both;

@@ -282,22 +282,28 @@ header nav li.current {
   -webkit-border-radius: 4px;
   border-radius: 4px 4px 0 0;
 }
-/* line 294, ../sass/main.scss */
+/* line 292, ../sass/main.scss */
+.section-list .card h2 {
+  display: inline-block;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+/* line 301, ../sass/main.scss */
 .section-list .card p {
   color: #686868;
   padding: 0 10px;
 }
-/* line 302, ../sass/main.scss */
+/* line 309, ../sass/main.scss */
 .section-list .card a {
   color: #989898;
 }
-/* line 309, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 .section-list .ratings {
   display: inline-block;
   margin: 15px 0;
   vertical-align: middle;
 }
-/* line 316, ../sass/main.scss */
+/* line 323, ../sass/main.scss */
 .section-list .label-video {
   display: inline-block;
   margin-left: 8px;
@@ -307,13 +313,6 @@ header nav li.current {
   vertical-align: middle;
   border-radius: 8px;
   color: #ffffff;
-}
-/* line 328, ../sass/main.scss */
-.section-list h2 {
-  display: inline-block;
-  font-size: 2rem;
-  font-weight: bold;
-  vertical-align: middle;
 }
 
 /* line 341, ../sass/main.scss */
@@ -654,12 +653,16 @@ strong {
 }
 
 /*search page end*/
-/* line 762, ../sass/main.scss */
+/* line 760, ../sass/main.scss */
+.collection-wrapper {
+  padding-top: 100px;
+}
+/* line 763, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
 
-/* line 776, ../sass/main.scss */
+/* line 777, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -668,7 +671,7 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 787, ../sass/main.scss */
+/* line 788, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }
