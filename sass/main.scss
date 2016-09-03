@@ -215,11 +215,12 @@ header
 //for all explaination
 .explain-section
 {
+	margin-bottom:60px;
 	text-align:center;
 		p
 		{
 			margin-top: 20px;
-			margin-bottom:60px;
+			
 		}
 }
 
@@ -254,6 +255,7 @@ header
 		// margin-top:3.4rem;
 		// margin-right:70px;
 		// width: 330px;
+		position:relative;
 		font-size: 1.8rem;
 		text-align: left;
 		@include border-radius(4px,4px);
@@ -763,6 +765,19 @@ strong
 	.card:nth-of-type(4n+1)
 	{
 		clear:both;
+	}
+
+	.card
+	{
+		input[type=checkbox]
+		{
+			position:absolute;
+			top:10px;
+			left:12px;
+			width: 20px;
+			height: 20px;
+			z-index: 9;
+		}
 	}
 
 	

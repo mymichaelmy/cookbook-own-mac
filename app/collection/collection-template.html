@@ -1,23 +1,31 @@
-<div class="collection-wrapper section-list container">
+<div class="collection-wrapper container">
 	<div class="row explain-section">
 		<h2>MY COLLECTION</h2>
 	</div>
 	<!-- should judge if exist -->
+	<form name="zips" action="/action.php" method="post" class="section-list section-method ">
 	<div class="clearfix">
-		<div class="card col-md-3" ng-repeat="card in cards">
-				<div class="bg-image">
-					<img ng-src="{{card.imgSrc}}" alt="">
-					<div class="title"><h2>{{card.title}}</h2>
+		<div class="col-md-3" ng-repeat="card in cards">
+			<div class="card" >
+				<input type="checkbox" name="files[]" value="{{card.fileURL}}"/>
+				<a ng-href="#!method_card/{{card.nid}}">
+					<div class="bg-image">
+						<img src="" alt="">
+
+						<h2>{{card.title}}</h2>
 					</div>
-				</div>
-				
-				<p>{{card.summary}}</p>
-				<a href="#!method_card/{{card.nid}}">Read more &gt; <i class="icon-right-arrow"></i></a>
+				</a>	
+					<!-- <p>{{card.summary}}</p> -->
+					<p>Posted by <strong>{{card.author}}</strong></p>
+					<p>{{card.recommended}} recommend this recipe</p>
+					<p>Endorsed by <span>{{card.endorse}}</span></p>
+
+			</div>
 		</div>
 	</div>
 	<!-- take into account the url will change when hosted online, remember to modify it -->
 	</br>
-	<form name="zips" action="/action.php" method="post">
+	
 		<input ng-repeat="card in cards" type="checkbox" name="files[]" value="{{card.fileURL}}"/>
 		<!-- <input type="submit" id="submit" name="createzip" value="Download All Seleted Files" > -->
 		<button type="submit" id="submit" name="createzip" value="Download All Seleted Files">Download All Seleted Files</button>
