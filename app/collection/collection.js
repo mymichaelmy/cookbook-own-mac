@@ -1,7 +1,9 @@
 angular.module('cookbook').controller('collectionController',function($scope,$http)
 {
 	var collectionArray=JSON.parse(getCookie('cardCollection'));
-	var outputArray=[];
+	var outputArray=[]; //prepare output for cards
+	$scope.selectArray=[]; //array for select box
+
 	collectionArray.forEach(function(value,index)
 	{
 		
@@ -17,7 +19,7 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 				nid:data.nid,
 				zipName:data.field_zip_files.und[0].filename,
 				fileURL:rootURL+mainPort+"/drupal/sites/default/files/"+data.field_zip_files.und[0].filename,
-				
+				indexInCookie:index
 			};
 
 			if(data.field_author)
@@ -46,6 +48,7 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 			}
 
 			outputArray.push(obj);
+			$scope.selectArray.push(false);
 
 		});
 	});
@@ -53,4 +56,24 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 
 
 	$scope.cards=outputArray;
+
+
+	$scope.toggleAll=function(selectAll)
+	{
+		var i=0;
+		if(selectAll)
+		{
+			for(i=0;i<$scope.selectArray.length;i++)
+			{
+				$scope.selectArray[i]=true;
+			}
+		}
+		else
+		{
+			for(i=0;i<$scope.selectArray.length;i++)
+			{
+				$scope.selectArray[i]=false;
+			}
+		}
+	};
 });
