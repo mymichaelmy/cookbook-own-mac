@@ -57,10 +57,10 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 
 	$scope.cards=outputArray;
 
-
+	var i=0;
 	$scope.toggleAll=function(selectAll)
 	{
-		var i=0;
+		
 		if(selectAll)
 		{
 			for(i=0;i<$scope.selectArray.length;i++)
@@ -75,5 +75,47 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 				$scope.selectArray[i]=false;
 			}
 		}
+	};
+
+	$scope.ifAnyCard=function()
+	{
+		for(i=0;i<$scope.selectArray.length;i++)
+		{
+			if($scope.selectArray[i]===true)
+			{
+				return true;
+			}
+		}
+		return false;
+	};
+
+	$scope.removeCard=function()
+	{
+		
+		
+		var currentCollection=[];
+		var collectionString='';
+		for(i=0; i<$scope.selectArray.length;i++)
+		{
+
+
+			
+			if ($scope.selectArray[i]===true)
+			{
+				//remove from cookie
+				if(getCookie('cardCollection')!=='')
+                {
+                    currentCollection=JSON.parse(getCookie('cardCollection'));
+                    currentCollection.splice($scope.cards[i].indexInCookie,1);
+
+                    collectionString=JSON.stringify(currentCollection);
+                    setCookie('cardCollection',collectionString,60,'/');
+                }
+				//remove from scope
+				$scope.selectArray.splice(i,1);
+				$scope.cards.splice(i,1);
+			}
+		}
+
 	};
 });

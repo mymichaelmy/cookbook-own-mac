@@ -785,10 +785,17 @@ strong
 	{
 		margin-bottom: 50px;
 		font-size: 1.6rem;
-
+		
+		.select-all-button
+		{
+			display: inline-block;
+			padding-top:12px;
+			padding-bottom:13px;
+		}
 		button
 		{
 			margin-left:20px;
+			margin-top: 0;
 			font-size:1.6rem;
 			border-style:solid;
 			border-width:1px;

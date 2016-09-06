@@ -677,8 +677,15 @@ strong {
   font-size: 1.6rem;
 }
 /* line 789, ../sass/main.scss */
+.collection-wrapper .configure-bar .select-all-button {
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+/* line 795, ../sass/main.scss */
 .collection-wrapper .configure-bar button {
   margin-left: 20px;
+  margin-top: 0;
   font-size: 1.6rem;
   border-style: solid;
   border-width: 1px;
@@ -687,7 +694,7 @@ strong {
   background-color: transparent;
 }
 
-/* line 810, ../sass/main.scss */
+/* line 817, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -696,7 +703,7 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 821, ../sass/main.scss */
+/* line 828, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }

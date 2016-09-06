@@ -24,8 +24,8 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
                 currentCollection.push(newCard);
                 var collectionString=JSON.stringify(currentCollection);
-                console.log(currentNumber);
-                console.log(currentCollection);
+                // console.log(currentNumber);
+                // console.log(currentCollection);
                 setCookie('totalNumber',currentNumber,60,'/');
                 setCookie('cardCollection',collectionString,60,'/');
 

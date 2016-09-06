@@ -5,10 +5,11 @@
 	<!-- should judge if exist -->
 	<form name="zips" action="/action.php" method="post" class="section-list section-method ">
 		<div class="configure-bar">
+			<span class="select-all-button">
 			<input type="checkbox" name="selectAll" ng-model="selectAll" ng-change="toggleAll(selectAll)"/>Select all
-			
-			<button type="submit" id="submit" name="createzip" value="Download All Seleted Files">Download recipes</button>
-			<button id="remove" name="remove">Remove from collection</button>
+			</span>
+			<button type="submit" id="submit" name="createzip" value="Download All Seleted Files" ng-show="ifAnyCard()">Download recipes</button>
+			<button type="button" id="remove" name="remove" ng-click="removeCard()" ng-show="ifAnyCard()">Remove from collection</button>
 		</div>
 		<div class="clearfix">
 			<div class="col-md-3" ng-repeat="card in cards">
@@ -32,7 +33,7 @@
 	<!-- take into account the url will change when hosted online, remember to modify it -->
 		</br>
 	
-		<input ng-repeat="card in cards" type="checkbox" name="files[]" value="{{card.fileURL}}"/>
+		<!-- <input ng-repeat="card in cards" type="checkbox" name="files[]" value="{{card.fileURL}}"/> -->
 		<!-- <input type="submit" id="submit" name="createzip" value="Download All Seleted Files" > -->
 		
 	</form>
