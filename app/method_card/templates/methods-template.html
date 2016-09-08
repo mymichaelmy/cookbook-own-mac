@@ -14,7 +14,10 @@
 			<h3>Author</h3>
 			<span>{{card.field_author.und[0].value}}</span>
 		</div>
-
+		<ul>
+			<h3>Ingredients</h3>
+			<li ng-repeat="ingredent in card.field_ingredients.und">{{ingredent.value}}</li>
+		</ul>
 	</div>
 	<div class="right-content">
 		
