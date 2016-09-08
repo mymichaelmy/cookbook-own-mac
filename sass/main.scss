@@ -34,7 +34,7 @@ h1
 h2
 {
 	font-size:3.2rem;
-	font-weight:bold;
+	font-weight:600;
 }
 
 h4
@@ -49,6 +49,10 @@ p
 
 }
 
+.small
+{
+	font-size:1.4rem;
+}
 button
 {
 	font-size:1.6rem;
@@ -477,30 +481,66 @@ form.search
 /*search part ends*/
 
 /* recipes style start  */
+.recepe-detail
+{
+	.cta
+	{
+		button
+		{
+			margin-bottom: 18px;
+			background-color:transparent;
+			border-style:none;
+
+		}
+	}
+
+	.lower-content
+	{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	ul,p,.bottom-margin
+	{
+		margin-bottom: 40px;
+	}
+
+	ul,p
+	{
+		font-size: 1.6rem;
+	}
+
+	.lower-content
+	{
+		h4
+		{
+			display: inline-block;
+			margin-bottom: 16px;
+			padding-bottom: 4px;
+			border-bottom-style:solid;
+			border-bottom-width:1px;
+			border-bottom-color:#DFDFDF;
+		}
+	}
+}
 
 .methods-wrapper
 {
-	margin:84px auto;
-	padding-top:42px;
-	width:$widthOfList+px;
+	
 	line-height:1.5;
-	h1
+
+	strong
 	{
-		font-size:3.4rem;
-		font-weight: bold;
+		color:#e98562;
+		font-size: 2.4rem;
+		margin-right: 6px;
 	}
 
-	h2
+	.card-head.container-fluid
 	{
-		font-size:2.8rem;
-		font-weight: bold;
+		background-color:#e98562;
 	}
-
-	p
-	{
-		font-size:2rem;
-
-	}
+	
 
 }
 
@@ -529,7 +569,7 @@ form.search
 		.left-sidebar
 		{
 			
-
+			
 			li
 			{
 				position:relative;
@@ -568,29 +608,58 @@ form.search
 
 }
 
+/*for head*/
 
-/* recipes style end  */
+.card-head
+{
+	color:#ffffff;
+	padding:126px 0 36px;
+
+	h2
+	{
+		margin:10px 0 16px;
+	}
+	
+}
+
 
 
 
 /*for left sidebar and right content*/
 .left-sidebar
 {
-	position:relative;
-	float:left;
-	width:200px;
+	// position:relative;
+	// float:left;
+	// width:200px;
 	height:100%;
 			
-	padding-right:20px;
+	// padding-right:20px;
 	line-height: 1.5;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
+	li,p
+	{
+		font-size: 1.4rem;
+		word-wrap: break-word;
+		margin-bottom: 6px;
+	}
 }
 
 .right-content
 {
-	margin-left:200px;
-	padding-left:20px;
+	// margin-left:200px;
+	// padding-left:20px;
+	padding-left:30px;
 	line-height: 1.5;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-left-color:#dfdfdf;
+
+	li
+	{
+		margin-bottom: 10px;
+	}
+
+
 
 }
 
@@ -655,6 +724,10 @@ form.search
 }
 
 /*for left sidebar and right content ended*/
+
+
+
+/* recipes style end  */
 
 
 /*search page start */

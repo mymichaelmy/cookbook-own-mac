@@ -1,62 +1,70 @@
- <div class="methods-wrapper">
-	<div class="cta">
-		<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)">recommend this</button></br>
-		<button ng-click="addToCollection(card.type,card.nid)">add this to your collection</button></br>
-	</div>
-	<h1>{{card.title}}</h1>
-	<div>
-		<i></i><span>{{card.field_recommended.und[0].value}} recommendtions</span>
-		
-	</div>
-
-	<div class="left-sidebar">
-		<div class="author">
-			<h4>Author</h4>
-			<span>{{card.field_author.und[0].value}}</span>
+ <div class="methods-wrapper recepe-detail">
+ 	<div class="container-fluid card-head">
+ 		<div class="container">
+			<div class="row">	
+				<img class="col-md-2" src="/images/method-head.png" />
+				<div class="col-md-8">
+					<h4>METHOD</h4>
+					<h2>{{card.title}}</h2>
+					<div class="small">
+						<i></i><span>{{card.field_recommended.und[0].value}} recommendtions</span>	
+					</div>
+				</div>
+				<div class="cta col-md-2 ">
+					<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)" class="small"><i></i>Recommend</button></br>
+					<button ng-click="addToCollection(card.type,card.nid)" class="small"><i></i>Add to collection</button></br>
+					<button ng-click="addToCollection(card.type,card.nid)" class="small"><i></i>Download</button></br>
+					
+				</div>
+			</div>
 		</div>
-		<h4>Ingredients</h4>
-		<ul>
-			<li ng-repeat="ingredent in card.field_ingredients.und">{{ingredent.value}}</li>
-		</ul>
-		<h4>Resources</h4>
-		<ul>
-			<li ng-repeat="resource in card.field_arsenal_files.und"><a ng-href="/drupal/sites/default/files/{{resource.filename}}" target="_blank">{{resource.filename}}</a></li>
-			<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
-		</ul>
-		
 	</div>
-	<div class="right-content">
+	<div class="lower-content container">
+		<div class="left-sidebar col-md-3">
+			<div class="author bottom-margin">
+				<h4>Author</h4>
+				<p>{{card.field_author.und[0].value}}</p>
+			</div>
+			<h4>Ingredients</h4>
+			<ul>
+				<li ng-repeat="ingredent in card.field_ingredients.und">{{ingredent.value}}</li>
+			</ul>
+			<h4>Resources</h4>
+			<ul>
+				<li ng-repeat="resource in card.field_arsenal_files.und"><a ng-href="/drupal/sites/default/files/{{resource.filename}}" target="_blank">{{resource.filename}}</a></li>
+				<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
+			</ul>
+			
+		</div>
+		<div class="right-content col-md-9">
+			
+			<p>{{card.field_summary.und[0].value}}</p>
+			<h4>Prep ({{card.field_prep_estimate.und[0].value}} mins)</h4>
+			<ul>
+				<li ng-repeat="prepStep in card.field_prep_steps.und"><strong>{{$index+1}} </strong>{{prepStep.value}}</li>
+			</ul>
+			<h4>Steps ({{card.field_recipe_estimate.und[0].value}} mins)</h4>
+			<ul>
+				<li ng-repeat="recipeStep in card.field_recipe_steps.und"><strong>{{$index+1}} </strong>{{recipeStep.value}}</li>
+			</ul>
+
+			<h4>Watch for</h4>
+			<ul>
+				<li ng-repeat="watchFor in card.field_watch_for.und"><strong>{{$index+1}} </strong>{{watchFor.value}}</li>
+			</ul>
+			<h4>Notes</h4>
+			<ul>
+				<li ng-repeat="note in card.field_notes.und"><strong>{{$index+1}} </strong>{{note.value}}</li>
+				<p>{{card.field_notes_text.und[0].value}}</p>
+			</ul>
+
+			<div ng-controller="DisqusController as disqus" identifier="disIdentifier">
+			<dir-disqus config="disqusConfig"></dir-disqus>
+		</div>
+		</div>
 		
-		<p>{{card.field_summary.und[0].value}}</p>
-		<h4>Prep ({{card.field_prep_estimate.und[0].value}} mins)</h4>
-		<ul>
-			<li ng-repeat="prepStep in card.field_prep_steps.und"><strong>{{$index+1}} </strong>{{prepStep.value}}</li>
-		</ul>
-		<h4>Steps ({{card.field_recipe_estimate.und[0].value}} mins)</h4>
-		<ul>
-			<li ng-repeat="recipeStep in card.field_recipe_steps.und"><strong>{{$index+1}} </strong>{{recipeStep.value}}</li>
-		</ul>
 
-		<h4>Watch for</h4>
-		<ul>
-			<li ng-repeat="watchFor in card.field_watch_for.und"><strong>{{$index+1}} </strong>{{watchFor.value}}</li>
-		</ul>
-		<h4>Notes</h4>
-		<ul>
-			<li ng-repeat="note in card.field_notes.und"><strong>{{$index+1}} </strong>{{note.value}}</li>
-			<p>{{card.field_notes_text.und[0].value}}</p>
-		</ul>
-	</div>
-	<img src="" alt="" ng-src="/drupal/sites/default/files/{{card.field_card_image.und[0].filename}}">
-	<p>{{card.field_recommended.und[0].value}} recommend this recipe</p>
-	<h2>Overview</h2>
-	<p>{{card.field_activity_description.und[0].value}}</p>
-	<!-- <a ng-href="/drupal/sites/default/files/{{card.field_arsenal_files.und[0].filename}}">{{card.field_arsenal_files.und[0].description}}</a> -->
-
-	<div class="file-link" ng-repeat="link in card.field_arsenal_files.und" ><i></i><a ng-href="/drupal/sites/default/files/{{card.field_arsenal_files.und[$index].filename}}" target="_blank">{{link.description}}</a></div>
-
-	
-	<div ng-controller="DisqusController as disqus" identifier="disIdentifier">
-		<dir-disqus config="disqusConfig"></dir-disqus>
+		
+		
 	</div>
 </div>
