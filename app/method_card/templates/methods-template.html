@@ -1,8 +1,25 @@
-<div class="methods-wrapper">
-
+ <div class="methods-wrapper">
+	<div class="cta">
+		<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)">recommend this</button></br>
+		<button ng-click="addToCollection(card.type,card.nid)">add this to your collection</button></br>
+	</div>
 	<h1>{{card.title}}</h1>
-	<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)">recommend this</button></br>
-	<button ng-click="addToCollection(card.type,card.nid)">add this to your collection</button></br>
+	<div>
+		<i></i><span>{{card.field_recommended.und[0].value}} recommendtions</span>
+		
+	</div>
+
+	<div class="left-sidebar">
+		<div class="author">
+			<h3>Author</h3>
+			<span>{{card.field_author.und[0].value}}</span>
+		</div>
+
+	</div>
+	<div class="right-content">
+		
+		<p>{{card.field_summary.und[0].value}}</p>
+	</div>
 	<img src="" alt="" ng-src="/drupal/sites/default/files/{{card.field_card_image.und[0].filename}}">
 	<p>{{card.field_recommended.und[0].value}} recommend this recipe</p>
 	<h2>Overview</h2>
