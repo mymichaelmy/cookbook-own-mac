@@ -1,43 +1,71 @@
-<div class="card-detail-wrapper">
-	<div class="heading">
-		<div class="container">
-			<h1>{{card.title}}</h1>
-			<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)">recommend this</button></br>
-			<button ng-click="addToCollection(card.type,card.nid)">add this to your collection</button></br>
+<div class="tip-wrapper recipe-detail">
+	<div class="container-fluid card-head">
+ 		<div class="container">
+			<div class="row">	
+				<img class="col-md-2" src="/images/tip-head.png" />
+				<div class="col-md-8">
+					<h4>CLASSROOM MANAGEMENT</h4>
+					<h2>{{card.title}}</h2>
+					<div class="small">
+						<i></i><span>{{card.field_recommended.und[0].value}} recommendtions</span>	
+					</div>
+				</div>
+				<div class="cta col-md-2 ">
+					<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)" class="small"><i></i>Recommend</button></br>
+					<button ng-click="addToCollection(card.type,card.nid)" class="small"><i></i>Add to collection</button></br>
+					<button ng-click="addToCollection(card.type,card.nid)" class="small"><i></i>Download</button></br>
+					
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="lower-content container">
-		<div class="left-sidebar">
+		<div class="left-sidebar col-md-3">
+			<div class="author bottom-margin">
+				<h4>Author</h4>
+				<p>{{card.field_author.und[0].value}}</p>
+			</div>
+			<h4>Ingredients</h4>
 			<ul>
-				<li scroll-on-click="about">About</li>
-				<li scroll-on-click="goals">Learning Goals</li>
-				<li scroll-on-click="consider">Things to consider</li>
-				<li scroll-on-click="discussion">Discussion</li>
+				<li ng-repeat="ingredent in card.field_ingredients.und">{{ingredent.value}}</li>
 			</ul>
+			<h4>Resources</h4>
+			<ul>
+				<li ng-repeat="resource in card.field_arsenal_files.und"><a ng-href="/drupal/sites/default/files/{{resource.filename}}" target="_blank">{{resource.filename}}</a></li>
+				<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
+			</ul>
+			
 		</div>
-		<div class="right-content">
-			<div>
-				<h2>Provided By</h2>
-				<p><strong>{{card.field_author.und[0].value}}</strong>{{card.field_author_title.und[0].value}}</p>
-			</div>
-			<div>
-				<h2 id="about">About</h2>
-				<p>{{card.field_about.und[0].value}}</p>
-			</div>
-			<div>
-				<h2 id="goals">Learning goals</h2>
-				<p>{{card.field_learning_goals.und[0].value}}</p>
-			</div>
+		<div class="right-content col-md-9">
+			
+			<p>{{card.field_summary.und[0].value}}</p>
+			<h4>Prep ({{card.field_prep_estimate.und[0].value}} mins)</h4>
+			<ul>
+				<li ng-repeat="prepStep in card.field_prep_steps.und"><strong>{{$index+1}} </strong>{{prepStep.value}}</li>
+			</ul>
+			<h4>Steps ({{card.field_recipe_estimate.und[0].value}} mins)</h4>
+			<ul>
+				<li ng-repeat="recipeStep in card.field_recipe_steps.und"><strong>{{$index+1}} </strong>{{recipeStep.value}}</li>
+			</ul>
 
-			<div>
-				<h2 id="consider">Things to consider</h2>
-				<p>{{card.field_things_to_consider.und[0].value}}</p>
-			</div>
+			<h4>Watch for</h4>
+			<ul>
+				<li ng-repeat="watchFor in card.field_watch_for.und"><strong>{{$index+1}} </strong>{{watchFor.value}}</li>
+			</ul>
+			<h4>Notes</h4>
+			<ul>
+				<li ng-repeat="note in card.field_notes.und"><strong>{{$index+1}} </strong>{{note.value}}</li>
+				<p>{{card.field_notes_text.und[0].value}}</p>
+			</ul>
 
-			<div ng-controller="DisqusController as disqus" identifier="disIdentifier" id="discussion">
-				<dir-disqus config="disqusConfig"></dir-disqus>
+			<div ng-controller="DisqusController as disqus" identifier="disIdentifier">
+			<dir-disqus config="disqusConfig"></dir-disqus>
 			</div>
 		</div>
+		
+
+		
+		
 	</div>
 
 

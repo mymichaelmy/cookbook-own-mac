@@ -481,7 +481,7 @@ form.search
 /*search part ends*/
 
 /* recipes style start  */
-.recepe-detail
+.recipe-detail
 {
 	.cta
 	{
@@ -539,6 +539,26 @@ form.search
 	.card-head.container-fluid
 	{
 		background-color:#e98562;
+	}
+	
+
+}
+
+.tip-wrapper
+{
+	
+	line-height:1.5;
+
+	strong
+	{
+		color:#69B4DE;
+		font-size: 2.4rem;
+		margin-right: 6px;
+	}
+
+	.card-head.container-fluid
+	{
+		background-color:#69B4DE;
 	}
 	
 
