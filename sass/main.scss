@@ -274,6 +274,8 @@ header
 			margin-right:0;
 		}
 
+
+
 		.bg-image
 		{
 
@@ -293,6 +295,40 @@ header
 				@include border-radius(4px 4px 0 0);
 			}
 
+		}
+
+		.method_card
+		{
+			.bg-image
+			{
+				img
+				{
+					background-color:#E58F70;;
+				}
+			}
+		}
+
+		.class_tip
+		{
+			.bg-image
+			{
+				img
+				{
+					background-color:#66B4DD;;
+				}
+			}
+		}
+
+		.course_example
+		{
+
+			.bg-image
+			{
+				img
+				{
+					background-color:#86BF69;;
+				}
+			}
 		}
 
 		h2   //to be overrided by .section-method h2
@@ -685,6 +721,12 @@ form.search
 
 .explore-wrapper
 {
+
+	.explore-head
+	{
+		padding-top:126px;
+	}
+
 	&.lower-content
 	{
 		position:relative;

@@ -274,12 +274,12 @@ header nav li.current {
 .section-list .card:nth-of-type(3n) {
   margin-right: 0;
 }
-/* line 277, ../sass/main.scss */
+/* line 279, ../sass/main.scss */
 .section-list .card .bg-image {
   position: relative;
   width: 100%;
 }
-/* line 287, ../sass/main.scss */
+/* line 289, ../sass/main.scss */
 .section-list .card .bg-image img {
   width: 100%;
   height: 225px;
@@ -288,28 +288,40 @@ header nav li.current {
   -webkit-border-radius: 4px;
   border-radius: 4px 4px 0 0;
 }
-/* line 298, ../sass/main.scss */
+/* line 304, ../sass/main.scss */
+.section-list .card .method_card .bg-image img {
+  background-color: #E58F70;
+}
+/* line 315, ../sass/main.scss */
+.section-list .card .class_tip .bg-image img {
+  background-color: #66B4DD;
+}
+/* line 327, ../sass/main.scss */
+.section-list .card .course_example .bg-image img {
+  background-color: #86BF69;
+}
+/* line 334, ../sass/main.scss */
 .section-list .card h2 {
   display: inline-block;
   font-size: 2rem;
   vertical-align: middle;
 }
-/* line 307, ../sass/main.scss */
+/* line 343, ../sass/main.scss */
 .section-list .card p {
   color: #686868;
   padding: 0 10px;
 }
-/* line 315, ../sass/main.scss */
+/* line 351, ../sass/main.scss */
 .section-list .card a {
   color: #989898;
 }
-/* line 322, ../sass/main.scss */
+/* line 358, ../sass/main.scss */
 .section-list .ratings {
   display: inline-block;
   margin: 15px 0;
   vertical-align: middle;
 }
-/* line 329, ../sass/main.scss */
+/* line 365, ../sass/main.scss */
 .section-list .label-video {
   display: inline-block;
   margin-left: 8px;
@@ -321,7 +333,7 @@ header nav li.current {
   color: #ffffff;
 }
 
-/* line 347, ../sass/main.scss */
+/* line 383, ../sass/main.scss */
 .section-method h2 {
   position: absolute;
   width: 100%;
@@ -340,29 +352,29 @@ header nav li.current {
   color: #ffffff;
 }
 
-/* line 367, ../sass/main.scss */
+/* line 403, ../sass/main.scss */
 i {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 372, ../sass/main.scss */
+/* line 408, ../sass/main.scss */
 i.star {
   width: 23px;
   height: 19px;
 }
-/* line 377, ../sass/main.scss */
+/* line 413, ../sass/main.scss */
 i.solid {
   background-image: url('/images/Star-solid.png?1467834586');
   background-size: 100%;
 }
-/* line 383, ../sass/main.scss */
+/* line 419, ../sass/main.scss */
 i.hollow {
   background-image: url('/images/Star-hollow.png?1467834598');
   background-size: 100%;
 }
 
 /* below for version 3 */
-/* line 394, ../sass/main.scss */
+/* line 430, ../sass/main.scss */
 .section-list .right {
   float: right;
   margin-left: 38px;
@@ -370,11 +382,11 @@ i.hollow {
   height: 360px;
   background-color: grey;
 }
-/* line 404, ../sass/main.scss */
+/* line 440, ../sass/main.scss */
 .section-list p {
   line-height: 1.5;
 }
-/* line 411, ../sass/main.scss */
+/* line 447, ../sass/main.scss */
 .section-list button {
   margin-top: 26px;
   padding: 12px 16px;
@@ -395,20 +407,20 @@ i.hollow {
   clear: both;
 }
 
-/* line 430, ../sass/main.scss */
+/* line 466, ../sass/main.scss */
 .section-methods-1 {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #dddddd;
 }
 
-/* line 439, ../sass/main.scss */
+/* line 475, ../sass/main.scss */
 .section-lessons div.title {
   margin-top: 1.4rem;
 }
 
 /* search part starts*/
-/* line 448, ../sass/main.scss */
+/* line 484, ../sass/main.scss */
 form.search {
   display: inline-block;
   float: right;
@@ -416,7 +428,7 @@ form.search {
   position: relative;
   margin-top: 16px;
 }
-/* line 456, ../sass/main.scss */
+/* line 492, ../sass/main.scss */
 form.search input[type=search] {
   padding: 0 20px;
   width: 300px;
@@ -429,7 +441,7 @@ form.search input[type=search] {
   border-width: 1px;
   border-color: #979797;
 }
-/* line 469, ../sass/main.scss */
+/* line 505, ../sass/main.scss */
 form.search label i {
   position: absolute;
   right: 20px;
@@ -440,26 +452,26 @@ form.search label i {
 
 /*search part ends*/
 /* recipes style start  */
-/* line 488, ../sass/main.scss */
+/* line 524, ../sass/main.scss */
 .recipe-detail .cta button {
   margin-bottom: 18px;
   background-color: transparent;
   border-style: none;
 }
-/* line 497, ../sass/main.scss */
+/* line 533, ../sass/main.scss */
 .recipe-detail .lower-content {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-/* line 503, ../sass/main.scss */
+/* line 539, ../sass/main.scss */
 .recipe-detail ul, .recipe-detail p, .recipe-detail .bottom-margin {
   margin-bottom: 40px;
 }
-/* line 508, ../sass/main.scss */
+/* line 544, ../sass/main.scss */
 .recipe-detail ul, .recipe-detail p {
   font-size: 1.6rem;
 }
-/* line 515, ../sass/main.scss */
+/* line 551, ../sass/main.scss */
 .recipe-detail .lower-content h4 {
   display: inline-block;
   margin-bottom: 16px;
@@ -469,37 +481,37 @@ form.search label i {
   border-bottom-color: #DFDFDF;
 }
 
-/* line 527, ../sass/main.scss */
+/* line 563, ../sass/main.scss */
 .methods-wrapper {
   line-height: 1.5;
 }
-/* line 532, ../sass/main.scss */
+/* line 568, ../sass/main.scss */
 .methods-wrapper strong {
   color: #e98562;
   font-size: 2.4rem;
   margin-right: 6px;
 }
-/* line 539, ../sass/main.scss */
+/* line 575, ../sass/main.scss */
 .methods-wrapper .card-head.container-fluid {
   background-color: #e98562;
 }
 
-/* line 547, ../sass/main.scss */
+/* line 583, ../sass/main.scss */
 .tip-wrapper {
   line-height: 1.5;
 }
-/* line 552, ../sass/main.scss */
+/* line 588, ../sass/main.scss */
 .tip-wrapper strong {
   color: #69B4DE;
   font-size: 2.4rem;
   margin-right: 6px;
 }
-/* line 559, ../sass/main.scss */
+/* line 595, ../sass/main.scss */
 .tip-wrapper .card-head.container-fluid {
   background-color: #69B4DE;
 }
 
-/* line 569, ../sass/main.scss */
+/* line 605, ../sass/main.scss */
 .card-detail-wrapper .heading {
   position: fixed;
   top: 84px;
@@ -509,17 +521,17 @@ form.search label i {
   background-color: #999999;
   z-index: 9;
 }
-/* line 582, ../sass/main.scss */
+/* line 618, ../sass/main.scss */
 .card-detail-wrapper .lower-content {
   position: relative;
   margin-top: 230px;
 }
-/* line 593, ../sass/main.scss */
+/* line 629, ../sass/main.scss */
 .card-detail-wrapper .lower-content .left-sidebar li {
   position: relative;
   cursor: pointer;
 }
-/* line 598, ../sass/main.scss */
+/* line 634, ../sass/main.scss */
 .card-detail-wrapper .lower-content .left-sidebar li:hover:before {
   content: '';
   position: absolute;
@@ -530,41 +542,41 @@ form.search label i {
   margin-left: -8px;
   background-color: #333333;
 }
-/* line 617, ../sass/main.scss */
+/* line 653, ../sass/main.scss */
 .card-detail-wrapper .lower-content .right-content h2 {
   font-size: 2rem;
 }
-/* line 621, ../sass/main.scss */
+/* line 657, ../sass/main.scss */
 .card-detail-wrapper .lower-content .right-content div + div {
   margin-top: 26px;
 }
 
 /*for head*/
-/* line 633, ../sass/main.scss */
+/* line 669, ../sass/main.scss */
 .card-head {
   color: #ffffff;
   padding: 126px 0 36px;
 }
-/* line 638, ../sass/main.scss */
+/* line 674, ../sass/main.scss */
 .card-head h2 {
   margin: 10px 0 16px;
 }
 
 /*for left sidebar and right content*/
-/* line 649, ../sass/main.scss */
+/* line 685, ../sass/main.scss */
 .left-sidebar {
   height: 100%;
   line-height: 1.5;
   font-size: 1.4rem;
 }
-/* line 659, ../sass/main.scss */
+/* line 695, ../sass/main.scss */
 .left-sidebar li, .left-sidebar p {
   font-size: 1.4rem;
   word-wrap: break-word;
   margin-bottom: 6px;
 }
 
-/* line 667, ../sass/main.scss */
+/* line 703, ../sass/main.scss */
 .right-content {
   padding-left: 30px;
   line-height: 1.5;
@@ -572,30 +584,34 @@ form.search label i {
   border-left-width: 1px;
   border-left-color: #dfdfdf;
 }
-/* line 677, ../sass/main.scss */
+/* line 713, ../sass/main.scss */
 .right-content li {
   margin-bottom: 10px;
 }
 
-/* line 688, ../sass/main.scss */
+/* line 725, ../sass/main.scss */
+.explore-wrapper .explore-head {
+  padding-top: 126px;
+}
+/* line 730, ../sass/main.scss */
 .explore-wrapper.lower-content {
   position: relative;
   margin-top: 100px;
 }
-/* line 696, ../sass/main.scss */
+/* line 738, ../sass/main.scss */
 .explore-wrapper .card:nth-of-type(3n+1) {
   clear: both;
 }
-/* line 701, ../sass/main.scss */
+/* line 743, ../sass/main.scss */
 .explore-wrapper .explore-sort {
   display: inline-block;
 }
-/* line 710, ../sass/main.scss */
+/* line 752, ../sass/main.scss */
 .explore-wrapper ul h3 {
   font-weight: bold;
   margin: 26px 0 10px;
 }
-/* line 716, ../sass/main.scss */
+/* line 758, ../sass/main.scss */
 .explore-wrapper ul .options-block {
   height: 100px;
   overflow: auto;
@@ -606,17 +622,17 @@ form.search label i {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 726, ../sass/main.scss */
+/* line 768, ../sass/main.scss */
 .explore-wrapper ul li {
   cursor: pointer;
   padding: 0 5px;
   text-transform: capitalize;
 }
-/* line 731, ../sass/main.scss */
+/* line 773, ../sass/main.scss */
 .explore-wrapper ul li:hover {
   color: #666666;
 }
-/* line 736, ../sass/main.scss */
+/* line 778, ../sass/main.scss */
 .explore-wrapper ul li.current {
   color: #ffffff;
   background-color: #333;
@@ -628,12 +644,12 @@ form.search label i {
 /*for left sidebar and right content ended*/
 /* recipes style end  */
 /*search page start */
-/* line 754, ../sass/main.scss */
+/* line 796, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
 }
-/* line 762, ../sass/main.scss */
+/* line 804, ../sass/main.scss */
 .search-result-wrapper h3 {
   padding: 20px 8px;
   font-size: 2rem;
@@ -642,13 +658,13 @@ form.search label i {
   border-bottom-width: 1px;
 }
 
-/* line 772, ../sass/main.scss */
+/* line 814, ../sass/main.scss */
 ul.my-pager {
   text-align: right;
   padding-right: 20px;
   margin: 20px 0 10px;
 }
-/* line 777, ../sass/main.scss */
+/* line 819, ../sass/main.scss */
 ul.my-pager li {
   display: inline;
   margin-right: 6px;
@@ -661,7 +677,7 @@ ul.my-pager li {
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 790, ../sass/main.scss */
+/* line 832, ../sass/main.scss */
 ul.my-pager li.current {
   background-color: #333333;
   color: #ffffff;
@@ -670,44 +686,44 @@ ul.my-pager li.current {
   border-radius: 16px;
 }
 
-/* line 799, ../sass/main.scss */
+/* line 841, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 804, ../sass/main.scss */
+/* line 846, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 809, ../sass/main.scss */
+/* line 851, ../sass/main.scss */
 .search-categories, .explore-categories {
   display: inline-block;
   padding: 20px 8px;
 }
-/* line 814, ../sass/main.scss */
+/* line 856, ../sass/main.scss */
 .search-categories li, .explore-categories li {
   display: inline-block;
   padding: 4px;
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 821, ../sass/main.scss */
+/* line 863, ../sass/main.scss */
 .search-categories li.current, .explore-categories li.current {
   color: #ffffff;
   background-color: #333;
   border-radius: 4px;
 }
-/* line 828, ../sass/main.scss */
+/* line 870, ../sass/main.scss */
 .search-categories li:hover, .explore-categories li:hover {
   color: #666666;
 }
-/* line 839, ../sass/main.scss */
+/* line 881, ../sass/main.scss */
 .search-categories li + li, .explore-categories li + li {
   margin-left: 10px;
 }
 
-/* line 846, ../sass/main.scss */
+/* line 888, ../sass/main.scss */
 .search-sort {
   display: inline-block;
   margin-left: 16px;
@@ -715,15 +731,15 @@ strong {
 }
 
 /*search page end*/
-/* line 855, ../sass/main.scss */
+/* line 897, ../sass/main.scss */
 .collection-wrapper {
   padding-top: 100px;
 }
-/* line 858, ../sass/main.scss */
+/* line 900, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
-/* line 865, ../sass/main.scss */
+/* line 907, ../sass/main.scss */
 .collection-wrapper .card input[type=checkbox] {
   position: absolute;
   top: 10px;
@@ -732,18 +748,18 @@ strong {
   height: 20px;
   z-index: 9;
 }
-/* line 877, ../sass/main.scss */
+/* line 919, ../sass/main.scss */
 .collection-wrapper .configure-bar {
   margin-bottom: 50px;
   font-size: 1.6rem;
 }
-/* line 882, ../sass/main.scss */
+/* line 924, ../sass/main.scss */
 .collection-wrapper .configure-bar .select-all-button {
   display: inline-block;
   padding-top: 12px;
   padding-bottom: 13px;
 }
-/* line 888, ../sass/main.scss */
+/* line 930, ../sass/main.scss */
 .collection-wrapper .configure-bar button {
   margin-left: 20px;
   margin-top: 0;
@@ -755,7 +771,7 @@ strong {
   background-color: transparent;
 }
 
-/* line 910, ../sass/main.scss */
+/* line 952, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -764,7 +780,7 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 921, ../sass/main.scss */
+/* line 963, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }

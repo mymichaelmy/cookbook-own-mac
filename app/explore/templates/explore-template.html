@@ -1,12 +1,14 @@
-<div class="explore-wrapper lower-content container">
-	<div class="row">
-		<div class="explain-section col-md-8 col-md-offset-2">
-			<h2>Start exploring!</h2>
-			<p>Our recipes are organized into three categories: methods, classroom tips, and courses. Use the filters to and search bars to make it easier when you’re looking for specific recipes!</p>
+<div class="explore-wrapper">
+	<div class="container explore-head">
+		<div class="row">
+			<div class="explain-section col-md-8 col-md-offset-2">
+				<h2>Start exploring!</h2>
+				<p>Our recipes are organized into three categories: methods, classroom tips, and courses. Use the filters to and search bars to make it easier when you’re looking for specific recipes!</p>
+			</div>
 		</div>
 	</div>
 	<div class="lower-content container">
-		<div class="left-sidebar">
+		<div class="left-sidebar col-md-3">
 			<ul>
 				<h3>Endorsed by</h3>
 
@@ -20,7 +22,7 @@
 		</div>
 		
 
-		<div class="right-content">
+		<div class="right-content col-md-9">
 			<ul class="search-categories">
 				<li ng-click="setCategory('bundle','all',totalNumber)" ng-class="{'current':currentCategory=='all'}">
 					<span>all</span>
@@ -31,14 +33,14 @@
 					<span class="category-count">({{category[1]}})</span>
 				</li>
 			</ul>
-			<form class="explore-sort">
+			<!-- <form class="explore-sort">
 				<select ng-model="sort" ng-change="sortResult()">
 					<option id="option-relevance" value="">relevance</option>
 					<option id="option-recommended" value="its_field_recommended">Most recommended</option>
 					<option id="option-recent" value="timestamp">Most recent</option>
 				</select>
 				
-			</form>
+			</form> -->
 			
 			<ul class="my-pager">
 				<li ng-class="{'current':currentPage===($index+1)}" ng-repeat="pager in pagers" ng-click="goToPage($index+1)">{{$index+1}}</li>
@@ -46,7 +48,7 @@
 			<div class="section-list section-method clearfix">
 				<div class="col-md-4" ng-repeat="result in results" >
 					<div class="card">
-						<a ng-href="#!{{result.bundle}}/{{result.entity_id}}">
+						<a ng-href="#!{{result.bundle}}/{{result.entity_id}}" class="{{result.bundle}}">
 							<div class="bg-image">
 								<img src="" alt="">
 								<h2>{{result.label[0]}}</h2>
