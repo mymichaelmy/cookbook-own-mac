@@ -55,9 +55,9 @@
 							</div>
 						</a>	
 							<!-- <p>{{card.summary}}</p> -->
-							<p>Posted by <strong>{{result.sm_field_author}}</strong></p>
+							<p>Posted by <strong>{{result.sm_field_author[0]||"Anonymous"}}</strong></p>
 							<p>{{result.its_field_recommended}} recommend this recipe</p>
-							<p>Endorsed by <span>{{result.sm_field_endorse}}</span></p>
+							<p>Endorsed by <span>{{result.sm_field_endorse[0]||"Design Thinking"}}</span></p>
 											
 						<!-- orginal html -->
 						<!-- <p>{{highlighting[result.id].content[0]}}</p> -->

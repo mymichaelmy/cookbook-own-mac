@@ -6,6 +6,114 @@
 @import "compass/reset";
 @import "compass/css3";
 
+//sprites
+@import "compass/utilities/sprites";
+$icons-layout:smart;
+$icons: sprite-map("icons/*.png", $layout: smart);
+@import "icons/*.png";
+
+.icons-sprite, .icons-add, .icons-blue-add, .icons-blue-download, .icons-blue-rec, .icons-blue-share, .icons-download, .icons-green-add, .icons-green-download, .icons-green-rec, .icons-green-share, .icons-paper, .icons-pencil, .icons-rec, .icons-red-add, .icons-red-download, .icons-red-rec, .icons-red-share, .icons-share, .icons-video {
+  background-image: url('/images/icons-s47e4bb7315.png');
+  background-repeat: no-repeat;
+  background-size:20px 380px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-add {
+  background-position: 0 -360px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-blue-add {
+  background-position: 0 -20px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-blue-download {
+  background-position: 0 -40px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-blue-rec {
+  background-position: 0 -60px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-blue-share {
+  background-position: 0 -80px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-download {
+  background-position: 0 -100px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-green-add {
+  background-position: 0 -120px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-green-download {
+  background-position: 0 -140px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-green-rec {
+  background-position: 0 -160px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-green-share {
+  background-position: 0 -180px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-paper {
+  background-position: 0 -200px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-pencil {
+  background-position: 0 -220px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-rec {
+  background-position: 0 -240px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-red-add {
+  background-position: 0 -260px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-red-download {
+  background-position: 0 -280px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-red-rec {
+  background-position: 0 -300px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-red-share {
+  background-position: 0 -320px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-share {
+  background-position: 0 -340px;
+}
+
+/* line 84, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-video {
+  background-position: 0 0;
+}
+
+
 // parameters go here
 $widthOfList: 1130;      //width of the desktop wrapper 
 
@@ -676,6 +784,21 @@ form.search
 		margin:10px 0 16px;
 	}
 	
+	.cta
+	{
+		button
+		{
+			i
+			{
+				display: inline-block;
+				margin-right:10px;
+				width: 20px;
+				height:20px;
+
+				// background-size: 20px 380px;
+			}
+		}
+	}
 }
 
 
