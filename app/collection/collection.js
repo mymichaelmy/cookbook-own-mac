@@ -17,11 +17,16 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 				summary:data.field_summary.und[0].value,
 				category:data.type,
 				nid:data.nid,
-				zipName:data.field_zip_files.und[0].filename,
-				fileURL:rootURL+mainPort+"/drupal/sites/default/files/"+data.field_zip_files.und[0].filename,
+				// zipName:data.field_zip_files.und[0].filename,
+				// fileURL:rootURL+mainPort+"/drupal/sites/default/files/"+data.field_zip_files.und[0].filename,
 				indexInCookie:index
 			};
 
+			if(data.field_zip_files)
+			{
+				obj.zipName=data.field_zip_files.und[0].filename;
+				obj.fileURL=rootURL+mainPort+"/drupal/sites/default/files/"+data.field_zip_files.und[0].filename;
+			}
 			if(data.field_author)
 			{
 				obj.author=data.field_author.und[0].value;
