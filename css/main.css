@@ -918,3 +918,10 @@ form select {
 form select::-ms-expand {
   display: none;
 }
+
+/* line 1104, ../sass/main.scss */
+footer {
+  background-color: #999999;
+  color: white;
+  text-align: center;
+}
