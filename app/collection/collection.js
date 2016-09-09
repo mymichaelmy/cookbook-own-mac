@@ -22,7 +22,7 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 				indexInCookie:index
 			};
 
-			if(data.field_zip_files)
+			if(data.field_zip_files.und)
 			{
 				obj.zipName=data.field_zip_files.und[0].filename;
 				obj.fileURL=rootURL+mainPort+"/drupal/sites/default/files/"+data.field_zip_files.und[0].filename;
