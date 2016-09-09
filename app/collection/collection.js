@@ -13,8 +13,8 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 			var obj=
 			{
 				title:data.title,
-				imgSrc:"/drupal/sites/default/files/"+data.field_card_image.und[0].filename,
-				summary:data.field_activity_description.und[0].value,
+				// imgSrc:"/drupal/sites/default/files/"+data.field_card_image.und[0].filename,
+				summary:data.field_summary.und[0].value,
 				category:data.type,
 				nid:data.nid,
 				zipName:data.field_zip_files.und[0].filename,
