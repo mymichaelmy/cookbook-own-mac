@@ -15,7 +15,7 @@
 			<div class="col-md-3" ng-repeat="card in cards">
 				<div class="card" >
 					<input type="checkbox" checked="" name="files[]" value="{{card.fileURL}}" ng-model="selectArray[$index]" />
-					<a ng-href="#!method_card/{{card.nid}}" class="{{result.category}}">
+					<a ng-href="#!method_card/{{card.nid}}" class="{{card.category}}">
 						<div class="bg-image">
 							<img src="" alt="">
 
