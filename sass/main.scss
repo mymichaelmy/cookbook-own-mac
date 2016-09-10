@@ -184,6 +184,10 @@ button
 }
 /* end of collection of shared styles*/
 
+b
+{
+	font-weight:600;
+}
 
 html,body
 {
@@ -677,7 +681,7 @@ form.search
 	{
 		color:#e98562;
 		font-size: 2.4rem;
-		margin-right: 6px;
+		
 	}
 
 	.card-head.container-fluid
@@ -836,6 +840,20 @@ form.search
 	li
 	{
 		margin-bottom: 10px;
+
+		p
+		{
+			margin-left:30px;
+			margin-top:6px;
+			margin-bottom: 8px;
+		}
+	}
+
+	strong.figure
+	{
+		float:left;
+		position:relative;
+		width: 30px;
 	}
 
 

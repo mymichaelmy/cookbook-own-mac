@@ -41,21 +41,21 @@
 			<p>{{card.field_summary.und[0].value}}</p>
 			<h4>Prep ({{card.field_prep_estimate.und[0].value}} mins)</h4>
 			<ul>
-				<li ng-repeat="prepStep in card.field_prep_steps.und"><strong>{{$index+1}} </strong>{{prepStep.value}}</li>
+				<li ng-repeat="prepStep in card.field_prep_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(prepStep.safe_value)"></p></li>
 			</ul>
 			<h4>Steps ({{card.field_recipe_estimate.und[0].value}} mins)</h4>
 			<ul>
-				<li ng-repeat="recipeStep in card.field_recipe_steps.und"><strong>{{$index+1}} </strong>{{recipeStep.value}}</li>
+				<li ng-repeat="recipeStep in card.field_recipe_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(recipeStep.safe_value)"></p></li>
 			</ul>
 
 			<h4>Watch for</h4>
 			<ul>
-				<li ng-repeat="watchFor in card.field_watch_for.und"><strong>{{$index+1}} </strong>{{watchFor.value}}</li>
+				<li ng-repeat="watchFor in card.field_watch_for_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(watchFor.safe_value)"></p></li>
 			</ul>
 			<h4>Notes</h4>
 			<ul>
-				<li ng-repeat="note in card.field_notes.und"><strong>{{$index+1}} </strong>{{note.value}}</li>
-				<p>{{card.field_notes_text.und[0].value}}</p>
+				<li ng-repeat="note in card.field_notes_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(note.safe_value)"></p></li>
+				
 			</ul>
 
 			<div ng-controller="DisqusController as disqus" identifier="disIdentifier">

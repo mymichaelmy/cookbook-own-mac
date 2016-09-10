@@ -1,10 +1,15 @@
-angular.module('cookbook',['ngRoute','angularUtils.directives.dirDisqus']).controller('indexController',function($scope, $http)
+angular.module('cookbook',['ngRoute','angularUtils.directives.dirDisqus']).controller('indexController',function($scope, $http,$sce)
 	{
 		$scope.currentTab={'name':'home'};
 
 		$scope.tabClick=function(newTab)
 		{
 			$scope.currentTab.name=newTab;
+		};
+
+		$scope.toTrustedHTML=function (html)   //this function is to trust the html that returned by solr
+		{
+			return $sce.trustAsHtml(html);
 		};
 	});
 angular.module('cookbook').config(['$locationProvider',function ($locationProvider)

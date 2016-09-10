@@ -83,10 +83,10 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 
     
 
-    $scope.toTrustedHTML=function (html)   //this function is to trust the html that returned by solr
-    {
-        return $sce.trustAsHtml(html);
-    };
+    // $scope.toTrustedHTML=function (html)   //this function is to trust the html that returned by solr
+    // {
+    //     return $sce.trustAsHtml(html);
+    // };
 
     $scope.currentCategory="all";
     //function to set category
