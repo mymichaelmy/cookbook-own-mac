@@ -612,37 +612,41 @@ form.search label i {
   border-bottom-width: 1px;
   border-bottom-color: #DFDFDF;
 }
+/* line 674, ../sass/main.scss */
+.recipe-detail .key-image {
+  width: 100%;
+}
 
-/* line 675, ../sass/main.scss */
+/* line 680, ../sass/main.scss */
 .methods-wrapper {
   line-height: 1.5;
 }
-/* line 680, ../sass/main.scss */
+/* line 685, ../sass/main.scss */
 .methods-wrapper strong {
   color: #e98562;
   font-size: 2.4rem;
 }
-/* line 687, ../sass/main.scss */
+/* line 692, ../sass/main.scss */
 .methods-wrapper .card-head.container-fluid {
   background-color: #e98562;
 }
 
-/* line 695, ../sass/main.scss */
+/* line 700, ../sass/main.scss */
 .tip-wrapper {
   line-height: 1.5;
 }
-/* line 700, ../sass/main.scss */
+/* line 705, ../sass/main.scss */
 .tip-wrapper strong {
   color: #69B4DE;
   font-size: 2.4rem;
   margin-right: 6px;
 }
-/* line 707, ../sass/main.scss */
+/* line 712, ../sass/main.scss */
 .tip-wrapper .card-head.container-fluid {
   background-color: #69B4DE;
 }
 
-/* line 717, ../sass/main.scss */
+/* line 722, ../sass/main.scss */
 .card-detail-wrapper .heading {
   position: fixed;
   top: 84px;
@@ -652,17 +656,17 @@ form.search label i {
   background-color: #999999;
   z-index: 9;
 }
-/* line 730, ../sass/main.scss */
+/* line 735, ../sass/main.scss */
 .card-detail-wrapper .lower-content {
   position: relative;
   margin-top: 230px;
 }
-/* line 741, ../sass/main.scss */
+/* line 746, ../sass/main.scss */
 .card-detail-wrapper .lower-content .left-sidebar li {
   position: relative;
   cursor: pointer;
 }
-/* line 746, ../sass/main.scss */
+/* line 751, ../sass/main.scss */
 .card-detail-wrapper .lower-content .left-sidebar li:hover:before {
   content: '';
   position: absolute;
@@ -673,26 +677,26 @@ form.search label i {
   margin-left: -8px;
   background-color: #333333;
 }
-/* line 765, ../sass/main.scss */
+/* line 770, ../sass/main.scss */
 .card-detail-wrapper .lower-content .right-content h2 {
   font-size: 2rem;
 }
-/* line 769, ../sass/main.scss */
+/* line 774, ../sass/main.scss */
 .card-detail-wrapper .lower-content .right-content div + div {
   margin-top: 26px;
 }
 
 /*for head*/
-/* line 781, ../sass/main.scss */
+/* line 786, ../sass/main.scss */
 .card-head {
   color: #ffffff;
   padding: 126px 0 36px;
 }
-/* line 786, ../sass/main.scss */
+/* line 791, ../sass/main.scss */
 .card-head h2 {
   margin: 10px 0 16px;
 }
-/* line 795, ../sass/main.scss */
+/* line 800, ../sass/main.scss */
 .card-head .cta button i {
   display: inline-block;
   margin-right: 10px;
@@ -701,20 +705,20 @@ form.search label i {
 }
 
 /*for left sidebar and right content*/
-/* line 812, ../sass/main.scss */
+/* line 817, ../sass/main.scss */
 .left-sidebar {
   height: 100%;
   line-height: 1.5;
   font-size: 1.4rem;
 }
-/* line 822, ../sass/main.scss */
+/* line 827, ../sass/main.scss */
 .left-sidebar li, .left-sidebar p {
   font-size: 1.4rem;
   word-wrap: break-word;
   margin-bottom: 6px;
 }
 
-/* line 830, ../sass/main.scss */
+/* line 835, ../sass/main.scss */
 .right-content {
   padding-left: 30px;
   line-height: 1.5;
@@ -722,46 +726,46 @@ form.search label i {
   border-left-width: 1px;
   border-left-color: #dfdfdf;
 }
-/* line 840, ../sass/main.scss */
+/* line 845, ../sass/main.scss */
 .right-content li {
   margin-bottom: 10px;
 }
-/* line 844, ../sass/main.scss */
+/* line 849, ../sass/main.scss */
 .right-content li p {
   margin-left: 30px;
   margin-top: 6px;
   margin-bottom: 8px;
 }
-/* line 852, ../sass/main.scss */
+/* line 857, ../sass/main.scss */
 .right-content strong.figure {
   float: left;
   position: relative;
   width: 30px;
 }
 
-/* line 866, ../sass/main.scss */
+/* line 871, ../sass/main.scss */
 .explore-wrapper .explore-head {
   padding-top: 126px;
 }
-/* line 871, ../sass/main.scss */
+/* line 876, ../sass/main.scss */
 .explore-wrapper.lower-content {
   position: relative;
   margin-top: 100px;
 }
-/* line 879, ../sass/main.scss */
+/* line 884, ../sass/main.scss */
 .explore-wrapper .card:nth-of-type(3n+1) {
   clear: both;
 }
-/* line 884, ../sass/main.scss */
+/* line 889, ../sass/main.scss */
 .explore-wrapper .explore-sort {
   display: inline-block;
 }
-/* line 893, ../sass/main.scss */
+/* line 898, ../sass/main.scss */
 .explore-wrapper ul h3 {
   font-weight: bold;
   margin: 26px 0 10px;
 }
-/* line 899, ../sass/main.scss */
+/* line 904, ../sass/main.scss */
 .explore-wrapper ul .options-block {
   height: 100px;
   overflow: auto;
@@ -772,17 +776,17 @@ form.search label i {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 909, ../sass/main.scss */
+/* line 914, ../sass/main.scss */
 .explore-wrapper ul li {
   cursor: pointer;
   padding: 0 5px;
   text-transform: capitalize;
 }
-/* line 914, ../sass/main.scss */
+/* line 919, ../sass/main.scss */
 .explore-wrapper ul li:hover {
   color: #666666;
 }
-/* line 919, ../sass/main.scss */
+/* line 924, ../sass/main.scss */
 .explore-wrapper ul li.current {
   color: #ffffff;
   background-color: #333;
@@ -794,12 +798,12 @@ form.search label i {
 /*for left sidebar and right content ended*/
 /* recipes style end  */
 /*search page start */
-/* line 937, ../sass/main.scss */
+/* line 942, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
 }
-/* line 945, ../sass/main.scss */
+/* line 950, ../sass/main.scss */
 .search-result-wrapper h3 {
   padding: 20px 8px;
   font-size: 2rem;
@@ -808,13 +812,13 @@ form.search label i {
   border-bottom-width: 1px;
 }
 
-/* line 955, ../sass/main.scss */
+/* line 960, ../sass/main.scss */
 ul.my-pager {
   text-align: right;
   padding-right: 20px;
   margin: 20px 0 10px;
 }
-/* line 960, ../sass/main.scss */
+/* line 965, ../sass/main.scss */
 ul.my-pager li {
   display: inline;
   margin-right: 6px;
@@ -827,7 +831,7 @@ ul.my-pager li {
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 973, ../sass/main.scss */
+/* line 978, ../sass/main.scss */
 ul.my-pager li.current {
   background-color: #333333;
   color: #ffffff;
@@ -836,44 +840,44 @@ ul.my-pager li.current {
   border-radius: 16px;
 }
 
-/* line 982, ../sass/main.scss */
+/* line 987, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 987, ../sass/main.scss */
+/* line 992, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 992, ../sass/main.scss */
+/* line 997, ../sass/main.scss */
 .search-categories, .explore-categories {
   display: inline-block;
   padding: 20px 8px;
 }
-/* line 997, ../sass/main.scss */
+/* line 1002, ../sass/main.scss */
 .search-categories li, .explore-categories li {
   display: inline-block;
   padding: 4px;
   font-size: 1.6rem;
   cursor: pointer;
 }
-/* line 1004, ../sass/main.scss */
+/* line 1009, ../sass/main.scss */
 .search-categories li.current, .explore-categories li.current {
   color: #ffffff;
   background-color: #333;
   border-radius: 4px;
 }
-/* line 1011, ../sass/main.scss */
+/* line 1016, ../sass/main.scss */
 .search-categories li:hover, .explore-categories li:hover {
   color: #666666;
 }
-/* line 1022, ../sass/main.scss */
+/* line 1027, ../sass/main.scss */
 .search-categories li + li, .explore-categories li + li {
   margin-left: 10px;
 }
 
-/* line 1029, ../sass/main.scss */
+/* line 1034, ../sass/main.scss */
 .search-sort {
   display: inline-block;
   margin-left: 16px;
@@ -881,15 +885,15 @@ strong {
 }
 
 /*search page end*/
-/* line 1038, ../sass/main.scss */
+/* line 1043, ../sass/main.scss */
 .collection-wrapper {
   padding-top: 100px;
 }
-/* line 1041, ../sass/main.scss */
+/* line 1046, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
-/* line 1048, ../sass/main.scss */
+/* line 1053, ../sass/main.scss */
 .collection-wrapper .card input[type=checkbox] {
   position: absolute;
   top: 10px;
@@ -898,18 +902,18 @@ strong {
   height: 20px;
   z-index: 9;
 }
-/* line 1060, ../sass/main.scss */
+/* line 1065, ../sass/main.scss */
 .collection-wrapper .configure-bar {
   margin-bottom: 50px;
   font-size: 1.6rem;
 }
-/* line 1065, ../sass/main.scss */
+/* line 1070, ../sass/main.scss */
 .collection-wrapper .configure-bar .select-all-button {
   display: inline-block;
   padding-top: 12px;
   padding-bottom: 13px;
 }
-/* line 1071, ../sass/main.scss */
+/* line 1076, ../sass/main.scss */
 .collection-wrapper .configure-bar button {
   margin-left: 20px;
   margin-top: 0;
@@ -921,7 +925,7 @@ strong {
   background-color: transparent;
 }
 
-/* line 1093, ../sass/main.scss */
+/* line 1098, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -930,12 +934,12 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 1104, ../sass/main.scss */
+/* line 1109, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }
 
-/* line 1122, ../sass/main.scss */
+/* line 1127, ../sass/main.scss */
 footer {
   background-color: #999999;
   color: white;

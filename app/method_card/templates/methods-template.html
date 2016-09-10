@@ -39,6 +39,7 @@
 		<div class="right-content col-md-9">
 			
 			<p>{{card.field_summary.und[0].value}}</p>
+			<img ng-src="/drupal/sites/default/files/{{card.field_key_images.und[0].filename}}" class="key-image" />
 			<h4>Prep ({{card.field_prep_estimate.und[0].value}} mins)</h4>
 			<ul>
 				<li ng-repeat="prepStep in card.field_prep_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(prepStep.safe_value)"></p></li>
