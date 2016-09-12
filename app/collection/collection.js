@@ -27,7 +27,7 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 				obj.zipName=data.field_zip_files.und[0].filename;
 				obj.fileURL=rootURL+mainPort+"/drupal/sites/default/files/"+data.field_zip_files.und[0].filename;
 			}
-			if(data.field_author)
+			if(data.field_author.und)
 			{
 				obj.author=data.field_author.und[0].value;
 			}

@@ -3,7 +3,7 @@
 	<h3>{{totalNumber}} Match for {{searchTerm}}</h3>
 	<ul class="search-categories">
 		<li ng-click="setCategory('all',totalNumber)" ng-class="{'current':currentCategory=='all'}">
-			<span>all</span>
+			<span>All</span>
 			<span>({{totalNumber}})</span>
 		</li>
 		<li ng-repeat="category in categories" ng-click="setCategory(category[0],category[1])" ng-class="{'current':currentCategory==category[0]}">
@@ -19,11 +19,11 @@
 		</select>
 		
 	</form>
-	<form ng-submit="submitFilter()">
+	<!-- <form ng-submit="submitFilter()">
 		Professor:<input type="text" ng-model="filter.sm_field_author" name="sm_field_author" value=""><br/>
 		Endorse:<input type="text" ng-model="filter.sm_field_endorse" name="sm_field_endorse" value=""><br/>
 		<button type="submit">filter</button>
-	</form>
+	</form> -->
 	<div class="search-result" ng-repeat="result in results" >
 		<a ng-href="#!{{result.bundle}}/{{result.entity_id}}"><h2>{{result.label[0]}}</h2></a>
 

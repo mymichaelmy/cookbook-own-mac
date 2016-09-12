@@ -181,12 +181,5 @@ angular.module('cookbook').controller('searchResultController',  function($scope
 
 
 
-//for filter of facet
-angular.module('cookbook').filter('noDash',function() {
-    return function(input) {
-        if (input) {
-			return input.replace('_', ' ');
-        }
-    };
-});
+
 

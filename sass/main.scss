@@ -121,6 +121,18 @@ $columnsInRow: "3n";        //cards in a row
 
 $iconSize: 18;
 $marginOfNavbar:42;
+
+//parameters for colors
+$methodColor1:#E98562;
+$methodColor2:#99492D;
+$tipColor1:#66B4DD;
+$tipColor2:#205D7D;
+$courseColor1:#9BC85D;
+$courseColor2:#4E6E20;
+
+$cardTextColor:#535353;
+$categoryTabColor:#959595;
+
 @mixin clearfix
 {
 	&:after
@@ -374,11 +386,12 @@ header
 		position:relative;
 		font-size: 1.8rem;
 		text-align: left;
+		
 		@include border-radius(4px,4px);
 		@include box-shadow(#aaaaaa 0px 1px 6px);
 		
 		margin-bottom: 20px;
-		padding-bottom:20px;
+		padding-bottom:10px;
 		
 
 		&:nth-of-type(#{$columnsInRow})
@@ -392,19 +405,22 @@ header
 		{
 
 			position:relative;
+			padding-top:16px;
+			margin-bottom:8px;
 			// margin-bottom:1.4rem;
-			// height:225px;
+			height:20rem;
 			width:100%;
+			@include border-radius(4px 4px 0 0);
 			
 			
 
 			img
 			{
 				// margin-bottom:1.4rem; //for vertical center of the title, stop doing
-				width:100%;
-				height:225px;
-				background-color:#999999;
-				@include border-radius(4px 4px 0 0);
+				// width:100%;
+				// height:225px;
+				// background-color:#999999;
+				// @include border-radius(4px 4px 0 0);
 			}
 
 		}
@@ -413,10 +429,18 @@ header
 		{
 			.bg-image
 			{
-				img
-				{
-					background-color:#E58F70;;
-				}
+	
+				background-image:image-url('method-background-thumbnail.png');
+				background-repeat:no-repeat;
+				background-size: 90px 81px;
+				background-position: right 16px bottom 16px;
+				background-color:#E98562;
+
+			}
+
+			.small
+			{
+				color:$methodColor2;
 			}
 		}
 
@@ -424,10 +448,16 @@ header
 		{
 			.bg-image
 			{
-				img
-				{
-					background-color:#66B4DD;;
-				}
+				background-color:#66B4DD;
+				background-image:image-url('tip-background-thumbnail.png');
+				background-repeat:no-repeat;
+				background-size: 73px 80px;
+				background-position: right 16px bottom 16px;
+			}
+
+			.small
+			{
+				color:$tipColor2;
 			}
 		}
 
@@ -436,10 +466,16 @@ header
 
 			.bg-image
 			{
-				img
-				{
-					background-color:#86BF69;;
-				}
+				background-image:image-url('course-background-thumbnail.png');
+				background-color:#9BC85D;
+				background-repeat:no-repeat;
+				background-size: 80px 56px;
+				background-position: right 16px bottom 16px;
+			}
+
+			.small
+			{
+				color:$courseColor2;
 			}
 		}
 
@@ -454,7 +490,7 @@ header
 
 		p
 		{
-			color:#686868;
+			color:$cardTextColor;
 			padding: 0 10px;
 			//margin-bottom:12px;
 
@@ -463,6 +499,34 @@ header
 		a   /*read more*/
 		{
 			color:#989898;
+		}
+
+		.card-heading 
+		{
+			position:relative;
+			width:100%;
+			padding:0 15px;
+			box-sizing:border-box;
+			top:0;
+			margin-top:0;
+			
+			h4
+			{
+				margin-bottom:12px;
+				font-weight: normal;
+				height:120px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				// @include translateY (-50%);
+				color:#ffffff;
+
+				&.small
+				{
+					text-transform:uppercase;
+					height:auto;
+				}
+			}
+			
 		}
 		
 	}
@@ -490,27 +554,7 @@ header
 
 }
 
-.section-method
-{
-	h2    /*to overlay h2 on image in method cards*/
-	{
 
-		position:absolute;
-		width:100%;
-		padding:0 10px;
-		box-sizing:border-box;
-		top:50%;
-		margin-top:0;
-		text-align:center;
-		
-		font-weight: 300;
-		letter-spacing: 0.05rem;
-		text-transform:uppercase;
-		@include translateY (-50%);
-		color:#ffffff;
-
-	}
-}
 
 i
 {
@@ -909,24 +953,25 @@ form.search
 			border-color:#aaaaaa;
 			border-width:1px;
 			@include border-radius(4px);
+
+			li.current
+			{
+				background-color:#4a4a4a;
+				color:#ffffff;
+			}
 		}
 
 		li
 		{
 			cursor:pointer;
-			padding:0 5px;
+			padding:6px 10px;
 			text-transform: capitalize;
-			&:hover
-			{
-				color:#666666;
-			}
+			// &:hover
+			// {
+			// 	color:#666666;
+			// }
 
-			&.current
-			{
-				color:#ffffff;
-				background-color:#333;
-				@include border-radius(4px);
-			}
+			
 		}
 	}
 }
@@ -980,6 +1025,11 @@ ul.my-pager
 				background-color: #333333;
 				color: #ffffff;
 				@include border-radius(16px);
+
+				&:hover
+				{
+					color:#ffffff;
+				}
 			}
 		}
 }
@@ -1002,15 +1052,21 @@ strong
 	li
 	{
 		display: inline-block;
-		padding:4px;
+		padding:6px 10px;
 		font-size:1.6rem;
 		cursor:pointer;
-		
+		color:$categoryTabColor;
+
 		&.current
 		{
 			color:#ffffff;
-			background-color:#333;
+			background-color:#4A4A4A;
 			border-radius: (4px);
+			
+			&:hover
+			{
+				color:#ffffff;
+			}
 		}
 
 		&:hover
@@ -1058,6 +1114,11 @@ strong
 			width: 20px;
 			height: 20px;
 			z-index: 9;
+		}
+
+		div.card-heading
+		{
+			margin-top: 26px;
 		}
 	}
 
@@ -1126,7 +1187,11 @@ form
 //footer
 footer
 {
-	background-color:#999999;
+	// border-top-style:solid;
+	// border-top-color:#999;
+	// border-top-width:1px;
+	padding:10px 50px;
+	background-color:#DDDDDD;
 	color:white;
-	text-align:center;
+	
 }

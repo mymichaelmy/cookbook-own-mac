@@ -25,11 +25,11 @@
 		<div class="right-content col-md-9">
 			<ul class="search-categories">
 				<li ng-click="setCategory('bundle','all',totalNumber)" ng-class="{'current':currentCategory=='all'}">
-					<span>all</span>
+					<span>All</span>
 					<span>({{totalNumber}})</span>
 				</li>
 				<li ng-repeat="category in categories" ng-click="setCategory('bundle',category[0],category[1])" ng-class="{'current':currentCategory==category[0]}">
-					<span class="category-title"> {{category[0]|noDash}}</span>
+					<span class="category-title"> {{category[0]|noDash}}s</span>
 					<span class="category-count">({{category[1]}})</span>
 				</li>
 			</ul>
@@ -50,14 +50,18 @@
 					<div class="card">
 						<a ng-href="#!{{result.bundle}}/{{result.entity_id}}" class="{{result.bundle}}">
 							<div class="bg-image">
+								
+								<div class="card-heading">
+									<h4 class="small">{{result.bundle|noDash}}</h4>
+									<h4>{{result.label[0]}}</h4>
+								</div>
 								<img src="" alt="">
-								<h2>{{result.label[0]}}</h2>
 							</div>
 						</a>	
 							<!-- <p>{{card.summary}}</p> -->
 							<p>Posted by <strong>{{result.sm_field_author[0]||"Anonymous"}}</strong></p>
-							<p>{{result.its_field_recommended}} recommend this recipe</p>
-							<p>Endorsed by <span>{{result.sm_field_endorse[0]||"Design Thinking"}}</span></p>
+							<p>{{result.its_field_recommended||"0"}} recommend this recipe</p>
+							<p>Endorsed by <span>{{result.sm_field_endorse[0]||"SAP"}}</span></p>
 											
 						<!-- orginal html -->
 						<!-- <p>{{highlighting[result.id].content[0]}}</p> -->

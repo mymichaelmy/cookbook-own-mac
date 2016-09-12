@@ -47,3 +47,30 @@ var searchFragsize=200;
 		setCookie('recommend',string1,60);
 	}
 }());
+
+
+//for filter of facet
+angular.module('cookbook').filter('noDash',function() {
+    return function(input) {
+		var result='';
+        switch(input)
+        {
+			case 'method_card':
+				result='Method';
+				break;
+
+			case 'class_tip':
+				result='Classroom tip';
+				break;
+
+			case 'course_example':
+				result='Course';
+				break;
+
+			default:
+				result='';
+        }
+
+        return result;
+    };
+});

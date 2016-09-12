@@ -17,9 +17,11 @@
 					<input type="checkbox" checked="" name="files[]" value="{{card.fileURL}}" ng-model="selectArray[$index]" />
 					<a ng-href="#!method_card/{{card.nid}}" class="{{card.category}}">
 						<div class="bg-image">
+							<div class="card-heading">
+								<h4 class="small">{{card.category|noDash}}</h4>
+								<h4>{{card.title}}</h4>
+							</div>
 							<img src="" alt="">
-
-							<h2>{{card.title}}</h2>
 						</div>
 					</a>	
 						<!-- <p>{{card.summary}}</p> -->
