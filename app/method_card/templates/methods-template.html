@@ -7,13 +7,14 @@
 					<h4>METHOD</h4>
 					<h2>{{card.title}}</h2>
 					<div class="small">
-						<i></i><span>{{card.field_recommended.und[0].value}} recommendations</span>	
+						<i></i><span>{{card.field_recommended.und[0].value}} recommendations</span> | <span>{{card.field_difficulty.und[0].value}} Difficulty</span>
+						 | <span>{{card.field_time_estimate.und[0].value}} minutes</span>	
 					</div>
 				</div>
 				<div class="cta col-md-2 ">
 					<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)" class="small"><i class="icons-red-rec"></i>Recommend</button></br>
 					<button ng-click="addToCollection(card.type,card.nid)" class="small"><i class="icons-red-add"></i>Add to collection</button></br>
-					<button ng-click="addToCollection(card.type,card.nid)" class="small"><i class="icons-red-download"></i>Download</button></br>
+					<button class="small"><a ng-href="/drupal/sites/default/files/{{card.field_zip_files.und[0].filename}}"><i class="icons-red-download"></i>Download</a></button></br>
 					
 				</div>
 			</div>
@@ -23,7 +24,15 @@
 		<div class="left-sidebar col-md-3">
 			<div class="author bottom-margin">
 				<h4>Author</h4>
-				<p>{{card.field_author.und[0].value}}</p>
+				<p class="bold">{{card.field_author.und[0].value}}</p>
+				<p>{{card.field_author_title.und[0].value}}</p>
+				<p>{{card.field_author_university.und[0].value}}</p>
+			</div>
+			<div class="author bottom-margin" ng-show="card.field_editor.und">
+				<h4>Editor</h4>
+				<p class="bold">{{card.field_editor.und[0].value}}</p>
+				<p>{{card.field_editor_title.und[0].value}}</p>
+				<p>{{card.field_editor_university.und[0].value}}</p>
 			</div>
 			<h4>Ingredients</h4>
 			<ul>
