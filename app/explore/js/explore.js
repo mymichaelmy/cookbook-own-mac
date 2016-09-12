@@ -7,7 +7,7 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 	var url=$scope.currentUrl=rootURL+solrPort+"/solr/drupal/select?"+"wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle&facet.field=sm_field_author&facet.field=sm_field_endorse";
 	$scope.currentCategory="all";
 
-	$scope.filterStatus={};
+	$scope.filterStatus={}; //to store status of every kind of filter
 
 	//check if there are existing category
 	if($routeParams.category)
@@ -30,7 +30,23 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
         refreshPagers($scope.totalNumber);
 
         $scope.currentPage=1;
+
+        $http.get($scope.currentUrl).success(function(data)
+		{
+					
+
+			
+			$scope.results=data.response.docs;
+
+			refreshPagers(data.response.numFound);  //refresh pager on bottom
+			
+			$scope.currentPage=1;
+					
+
+		});
     });
+
+
 	//init ends
 
 	//uitility functions
