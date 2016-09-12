@@ -641,37 +641,43 @@ form.search label i {
 .recipe-detail .key-image {
   width: 100%;
 }
+/* line 723, ../sass/main.scss */
+.recipe-detail .right-content {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #dfdfdf;
+}
 
-/* line 724, ../sass/main.scss */
+/* line 731, ../sass/main.scss */
 .methods-wrapper {
   line-height: 1.5;
 }
-/* line 729, ../sass/main.scss */
+/* line 736, ../sass/main.scss */
 .methods-wrapper strong {
   color: #e98562;
   font-size: 2.4rem;
 }
-/* line 736, ../sass/main.scss */
+/* line 743, ../sass/main.scss */
 .methods-wrapper .card-head.container-fluid {
   background-color: #e98562;
 }
 
-/* line 744, ../sass/main.scss */
+/* line 751, ../sass/main.scss */
 .tip-wrapper {
   line-height: 1.5;
 }
-/* line 749, ../sass/main.scss */
+/* line 756, ../sass/main.scss */
 .tip-wrapper strong {
   color: #69B4DE;
   font-size: 2.4rem;
   margin-right: 6px;
 }
-/* line 756, ../sass/main.scss */
+/* line 763, ../sass/main.scss */
 .tip-wrapper .card-head.container-fluid {
   background-color: #69B4DE;
 }
 
-/* line 766, ../sass/main.scss */
+/* line 773, ../sass/main.scss */
 .card-detail-wrapper .heading {
   position: fixed;
   top: 84px;
@@ -681,17 +687,17 @@ form.search label i {
   background-color: #999999;
   z-index: 9;
 }
-/* line 779, ../sass/main.scss */
+/* line 786, ../sass/main.scss */
 .card-detail-wrapper .lower-content {
   position: relative;
   margin-top: 230px;
 }
-/* line 790, ../sass/main.scss */
+/* line 797, ../sass/main.scss */
 .card-detail-wrapper .lower-content .left-sidebar li {
   position: relative;
   cursor: pointer;
 }
-/* line 795, ../sass/main.scss */
+/* line 802, ../sass/main.scss */
 .card-detail-wrapper .lower-content .left-sidebar li:hover:before {
   content: '';
   position: absolute;
@@ -702,26 +708,26 @@ form.search label i {
   margin-left: -8px;
   background-color: #333333;
 }
-/* line 814, ../sass/main.scss */
+/* line 821, ../sass/main.scss */
 .card-detail-wrapper .lower-content .right-content h2 {
   font-size: 2rem;
 }
-/* line 818, ../sass/main.scss */
+/* line 825, ../sass/main.scss */
 .card-detail-wrapper .lower-content .right-content div + div {
   margin-top: 26px;
 }
 
 /*for head*/
-/* line 830, ../sass/main.scss */
+/* line 837, ../sass/main.scss */
 .card-head {
   color: #ffffff;
   padding: 126px 0 36px;
 }
-/* line 835, ../sass/main.scss */
+/* line 842, ../sass/main.scss */
 .card-head h2 {
   margin: 10px 0 16px;
 }
-/* line 844, ../sass/main.scss */
+/* line 851, ../sass/main.scss */
 .card-head .cta button i {
   display: inline-block;
   margin-right: 10px;
@@ -730,67 +736,66 @@ form.search label i {
 }
 
 /*for left sidebar and right content*/
-/* line 861, ../sass/main.scss */
+/* line 868, ../sass/main.scss */
 .left-sidebar {
   height: 100%;
   line-height: 1.5;
   font-size: 1.4rem;
 }
-/* line 871, ../sass/main.scss */
+/* line 878, ../sass/main.scss */
 .left-sidebar li, .left-sidebar p {
   font-size: 1.4rem;
   word-wrap: break-word;
   margin-bottom: 6px;
 }
 
-/* line 879, ../sass/main.scss */
+/* line 886, ../sass/main.scss */
 .right-content {
   padding-left: 30px;
   line-height: 1.5;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: #dfdfdf;
 }
-/* line 889, ../sass/main.scss */
+/* line 896, ../sass/main.scss */
 .right-content li {
   margin-bottom: 10px;
 }
-/* line 893, ../sass/main.scss */
+/* line 900, ../sass/main.scss */
 .right-content li p {
   margin-left: 30px;
   margin-top: 6px;
   margin-bottom: 8px;
 }
-/* line 901, ../sass/main.scss */
+/* line 908, ../sass/main.scss */
 .right-content strong.figure {
   float: left;
   position: relative;
   width: 30px;
 }
 
-/* line 915, ../sass/main.scss */
+/* line 922, ../sass/main.scss */
 .explore-wrapper .explore-head {
   padding-top: 126px;
 }
-/* line 920, ../sass/main.scss */
-.explore-wrapper.lower-content {
+/* line 927, ../sass/main.scss */
+.explore-wrapper .lower-content {
   position: relative;
-  margin-top: 100px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #dcdcdc;
 }
-/* line 928, ../sass/main.scss */
+/* line 937, ../sass/main.scss */
 .explore-wrapper .card:nth-of-type(3n+1) {
   clear: both;
 }
-/* line 933, ../sass/main.scss */
+/* line 942, ../sass/main.scss */
 .explore-wrapper .explore-sort {
   display: inline-block;
 }
-/* line 942, ../sass/main.scss */
+/* line 951, ../sass/main.scss */
 .explore-wrapper ul h3 {
   font-weight: bold;
   margin: 26px 0 10px;
 }
-/* line 948, ../sass/main.scss */
+/* line 957, ../sass/main.scss */
 .explore-wrapper ul .options-block {
   height: 100px;
   overflow: auto;
@@ -801,12 +806,12 @@ form.search label i {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 957, ../sass/main.scss */
+/* line 966, ../sass/main.scss */
 .explore-wrapper ul .options-block li.current {
   background-color: #4a4a4a;
   color: #ffffff;
 }
-/* line 964, ../sass/main.scss */
+/* line 973, ../sass/main.scss */
 .explore-wrapper ul li {
   cursor: pointer;
   padding: 6px 10px;
@@ -816,12 +821,12 @@ form.search label i {
 /*for left sidebar and right content ended*/
 /* recipes style end  */
 /*search page start */
-/* line 987, ../sass/main.scss */
+/* line 996, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
 }
-/* line 995, ../sass/main.scss */
+/* line 1004, ../sass/main.scss */
 .search-result-wrapper h3 {
   padding: 20px 8px;
   font-size: 2rem;
@@ -830,13 +835,13 @@ form.search label i {
   border-bottom-width: 1px;
 }
 
-/* line 1005, ../sass/main.scss */
+/* line 1014, ../sass/main.scss */
 ul.my-pager {
   text-align: right;
   padding-right: 20px;
   margin: 20px 0 10px;
 }
-/* line 1010, ../sass/main.scss */
+/* line 1019, ../sass/main.scss */
 ul.my-pager li {
   display: inline;
   margin-right: 6px;
@@ -849,7 +854,7 @@ ul.my-pager li {
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 1023, ../sass/main.scss */
+/* line 1032, ../sass/main.scss */
 ul.my-pager li.current {
   background-color: #333333;
   color: #ffffff;
@@ -857,27 +862,66 @@ ul.my-pager li.current {
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 1029, ../sass/main.scss */
+/* line 1038, ../sass/main.scss */
 ul.my-pager li.current:hover {
   color: #ffffff;
 }
 
-/* line 1037, ../sass/main.scss */
+/* line 1046, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 1042, ../sass/main.scss */
+/* line 1051, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 1047, ../sass/main.scss */
+/* line 1057, ../sass/main.scss */
+.search-list {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #bbbbbb;
+  padding-top: 20px;
+}
+/* line 1064, ../sass/main.scss */
+.search-list a h4 {
+  margin-bottom: 6px;
+  color: #4A4A4A;
+  font-weight: bold;
+}
+/* line 1070, ../sass/main.scss */
+.search-list a h4:hover {
+  color: #000000;
+}
+/* line 1077, ../sass/main.scss */
+.search-list .thumbnail {
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* line 1082, ../sass/main.scss */
+.search-list .thumbnail.method_card {
+  background-image: url('/images/method-background-thumbnail.png?1473644267');
+  background-color: #E98562;
+}
+/* line 1088, ../sass/main.scss */
+.search-list .thumbnail.class_tip {
+  background-image: url('/images/tip-background-thumbnail.png?1473644344');
+  background-color: #66B4DD;
+}
+/* line 1094, ../sass/main.scss */
+.search-list .thumbnail.course_example {
+  background-image: url('/images/course-background-thumbnail.png?1473644357');
+  background-color: #9BC85D;
+}
+
+/* line 1103, ../sass/main.scss */
 .search-categories, .explore-categories {
   display: inline-block;
   padding: 20px 8px;
 }
-/* line 1052, ../sass/main.scss */
+/* line 1108, ../sass/main.scss */
 .search-categories li, .explore-categories li {
   display: inline-block;
   padding: 6px 10px;
@@ -885,26 +929,26 @@ strong {
   cursor: pointer;
   color: #959595;
 }
-/* line 1060, ../sass/main.scss */
+/* line 1116, ../sass/main.scss */
 .search-categories li.current, .explore-categories li.current {
   color: #ffffff;
   background-color: #4A4A4A;
   border-radius: 4px;
 }
-/* line 1066, ../sass/main.scss */
+/* line 1122, ../sass/main.scss */
 .search-categories li.current:hover, .explore-categories li.current:hover {
   color: #ffffff;
 }
-/* line 1072, ../sass/main.scss */
+/* line 1128, ../sass/main.scss */
 .search-categories li:hover, .explore-categories li:hover {
   color: #666666;
 }
-/* line 1083, ../sass/main.scss */
+/* line 1139, ../sass/main.scss */
 .search-categories li + li, .explore-categories li + li {
   margin-left: 10px;
 }
 
-/* line 1090, ../sass/main.scss */
+/* line 1146, ../sass/main.scss */
 .search-sort {
   display: inline-block;
   margin-left: 16px;
@@ -912,15 +956,15 @@ strong {
 }
 
 /*search page end*/
-/* line 1099, ../sass/main.scss */
+/* line 1155, ../sass/main.scss */
 .collection-wrapper {
   padding-top: 100px;
 }
-/* line 1102, ../sass/main.scss */
+/* line 1158, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
-/* line 1109, ../sass/main.scss */
+/* line 1165, ../sass/main.scss */
 .collection-wrapper .card input[type=checkbox] {
   position: absolute;
   top: 10px;
@@ -929,22 +973,22 @@ strong {
   height: 20px;
   z-index: 9;
 }
-/* line 1119, ../sass/main.scss */
+/* line 1175, ../sass/main.scss */
 .collection-wrapper .card div.card-heading {
   margin-top: 26px;
 }
-/* line 1126, ../sass/main.scss */
+/* line 1182, ../sass/main.scss */
 .collection-wrapper .configure-bar {
   margin-bottom: 50px;
   font-size: 1.6rem;
 }
-/* line 1131, ../sass/main.scss */
+/* line 1187, ../sass/main.scss */
 .collection-wrapper .configure-bar .select-all-button {
   display: inline-block;
   padding-top: 12px;
   padding-bottom: 13px;
 }
-/* line 1137, ../sass/main.scss */
+/* line 1193, ../sass/main.scss */
 .collection-wrapper .configure-bar button {
   margin-left: 20px;
   margin-top: 0;
@@ -956,7 +1000,7 @@ strong {
   background-color: transparent;
 }
 
-/* line 1159, ../sass/main.scss */
+/* line 1215, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -965,12 +1009,12 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 1170, ../sass/main.scss */
+/* line 1226, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }
 
-/* line 1188, ../sass/main.scss */
+/* line 1244, ../sass/main.scss */
 footer {
   padding: 10px 50px;
   background-color: #DDDDDD;
