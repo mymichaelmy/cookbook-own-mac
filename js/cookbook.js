@@ -60,7 +60,7 @@ angular.module('cookbook').filter('noDash',function() {
 				break;
 
 			case 'class_tip':
-				result='Classroom tip';
+				result='Classroom management';
 				break;
 
 			case 'course_example':

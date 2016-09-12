@@ -1,31 +1,29 @@
-<section class="section-list section-method clearfix container-fluid">
-			<div class="container">
-				<div class="row">
-					<div class="intro col-md-3">
-						<h1>{{title}}</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum nisl venenatis viverra varius. Quisque commodo eget justo non facilisis. Curabitur commodo, ligula ac bibendum convallis, turpis mi ultricies urna, ac suscipit elit dui ac nisl. Proin ultricies sagittis sagittis. Pellentesque arcu massa, ullamcorper nec maximus et, feugiat a massa.</p>
-						<button>View all</button>
-					</div>
-					<div class="card col-md-3" ng-repeat="card in cards">
-								<div class="bg-image"><img src="" alt="">
-								<h2>{{card.title}}</h2></div>
-								<div class="ratings-wrapper"><span class="ratings">Ratings</span>
-									<span class="rating star">
-										<i class="solid star"></i>
-										<i class="solid star"></i>
-										<i class="solid star"></i>
-										<i class="hollow star"></i>
-										<i class="hollow star"></i>
+<section class="section-list section-method row">
 			
-									</span>
-								</div>
-								<!-- <p>{{card.summary}}</p> -->
-								<p>Posted by <strong>{{card.author}}</strong></p>
-								<p>{{card.recommended}} recommend this recipe</p>
-								<p>Endorsed by <span>{{card.endorse}}</span></p>
-								<a href="#!{{category}}/{{card.nid}}">Read more &gt; <i class="icon-right-arrow"></i></a>
+					
+						<div class="col-md-3" ng-repeat="card in cards" >
+							<div class="card">
+								<a ng-href="#!{{category}}/{{card.nid}}" class="{{category}}">
+									<div class="bg-image">
+										
+										<div class="card-heading">
+											<h4 class="small">{{category|noDash}}</h4>
+											<h4>{{card.title}}</h4>
+										</div>
+										<img src="" alt="">
+									</div>
+								</a>	
+									<!-- <p>{{card.summary}}</p> -->
+									<p>Posted by <strong>{{card.author||"Anonymous"}}</strong></p>
+									<p>{{card.recommended||"0"}} recommend this recipe</p>
+									<p>Endorsed by <span>{{card.endorse||"SAP"}}</span></p>
+													
+								<!-- orginal html -->
+								<!-- <p>{{highlighting[result.id].content[0]}}</p> -->
+							</div>
+							
 						</div>
-				</div>
-			</div>
+					
+			
 			
 </section>
