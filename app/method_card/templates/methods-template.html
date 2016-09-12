@@ -48,25 +48,35 @@
 		<div class="right-content col-md-9">
 			
 			<p>{{card.field_summary.und[0].value}}</p>
-			<img ng-src="/drupal/sites/default/files/{{card.field_key_images.und[0].filename}}" class="key-image" />
-			<h4>Prep ({{card.field_prep_estimate.und[0].value}} mins)</h4>
-			<ul>
-				<li ng-repeat="prepStep in card.field_prep_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(prepStep.safe_value)"></p></li>
-			</ul>
+			<figure>
+				<img ng-src="/drupal/sites/default/files/{{card.field_key_images.und[0].filename}}" class="key-image" />
+			</figure>
+			<div ng-show="card.field_prep_estimate.und" >
+				<h4>Prep ({{card.field_prep_estimate.und[0].value}} mins)</h4>
+				<ul>
+					<li ng-repeat="prepStep in card.field_prep_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(prepStep.safe_value)"></p></li>
+				</ul>
+			</div>
+
 			<h4>Steps ({{card.field_recipe_estimate.und[0].value}} mins)</h4>
 			<ul>
 				<li ng-repeat="recipeStep in card.field_recipe_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(recipeStep.safe_value)"></p></li>
 			</ul>
+			
+			<div ng-show="card.field_watch_for_text.und" >
+				<h4>Watch for</h4>
+				<ul>
+					<li ng-repeat="watchFor in card.field_watch_for_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(watchFor.safe_value)"></p></li>
+				</ul>
+			</div>
 
-			<h4>Watch for</h4>
-			<ul>
-				<li ng-repeat="watchFor in card.field_watch_for_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(watchFor.safe_value)"></p></li>
-			</ul>
-			<h4>Notes</h4>
-			<ul>
-				<li ng-repeat="note in card.field_notes_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(note.safe_value)"></p></li>
-				
-			</ul>
+			<div ng-show="card.field_notes_text.und" >
+				<h4>Notes</h4>
+				<ul>
+					<li ng-repeat="note in card.field_notes_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(note.safe_value)"></p></li>
+					
+				</ul>
+			</div>
 
 			<div ng-controller="DisqusController as disqus" identifier="disIdentifier">
 			<dir-disqus config="disqusConfig"></dir-disqus>
