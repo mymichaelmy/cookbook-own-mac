@@ -1064,7 +1064,12 @@ form select::-ms-expand {
   display: none;
 }
 
-/* line 1313, ../sass/main.scss */
+/* line 1315, ../sass/main.scss */
+.recipe-list-wrapper {
+  padding-top: 100px;
+}
+
+/* line 1322, ../sass/main.scss */
 footer {
   padding: 10px 50px;
   background-color: #DDDDDD;
