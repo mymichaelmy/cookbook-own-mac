@@ -1008,12 +1008,13 @@ strong {
 /* line 1223, ../sass/main.scss */
 .collection-wrapper {
   padding-top: 100px;
+  padding-bottom: 100px;
 }
-/* line 1226, ../sass/main.scss */
+/* line 1227, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
-/* line 1233, ../sass/main.scss */
+/* line 1234, ../sass/main.scss */
 .collection-wrapper .card input[type=checkbox] {
   position: absolute;
   top: 10px;
@@ -1022,22 +1023,22 @@ strong {
   height: 20px;
   z-index: 9;
 }
-/* line 1243, ../sass/main.scss */
+/* line 1244, ../sass/main.scss */
 .collection-wrapper .card div.card-heading {
   margin-top: 26px;
 }
-/* line 1250, ../sass/main.scss */
+/* line 1251, ../sass/main.scss */
 .collection-wrapper .configure-bar {
   margin-bottom: 50px;
   font-size: 1.6rem;
 }
-/* line 1255, ../sass/main.scss */
+/* line 1256, ../sass/main.scss */
 .collection-wrapper .configure-bar .select-all-button {
   display: inline-block;
   padding-top: 12px;
   padding-bottom: 13px;
 }
-/* line 1261, ../sass/main.scss */
+/* line 1262, ../sass/main.scss */
 .collection-wrapper .configure-bar button {
   margin-left: 20px;
   margin-top: 0;
@@ -1049,7 +1050,7 @@ strong {
   background-color: transparent;
 }
 
-/* line 1283, ../sass/main.scss */
+/* line 1284, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1058,12 +1059,12 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 1294, ../sass/main.scss */
+/* line 1295, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }
 
-/* line 1312, ../sass/main.scss */
+/* line 1313, ../sass/main.scss */
 footer {
   padding: 10px 50px;
   background-color: #DDDDDD;
