@@ -39,6 +39,10 @@ angular.module('cookbook')
             templateUrl:'/app/explore/templates/explore-template.html',
             controller:'exploreController'
         })
+        .when('/recipe_list/',{
+            templateUrl:'/app/recipe-list/templates/recipe-list-template.html',
+            controller:'recipeListController'
+        })
         .otherwise({
             redirectTo: "/"
         });
