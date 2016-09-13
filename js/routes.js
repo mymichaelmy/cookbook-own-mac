@@ -83,6 +83,30 @@ angular.module('cookbook').controller('cardsController',  function($scope, $http
     });
 });
 
-
+// angular.module('cookbook').directive('routeLoadingIndicator', function($rootScope) {
+//   return {
+//     restrict: 'E',
+//     template: "<div ng-show='isRouteLoading' class='loading-indicator'>" +
+//     "<div class='loading-indicator-body'>" +
+//     "<h3 class='loading-title'>Loading...</h3>" +
+//     "<div class='spinner'><circle-spinner></circle-spinner></div>" +
+//     "</div>" +
+//     "</div>",
+//     replace: true,
+//     link: function(scope, elem, attrs) {
+//       scope.isRouteLoading = false;
+ 
+//       $rootScope.$on('$routeChangeStart', function() {
+//         scope.isRouteLoading = true;
+//       });
+//       $rootScope.$on('$routeChangeSuccess', function() {
+//         window.setTimeout(function()
+//         {
+//                 scope.isRouteLoading = false;
+//         },100);
+//       });
+//     }
+//   };
+// });
 
 

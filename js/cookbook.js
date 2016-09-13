@@ -1,4 +1,4 @@
-angular.module('cookbook',['ngRoute','angularUtils.directives.dirDisqus']).controller('indexController',function($scope, $http,$sce)
+angular.module('cookbook',['ngRoute','angularUtils.directives.dirDisqus','angular-spinkit']).controller('indexController',function($scope, $http,$sce)
 	{
 		$scope.currentTab={'name':'home'};
 
