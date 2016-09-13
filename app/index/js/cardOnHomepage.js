@@ -26,4 +26,15 @@ angular.module('cookbook').controller('homeCardsController',function($http,$scop
 
         }());
     });
+
+
+});
+
+angular.module('cookbook').controller('homeController',function($scope)
+{
+	$scope.scrollDown=function(id)
+    {
+		var target=document.getElementById(id);
+		window.scrollTo(0,window.scrollY+target.getBoundingClientRect().top);
+    };
 });

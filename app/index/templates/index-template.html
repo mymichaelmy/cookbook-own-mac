@@ -6,20 +6,58 @@
 					<div class="col-md-6">
 						<h1>The Teaching Kit</h1>
 						<p>The teaching kit offers recipe cards for implementing design-led learning in the classroom. Through design-led learning, students get to deeply engage with course concepts, practice design thinking, and collaboratively solve problems.</p>
+
+						<button>
+						<a href="#!explore">Start exploring</a>
+						</button>
 					</div>
 					<img class="col-md-6" src="/images/index-banner.png" />
 				</div>
 
-				<div class="row">
-					<button>
-						<a href="#!explore">Start exploring</a>
-					</button>
-				</div>
+				<!-- <div class="row">
+					
+				</div> -->
 			</div>
 
 
 		</section>
-		
+
+		<div class="category-intro-wrapper container-fluid">
+			<section class="container index-intro">
+				<div class="row">
+					<img class="col-md-4" src="/images/what-is-recipes.png" />
+					<div class="col-md-8 text-align-center explain-section">
+						<h1>What is a recipe?</h1>
+						<p>Each recipe provides a unique angle on facilitating a design-led university course. They are designed to aid the teaching process, from lecturing design thinking concepts to grading project deliverables.</p>
+					</div>
+
+					<button class="arrow-down" ng-click="scrollDown('method-intro')">
+						<i></i>
+					</button>
+					
+				</div>
+				<!-- <div class="row">
+					<div class="col-md-4">
+						<img src="images/index-method.png" alt="methods">
+						<h4 class="text-align-center">Methods</h4>
+						<p>Incorporating design thinking methods into the learning experience provides deep industry insights.</p>
+						<a href="#!explore/method_card" class="hyperlink">View methods</a>
+					</div>
+					<div class="col-md-4">
+						<img src="images/index-classroom.png" alt="classroom">
+						<h4 class="text-align-center">Classroom tips</h4>
+						<p>Suggestions on how to manage a design-led classroom, from defining rubrics to grading student work, and more.</p>
+						<a href="#!explore/class_tip" class="hyperlink">View tips</a>
+					</div>
+					<div class="col-md-4">
+						<img src="images/index-course.png" alt="courses">
+						<h4 class="text-align-center">Example courses</h4>
+						<p>Examples of design-led courses run by university professors and endorsed by the industry.</p>
+						<a href="#!explore/course_example" class="hyperlink">View courses</a>
+					</div>
+				</div> -->
+			</section>
+		</div>
 		
 		
 		<!-- list of lessons -->
@@ -119,12 +157,12 @@
 			</div>
 			
 		</section> -->
-		<div class="category-intro-wrapper container-fluid">
+		<div class="category-intro-wrapper container-fluid" id="method-intro">
 			<section class="container category-intro">
 					<div class="row">
 						<img class="col-md-3" src="/images/method-head.png" />
 						<div class="intro col-md-9">
-							<h3>Methods</h3>
+							<h3><strong>1. </strong>Methods</h3>
 							<p>Incorporating design thinking methods into the learning experience provides deep industry insights.</p>
 							<a href="#!explore/method_card" class="hyperlink">View all methods</a>
 						</div>
@@ -134,12 +172,12 @@
 		</div>
 		
 
-		<div class="category-intro-wrapper container-fluid">
+		<div class="category-intro-wrapper container-fluid" id="tip-intro">
 			<section class="container category-intro">
 						<div class="row">
 							<img class="col-md-3" src="/images/tip-home.png" />
 							<div class="intro col-md-9">
-								<h3>Classroom management</h3>
+								<h3><strong>2. </strong>Classroom management</h3>
 								<p>Suggestions on how to manage a design-led classroom, from defining rubrics to grading student work, and more.</p>
 								<a href="#!explore/class_tip" class="hyperlink">View all classroom management</a>
 							</div>
@@ -148,50 +186,21 @@
 			</section>
 		</div>
 		
-		<div class="category-intro-wrapper container-fluid">
+		<div class="category-intro-wrapper container-fluid" id="course-intro">
 			<section class="container category-intro">
 				<div class="row">
 					<img class="col-md-3" src="/images/course-head.png" />
 					<div class="intro col-md-9">
-						<h3>Example courses</h3>
+						<h3><strong>3. </strong>Example courses</h3>
 						<p>Examples of design-led courses run by university professors and endorsed by the industry.</p>
 						<a href="#!explore/course_example" class="hyperlink">View all example courses</a>
 					</div>
 				</div>
-				<card-on-homepage title="Example course" category="course_example" categoryurl="course-examples-homepage"></card-on-homepage>
+				<!-- <card-on-homepage title="Example course" category="course_example" categoryurl="course-examples-homepage"></card-on-homepage> -->
+				<img src="/images/coming-soon.png" class="col-md-offset-3 col-md-6" />
 			</section>
 		</div>
 		
-		<div class="category-intro-wrapper container-fluid">
-			<section class="container index-intro">
-				<div class="row">
-					<div class="col-md-9 text-align-center explain-section">
-						<h2>What is a recipe?</h2>
-						<p>Each recipe provides a unique angle on facilitating a design-led university course. They are designed to aid the teaching process, from lecturing design thinking concepts to grading project deliverables.</p>
-					</div>
-					<img class="col-md-3" src="/images/what-is-recipes.png" />
-				</div>
-				<!-- <div class="row">
-					<div class="col-md-4">
-						<img src="images/index-method.png" alt="methods">
-						<h4 class="text-align-center">Methods</h4>
-						<p>Incorporating design thinking methods into the learning experience provides deep industry insights.</p>
-						<a href="#!explore/method_card" class="hyperlink">View methods</a>
-					</div>
-					<div class="col-md-4">
-						<img src="images/index-classroom.png" alt="classroom">
-						<h4 class="text-align-center">Classroom tips</h4>
-						<p>Suggestions on how to manage a design-led classroom, from defining rubrics to grading student work, and more.</p>
-						<a href="#!explore/class_tip" class="hyperlink">View tips</a>
-					</div>
-					<div class="col-md-4">
-						<img src="images/index-course.png" alt="courses">
-						<h4 class="text-align-center">Example courses</h4>
-						<p>Examples of design-led courses run by university professors and endorsed by the industry.</p>
-						<a href="#!explore/course_example" class="hyperlink">View courses</a>
-					</div>
-				</div> -->
-			</section>
-		</div>
+		
 
 	</div>

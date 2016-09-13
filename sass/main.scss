@@ -194,6 +194,11 @@ button
 	{
 		color: #ffffff;
 	}
+
+	&:focus
+	{
+		outline:0;
+	}
 }
 
 .hyperlink
@@ -286,13 +291,15 @@ header
 {
 	
 	background-color:#ffffff;
-	padding-top:160px;
-	padding-bottom:100px;
+	padding-top:100px;
+	padding-bottom:60px;
 	.row
 	{
+		
+		text-align: center;
 		button
 		{
-			margin-left:15px;
+			margin-top: 30px;
 			padding:10px 18px;
 
 			color:#ffffff;
@@ -305,7 +312,8 @@ header
 		h1
 		{
 			margin-top: 30px;
-			margin-bottom:60px;
+			margin-bottom:50px;
+			text-align: center;
 		}
 	}
 }
@@ -321,7 +329,7 @@ header
 .index-intro
 {
 	padding-top:84px;
-	padding-bottom:100px;
+	padding-bottom:80px;
 	img
 	{
 		// width: 100%;
@@ -369,7 +377,29 @@ header
 		background-color: #dfdfdf;
 	}
 
+	h1
+	{
+		margin-top: 30px;
+		margin-bottom:30px;
+	}
+	
+	.arrow-down
+	{
+		
+		background-color:transparent;
+		border-style:none;
+		i
+		{
+			width:58px;
+			height:27px;
+			background-image:image-url('arrow-down.png');
+			background-size:contain;
+		}
+	}
+
+
 }
+
 .category-intro
 {
 	padding-top:84px;
@@ -387,12 +417,14 @@ header
 		p
 		{
 			margin-top:12px;
+			margin-left: 25px;
 		}
 
 		a
 		{
 			display: inline-block;
 			margin-top:22px;
+			margin-left: 25px;
 		}
 	}
 
@@ -405,7 +437,7 @@ header
 //for all explaination
 .explain-section
 {
-	margin-bottom:60px;
+	margin-bottom:50px;
 	text-align:center;
 		p
 		{
@@ -1114,6 +1146,21 @@ ul.my-pager
 strong
 {
 	font-weight:bold;
+
+	#method-intro h3 &
+	{
+		color:$methodColor1;
+	}
+
+	#tip-intro h3 &
+	{
+		color:$tipColor1;
+	}
+
+	#course-intro h3 &
+	{
+		color:$courseColor1;
+	}
 }
 
 .search-result

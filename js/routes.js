@@ -9,7 +9,7 @@ angular.module('cookbook')
         })
         .when('/', {
             templateUrl: '/app/index/templates/index-template.html',
-            // controller: 'cardsController'
+            controller: 'homeController'
         })
         .when('/method_card/:cardUid', {
             templateUrl: '/app/method_card/templates/methods-template.html',

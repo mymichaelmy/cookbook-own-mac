@@ -24,7 +24,7 @@ var rootURL="http://54.153.57.8";   //save root url
 var mainPort=":80";
 var solrPort=":8983";
 var searchFragsize=200;
-
+var numberPerPage=12;
 
 /*init part*/
 

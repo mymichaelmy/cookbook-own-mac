@@ -4,7 +4,7 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 	//init
 	$scope.currentTab.name='explore';//change the tab
 
-	var url=$scope.currentUrl=rootURL+solrPort+"/solr/drupal/select?"+"wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&fq=ss_language:und&facet=on&facet.field=bundle&facet.field=sm_field_author&facet.field=sm_field_endorse";
+	var url=$scope.currentUrl=rootURL+solrPort+"/solr/drupal/select?"+"wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&rows="+numberPerPage+"&fq=ss_language:und&facet=on&facet.field=bundle&facet.field=sm_field_author&facet.field=sm_field_endorse";
 	$scope.currentCategory="all";
 
 	$scope.filterStatus={}; //to store status of every kind of filter
@@ -53,7 +53,7 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 	function refreshPagers(totalNumber)
 	{
 		$scope.pagers=[];
-		for(var i=1;i<=(totalNumber-1)/10+1;i++)
+		for(var i=1;i<=(totalNumber-1)/numberPerPage+1;i++)
 		{
 			$scope.pagers.push(i);
 		}
@@ -72,7 +72,7 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 				url+=('&fq=bundle:'+$scope.currentCategory);
 			}
 
-			url+=('&start='+(num-1)*10);
+			url+=('&start='+(num-1)*numberPerPage);
 
 			$http.get(url).success(function(data)
 			{
