@@ -1,4 +1,4 @@
-angular.module('cookbook').controller('exploreController',  function($scope, $http,$routeParams)
+angular.module('cookbook').controller('exploreController',  function($scope, $http,$routeParams,$location)
 {
 
 	//init
@@ -124,15 +124,26 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 					//
 					$scope.results=data.response.docs;
 
-					if(categoryTitle!='bundle')
+					if(categoryTitle!='bundle')  //if the tab is not a bundle tab, reset filter
 					{
 						//update the bundle tab
 						$scope.totalNumber=data.response.numFound;
 						$scope.categories=data.facet_counts.facet_fields.bundle;
 						$scope.currentCategory='all';
 					}
+					else if(categoryValue!=='all')
+					{
+						$location.url('/explore/'+categoryValue);
+					}
+
+					else
+					{
+						$location.url('/explore/');
+					}
+
 					refreshPagers(numberInCategory);  //refresh pager on bottom
 					
+
 					$scope.currentPage=1;
 					
 
