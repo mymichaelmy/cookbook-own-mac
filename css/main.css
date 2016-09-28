@@ -1112,3 +1112,15 @@ footer {
   background-color: #DDDDDD;
   color: white;
 }
+/* line 1384, ../sass/main.scss */
+footer p {
+  display: inline-block;
+}
+/* line 1388, ../sass/main.scss */
+footer .right {
+  float: right;
+}
+/* line 1393, ../sass/main.scss */
+footer a:link, footer a:visited {
+  color: inherit;
+}

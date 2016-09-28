@@ -1381,5 +1381,19 @@ footer
 	background-color:#DDDDDD;
 	color:white;
 	
+	p
+	{
+		display: inline-block;
+	}
+	.right
+	{
+		float:right;
+	}
+
+	a:link,a:visited
+	{
+		color:inherit;
+	}
+	
 }
 
