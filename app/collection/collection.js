@@ -100,7 +100,7 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 		
 		var currentCollection=[];
 		var collectionString='';
-		for(i=0; i<$scope.selectArray.length;i++)
+		for(i=$scope.selectArray.length-1;i>=0;i--)
 		{
 
 
