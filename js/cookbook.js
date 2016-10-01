@@ -11,6 +11,15 @@ angular.module('cookbook',['ngRoute','angularUtils.directives.dirDisqus','angula
 		{
 			return $sce.trustAsHtml(html);
 		};
+
+		$scope.showPopup=getCookie('noPopup')?false:true;
+
+		$scope.closePopup=function()
+		{
+			$scope.showPopup=false;
+
+			setCookie('noPopup',true,200,'/');
+		};
 	});
 angular.module('cookbook').config(['$locationProvider',function ($locationProvider)
 	{

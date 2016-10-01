@@ -38,3 +38,4 @@ angular.module('cookbook').controller('homeController',function($scope)
 		window.scrollTo(0,window.scrollY+target.getBoundingClientRect().top);
     };
 });
+
