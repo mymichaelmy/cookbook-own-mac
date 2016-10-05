@@ -46,6 +46,13 @@ angular.module('cookbook')
         .when('/about/',{
             templateUrl:'/app/about/templates/about.html'
         })
+        .when('/login/',{
+            templateUrl:'/app/login/templates/login-template.html'
+        })
+        .when('/register/',{
+            templateUrl:'/app/register/templates/register-template.html',
+            controller:'registerController'
+        })
         .otherwise({
             redirectTo: "/"
         });

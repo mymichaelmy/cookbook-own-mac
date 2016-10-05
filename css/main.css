@@ -1228,3 +1228,15 @@ footer .mail:hover {
   background-size: contain;
   cursor: pointer;
 }
+
+/* start of register page */
+/* line 1524, ../sass/main.scss */
+.register-wrapper {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+/* line 1529, ../sass/main.scss */
+.register-wrapper .input-title {
+  display: inline-block;
+  width: 80px;
+}
