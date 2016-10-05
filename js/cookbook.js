@@ -83,3 +83,17 @@ angular.module('cookbook').filter('noDash',function() {
         return result;
     };
 });
+
+angular.module('cookbook').filter('fileName',function() {
+    return function(input) {
+		var myRegexp = /^public:\/\/(\S*)$/g;
+		var match= myRegexp.exec(input);
+
+		if(match)
+		{
+			return match[1];
+		}
+		
+		
+    };
+});

@@ -14,7 +14,7 @@
 				<div class="cta col-md-2 ">
 					<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)" class="small"><i class="icons-red-rec"></i>Recommend</button>
 					<button ng-click="addToCollection(card.type,card.nid)" class="small" ng-show="card.field_zip_files.und"><i class="icons-red-add"></i>Add to collection</button>
-					<button class="small"><a ng-href="/drupal/sites/default/files/{{card.field_zip_files.und[0].filename}}"><i class="icons-red-download"></i>Download</a></button>
+					<button class="small"><a ng-href="/drupal/sites/default/files/{{card.field_zip_files.und[0].uri|fileName}}"><i class="icons-red-download"></i>Download</a></button>
 					
 				</div>
 			</div>
