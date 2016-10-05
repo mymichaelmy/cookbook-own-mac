@@ -220,6 +220,7 @@ b
 
 html,body
 {
+	position:relative;
 	height:100%;
 	font-size:10px;
 	font-family:"Open Sans",Helvetica,Arial,sans-serif;
@@ -1420,6 +1421,7 @@ footer
 	// border-top-style:solid;
 	// border-top-color:#999;
 	// border-top-width:1px;
+	margin-top:100px;
 	padding:10px 50px;
 	background-color:#DDDDDD;
 	color:#888;
