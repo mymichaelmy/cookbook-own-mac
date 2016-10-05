@@ -86,7 +86,7 @@ angular.module('cookbook').filter('noDash',function() {
 
 angular.module('cookbook').filter('fileName',function() {
     return function(input) {
-		var myRegexp = /^public:\/\/(\S*)$/g;
+		var myRegexp = /^public:\/\/(.*)$/g;
 		var match= myRegexp.exec(input);
 
 		if(match)
