@@ -665,7 +665,7 @@ form.search {
 /* line 754, ../sass/main.scss */
 form.search input[type=search] {
   padding: 2px 10px;
-  width: 300px;
+  width: 210px;
   height: 2.8rem;
   font-size: 1.4rem;
   -moz-border-radius: 6px / 6px;
