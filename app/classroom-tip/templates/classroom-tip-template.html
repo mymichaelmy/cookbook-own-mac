@@ -38,14 +38,19 @@
 			<ul>
 				<li ng-repeat="ingredent in card.field_ingredients.und">{{ingredent.value}}</li>
 			</ul>
-			<h4>Resources</h4>
+			<div ng-show="card.field_arsenal_files.und">
+				<h4>Resources</h4>
+				<ul>
+					<li ng-repeat="resource in card.field_arsenal_files.und"><a ng-href="/drupal/sites/default/files/{{resource.filename}}" target="_blank">{{resource.filename}}</a></li>
+				</ul>
+			</div>
 			<ul>
-				<li ng-repeat="resource in card.field_arsenal_files.und"><a ng-href="/drupal/sites/default/files/{{resource.filename}}" target="_blank">{{resource.filename}}</a></li>
-			</ul>
-			<ul>
-			<h4>Also see</h4>	
-				<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
-			</ul>
+			
+			<div ng-show="card.field_links.und">
+				<h4>Also see</h4>
+					<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
+				</ul>
+			</div>
 			
 		</div>
 		<div class="right-content col-md-9">
