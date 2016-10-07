@@ -44,9 +44,10 @@
 					<li ng-repeat="resource in card.field_arsenal_files.und"><a ng-href="/drupal/sites/default/files/{{resource.filename}}" target="_blank">{{resource.filename}}</a></li>
 				</ul>
 			</div>
-			<ul>
+			
 			
 			<div ng-show="card.field_links.und">
+				<ul>
 				<h4>Also see</h4>
 					<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
 				</ul>
