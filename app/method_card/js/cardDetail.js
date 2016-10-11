@@ -1,6 +1,15 @@
 angular.module('cookbook').controller('cardDetailController',  function($scope, $http,$routeParams) {
 
   // $scope.order_id = $routeParams.orderId;
+  // 
+    function downloadTxt(txtString)
+    {
+            var blob = new Blob([txtString], {type: "text/plain;charset=utf-8"});
+
+            var textFile = window.URL.createObjectURL(blob);
+
+            return textFile;
+    }
     $http.get('/drupal/rest/node/'+$routeParams.cardUid).success(function(data)
     {
         $scope.card=data;
@@ -63,6 +72,16 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
                 });
             }
         };
+
+        var txtString="";
+
+        txtString+=$scope.card.title+"\r\n";
+        txtString+=$scope.card.field_summary.und[0].value+"\r\n";
+
+        var downloadLink=document.getElementById('downloadTxt');
+        downloadLink.href=downloadTxt(txtString);
+
+        
         
     });
 });
