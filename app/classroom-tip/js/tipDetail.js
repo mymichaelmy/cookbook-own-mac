@@ -83,7 +83,7 @@ angular.module('cookbook').controller('tipDetailController',  function($scope, $
 
         if($scope.card.field_links.und)
         {
-            txtString+="<br /><b>"+"Resources"+"</b><br />";
+            txtString+="<br /><b>"+"Also see"+"</b><br />";
             $scope.card.field_links.und.forEach(function(value,index)
             {
 
