@@ -35,3 +35,19 @@ function replaceSpaceForSolr(str)
 {
 	return str.replace(/\s+/g,"\\"+'+');
 }
+
+function replacePublicRoot(str)
+{
+    var myRegexp = /^public:\/\/(.*)$/g;
+    var match= myRegexp.exec(str);
+
+    if(match)
+    {
+        return match[1];
+    }
+
+    else
+    {
+        return '';
+    }
+}

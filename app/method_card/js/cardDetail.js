@@ -20,7 +20,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             //should check if added
             if(cardIfAdded('cardCollection',cardType,cardID)===false)
             {
-            //
+            
                 var newCard={'cardType':cardType,'cardID':cardID};
                 var currentNumber=Number(getCookie('totalNumber'))+1;
                 var currentCollection=[];
@@ -75,11 +75,47 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
         var txtString="";
 
-        txtString+=$scope.card.title+"\r\n";
-        txtString+=$scope.card.field_summary.und[0].value+"\r\n";
+        txtString+="<b>"+$scope.card.title+"</b><br />";
+        txtString+=$scope.card.field_summary.und[0].value+"<br />";
 
+        if($scope.card.field_arsenal_files.und)
+        {
+            txtString+="<br /><b>"+"Resources"+"</b><br />";
+            $scope.card.field_arsenal_files.und.forEach(function(value,index)
+            {
+
+                txtString+=(index+1)+". "+value.filename+"<br />";
+                txtString+="<a href="+rootURL+mainPort+"/drupal/sites/default/files/"+replacePublicRoot(value.uri)+">"+rootURL+mainPort+"/drupal/sites/default/files/"+replacePublicRoot(value.uri)+"</a>"+"<br />";
+            });
+        }
+
+        if($scope.card.field_links.und)
+        {
+            txtString+="<br /><b>"+"Resources"+"</b><br />";
+            $scope.card.field_links.und.forEach(function(value,index)
+            {
+
+                txtString+=(index+1)+". "+value.title+"<br />";
+                txtString+="<a href=http://"+value.url+">"+value.url+"</a>"+"<br />";
+            });
+        }
+
+        // txtString+="<br />"+"Steps"+"<br />";
+        // $scope.card.field_recipe_steps_text.und.forEach(function(value,index)
+        // {
+
+        //     txtString+=(index+1)+". "+value.value+"<br />";
+        // });
+        
         var downloadLink=document.getElementById('downloadTxt');
         downloadLink.href=downloadTxt(txtString);
+
+
+        txtString=encodeURIComponent(txtString);
+        $scope.downloadDoc=function()
+        {
+            window.location.href = "/php/doc.php"+"?content="+txtString+"&title="+$scope.card.title;
+        };
 
         
         

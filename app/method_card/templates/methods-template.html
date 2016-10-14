@@ -17,7 +17,10 @@
 					<button class="small"><a ng-href="/drupal/sites/default/files/{{card.field_zip_files.und[0].uri|fileName}}"><i class="icons-red-download"></i>Download</a></button>
 
 					<button class="small"><a download="info.txt" id="downloadTxt" href=""><i class="icons-red-download"></i>Download .txt</a></button>
-					
+					<!-- <form action="/php/doc.php">
+						<button type="submit">download doc</button>
+					</form> -->
+					<button ng-click="downloadDoc()">Download doc</button>
 				</div>
 			</div>
 		</div>
@@ -51,7 +54,7 @@
 			<div ng-show="card.field_links.und">
 				<ul>
 				<h4>Also see</h4>
-					<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
+					<li ng-repeat="link in card.field_links.und"><a ng-href="http://{{link.url}}" target="_blank">{{link.title}}</a></li>
 				</ul>
 			</div>
 		</div>
