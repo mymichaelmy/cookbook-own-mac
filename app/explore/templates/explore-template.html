@@ -70,6 +70,10 @@
 				</div>
 			</div>
 
+			<ul class="my-pager">
+				<li ng-class="{'current':currentPage===($index+1)}" ng-repeat="pager in pagers" ng-click="goToPage($index+1)">{{$index+1}}</li>
+			</ul>
+
 			
 
 		</div>
