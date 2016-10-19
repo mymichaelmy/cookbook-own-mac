@@ -51,3 +51,16 @@ function replacePublicRoot(str)
         return '';
     }
 }
+
+function titleToRtf(title)
+{
+    var string= '\\b'+title+'\\b0\\par';
+    return string;
+}
+
+function linkToRtf(uri)
+{
+    var string='{\\*\\generator Msftedit 5.41.21.2509;}\\viewkind4\\uc1\\pard\\sa200\\sl276\\slmult1\\lang9\\f0\\fs22{\\field{\\*\\fldinst{HYPERLINK '+rootURL+mainPort+'/drupal/sites/default/files/'+replacePublicRoot(uri)+'}}{\\fldrslt{\\ul\\cf1 '+rootURL+mainPort+'/drupal/sites/default/files/'+replacePublicRoot(uri)+'}}}\\f0\\fs22\\par\\par';
+
+    return string;
+}

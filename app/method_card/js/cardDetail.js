@@ -75,8 +75,8 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
         var txtString="";
 
-        txtString+="\b"+$scope.card.title+"\b0\par";
-        txtString+=$scope.card.field_summary.und[0].value+"\par";
+        txtString+="\\b"+$scope.card.title+"\\b0\\par";
+        txtString+=$scope.card.field_summary.und[0].value+"\\par";
 
         if($scope.card.field_arsenal_files.und)
         {
@@ -85,7 +85,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             {
 
                 txtString+=(index+1)+". "+value.filename+"\\par";
-                txtString+="<a href="+rootURL+mainPort+"/drupal/sites/default/files/"+replacePublicRoot(value.uri)+">"+rootURL+mainPort+"/drupal/sites/default/files/"+replacePublicRoot(value.uri)+"</a>"+"\\par";
+                txtString+=linkToRtf(value.uri);
             });
         }
 
@@ -96,7 +96,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             {
 
                 txtString+=(index+1)+". "+value.title+"\\par";
-                txtString+="<a href=http://"+value.url+">"+value.url+"</a>"+"\\par";
+                txtString+=linkToRtf(value.uri);
             });
         }
 
