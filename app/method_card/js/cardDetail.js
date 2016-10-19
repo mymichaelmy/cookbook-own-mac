@@ -75,28 +75,28 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
         var txtString="";
 
-        txtString+="\\b"+$scope.card.title+"\\b0\\par";
-        txtString+=$scope.card.field_summary.und[0].value+"\\par";
+        txtString+="\\b "+$scope.card.title+" \\b0\\par ";
+        txtString+=$scope.card.field_summary.und[0].value+"\\par ";
 
         if($scope.card.field_arsenal_files.und)
         {
-            txtString+="\\par\\b"+"Resources"+"\\b0\\par";
+            txtString+="\\par \\b "+"Resources"+" \\b0\\par ";
             $scope.card.field_arsenal_files.und.forEach(function(value,index)
             {
 
-                txtString+=(index+1)+". "+value.filename+"\\par";
-                txtString+=linkToRtf(value.uri);
+                txtString+=(index+1)+". "+value.filename+"\\par ";
+                txtString+=linkToRtf(value.uri,true);
             });
         }
 
         if($scope.card.field_links.und)
         {
-            txtString+="\\par\\b"+"Also see"+"\\b0\\par";
+            txtString+="\\par \\b "+"Also see"+" \\b0\\par ";
             $scope.card.field_links.und.forEach(function(value,index)
             {
 
-                txtString+=(index+1)+". "+value.title+"\\par";
-                txtString+=linkToRtf(value.uri);
+                txtString+=(index+1)+". "+value.title+"\\par ";
+                txtString+=linkToRtf(value.url,false);
             });
         }
 

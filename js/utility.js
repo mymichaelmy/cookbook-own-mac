@@ -58,9 +58,18 @@ function titleToRtf(title)
     return string;
 }
 
-function linkToRtf(uri)
+function linkToRtf(uri,ifReplace)   //ifReplace decides whether to process the link, to replace public with real link
 {
-    var string='{\\*\\generator Msftedit 5.41.21.2509;}\\viewkind4\\uc1\\pard\\sa200\\sl276\\slmult1\\lang9\\f0\\fs22{\\field{\\*\\fldinst{HYPERLINK '+rootURL+mainPort+'/drupal/sites/default/files/'+replacePublicRoot(uri)+'}}{\\fldrslt{\\ul\\cf1 '+rootURL+mainPort+'/drupal/sites/default/files/'+replacePublicRoot(uri)+'}}}\\f0\\fs22\\par\\par';
+    var uriString='';
+    if(ifReplace)
+    {
+        uriString=rootURL+mainPort+'/drupal/sites/default/files/'+replacePublicRoot(uri);
+    }
+    else
+    {
+        uriString=uri;
+    }
+    var string='{\\*\\generator Msftedit 5.41.21.2509;}\\viewkind4\\uc1\\pard\\sa200\\sl276\\slmult1\\lang9\\f0\\fs22{\\field{\\*\\fldinst{HYPERLINK '+uriString+'}}{\\fldrslt{\\ul\\cf1 '+uriString+'}}}\\f0\\fs22\\par ';
 
     return string;
 }
