@@ -2,7 +2,7 @@
 header("Content-type: text/rtf ");
 
 $title=$_GET["title"];
-header("Content-Disposition: attachment;Filename=rtf.rtf");
+header("Content-Disposition: attachment;Filename=$title.rtf");
 
 
 $string1 = $_GET["content"];
