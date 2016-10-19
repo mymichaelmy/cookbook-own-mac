@@ -75,28 +75,28 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
         var txtString="";
 
-        txtString+="<b>"+$scope.card.title+"</b><br />";
-        txtString+=$scope.card.field_summary.und[0].value+"<br />";
+        txtString+="\b"+$scope.card.title+"\b0\par";
+        txtString+=$scope.card.field_summary.und[0].value+"\par";
 
         if($scope.card.field_arsenal_files.und)
         {
-            txtString+="<br /><b>"+"Resources"+"</b><br />";
+            txtString+="\\par\\b"+"Resources"+"\\b0\\par";
             $scope.card.field_arsenal_files.und.forEach(function(value,index)
             {
 
-                txtString+=(index+1)+". "+value.filename+"<br />";
-                txtString+="<a href="+rootURL+mainPort+"/drupal/sites/default/files/"+replacePublicRoot(value.uri)+">"+rootURL+mainPort+"/drupal/sites/default/files/"+replacePublicRoot(value.uri)+"</a>"+"<br />";
+                txtString+=(index+1)+". "+value.filename+"\\par";
+                txtString+="<a href="+rootURL+mainPort+"/drupal/sites/default/files/"+replacePublicRoot(value.uri)+">"+rootURL+mainPort+"/drupal/sites/default/files/"+replacePublicRoot(value.uri)+"</a>"+"\\par";
             });
         }
 
         if($scope.card.field_links.und)
         {
-            txtString+="<br /><b>"+"Also see"+"</b><br />";
+            txtString+="\\par\\b"+"Also see"+"\\b0\\par";
             $scope.card.field_links.und.forEach(function(value,index)
             {
 
-                txtString+=(index+1)+". "+value.title+"<br />";
-                txtString+="<a href=http://"+value.url+">"+value.url+"</a>"+"<br />";
+                txtString+=(index+1)+". "+value.title+"\\par";
+                txtString+="<a href=http://"+value.url+">"+value.url+"</a>"+"\\par";
             });
         }
 
@@ -114,7 +114,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
         txtString=encodeURIComponent(txtString);
         $scope.downloadDoc=function()
         {
-            window.location.href = "/php/doc.php"+"?content="+txtString+"&title="+$scope.card.title;
+            window.location.href = "/php/rtf.php"+"?content="+txtString+"&title="+$scope.card.title;
         };
 
         
