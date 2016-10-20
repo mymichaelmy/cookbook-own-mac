@@ -37,12 +37,15 @@
 					<p ng-bind-html="toTrustedHTML(highlighting[result.id].content[0])"></p>
 				</div>
 			</div>
+
+
+		<ul class="my-pager">
+		<li ng-repeat="pager in pagers" ng-click="goToPage($index+1)">{{$index+1}}</li>
+		</ul>
 	
 	</div>
 
-	<ul class="my-pager">
-		<li ng-repeat="pager in pagers" ng-click="goToPage($index+1)">{{$index+1}}</li>
-	</ul>
+	
 </div>
 
 
