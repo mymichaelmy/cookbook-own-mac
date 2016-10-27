@@ -1242,3 +1242,14 @@ footer .mail:hover {
   display: inline-block;
   width: 80px;
 }
+
+/* line 1538, ../sass/main.scss */
+.activation-wrapper {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+/* line 1543, ../sass/main.scss */
+.activation-wrapper .input-title {
+  display: inline-block;
+  width: 80px;
+}

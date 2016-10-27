@@ -35,6 +35,10 @@ angular.module('cookbook').controller('registerController',function($http,$scope
 			responseType:'text'
 		};
 
-		$http.post('http://127.0.0.1:8080/drupal/userapi/user/register.json',submitObj,config);
-	};   //need to modify ip address before upload
+		$http.post('/drupal/userapi/user/register.json',submitObj,config).success(function(data)   //need to modify ip address before upload
+		{
+			//login or email verification
+		});
+		
+	};
 });

@@ -53,6 +53,14 @@ angular.module('cookbook')
             templateUrl:'/app/register/templates/register-template.html',
             controller:'registerController'
         })
+        .when('/activation/',{
+            templateUrl:'/app/register/templates/activation-template.html',
+            controller:'activationController'
+        })
+        .when('/reset-password/',{
+            templateUrl:'/app/register/templates/reset-password-template.html',
+            controller:'resetPassController'
+        })
         .otherwise({
             redirectTo: "/"
         });
