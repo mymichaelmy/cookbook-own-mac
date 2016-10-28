@@ -38,6 +38,9 @@ angular.module('cookbook').controller('resetPassController',function($http,$scop
 			{
 				console.error('error', status, data);
 			});
+		}).error(function(data, status)
+		{
+			console.error('error', status, data);
 		});
 			
 		
