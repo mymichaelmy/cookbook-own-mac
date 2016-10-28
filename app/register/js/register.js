@@ -44,13 +44,13 @@ angular.module('cookbook').controller('registerController',function($http,$scope
 					'X-CSRF-Token': data.token
 				},
 			};
-			$http.post('/drupal/userapi/user/register.json',submitObj,config).success(function(data)   //need to modify ip address before upload
+			$http.post('/drupal/userapi/user/register.json',submitObj,config).then(function(response)   //need to modify ip address before upload
 			{
 			//login or email verification
-				console.log(data);
-			}).error(function(data, status)
+				console.log(response);
+			}).catch(function(response)
 			{
-				console.error('error', status, data);
+				console.error('error', response);
 			});
 		}).error(function(data, status)
 		{
