@@ -33,7 +33,13 @@ angular.module('cookbook').controller('activationController',function($http,$sco
 			{
 				console.log(data);
 				$scope.token=data.pass_reset_token;
+			}).error(function(data, status)
+			{
+				console.error('error', status, data);
 			});
+		}).error(function(data, status)
+		{
+			console.error('error', status, data);
 		});
 
 

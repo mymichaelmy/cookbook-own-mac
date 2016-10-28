@@ -38,11 +38,23 @@ angular.module('cookbook').controller('registerController',function($http,$scope
 
 		$http.post('/drupal/userapi/user/token.json',dataPost,config).success(function(data)  //gain x-csrf token
 		{
+			var config = {
+				headers:{
+					'Content-Type': 'application/json',
+					'X-CSRF-Token': data.token
+				},
+			};
 			$http.post('/drupal/userapi/user/register.json',submitObj,config).success(function(data)   //need to modify ip address before upload
 			{
 			//login or email verification
 				console.log(data);
+			}).error(function(data, status)
+			{
+				console.error('error', status, data);
 			});
+		}).error(function(data, status)
+		{
+			console.error('error', status, data);
 		});
 		
 	};
