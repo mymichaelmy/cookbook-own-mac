@@ -1233,12 +1233,12 @@ footer .mail:hover {
 
 /* start of register page */
 /* line 1526, ../sass/main.scss */
-.register-wrapper {
+.register-wrapper, .login-wrapper {
   padding-top: 100px;
   padding-bottom: 80px;
 }
 /* line 1531, ../sass/main.scss */
-.register-wrapper .input-title {
+.register-wrapper .input-title, .login-wrapper .input-title {
   display: inline-block;
   width: 80px;
 }

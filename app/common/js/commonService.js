@@ -1,5 +1,5 @@
 (function(){
-	angular.module('cookbook',[]).factory('commonService',['$http',function($http)
+	angular.module('cookbook').factory('commonService',['$http',function($http)
 	{
 		var commonService={};
 
@@ -8,8 +8,17 @@
 		//getCSRF
 		commonService.getCSRF=function(successCallback)
 		{
-			var argArray=arguments.slice(1);  //remove the first parameter and pass all the arguments to callback function
-			$http.post('/drupal/userapi/user/token.json',dataPost,config).success(function(data,argArray)  //gain x-csrf token
+			var dataPost={};
+			var config =
+			{
+				headers:
+				{
+					'Content-Type': 'application/json'
+				},
+			};
+
+			var argArray=Array.prototype.slice.call(arguments, 1);  //remove the first parameter and pass all the arguments to callback function
+			$http.post('/drupal/userapi/user/token.json',dataPost,config).success(function(data)  //gain x-csrf token
 			{
 				commonService.CSRFToken=data.token;
 				successCallback.apply(this,argArray);   //pass arguments to callback function
@@ -47,11 +56,11 @@
 
 			var submitObj=
 			{
-				username:username,
-				pass:password
+				'username':username,
+				'password':password
 			};
 
-			$http.post('/drupal/userapi/user/register.json',submitObj,config).then(function(response)   //need to modify ip address before upload
+			$http.post('/drupal/userapi/user/login.json',submitObj,config).then(function(response)   //need to modify ip address before upload
 			{
 			//login or email verification
 				console.log(response);
