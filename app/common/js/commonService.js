@@ -71,6 +71,24 @@
 
 		};
 
+		commonService.updateContributeLinks=function(data,uid)
+		{
+			var config = {
+				headers:{
+					'Content-Type': 'application/json',
+					'X-CSRF-Token': commonService.CSRFToken
+				},
+			};
+
+			$http.put('/drupal/rest/node/'+uid,data,config).success(function(data)
+            {
+                console.log(data);
+
+            }).error(function(data){
+                console.error(data);
+            });
+		};
+
 		return commonService;
 	}]);
 }());

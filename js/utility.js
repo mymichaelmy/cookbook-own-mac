@@ -73,3 +73,12 @@ function linkToRtf(uri,ifReplace)   //ifReplace decides whether to process the l
 
     return string;
 }
+
+
+function validateLink(link)
+{
+    var referenceReg= /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/;
+
+    return referenceReg.test(link);
+
+}

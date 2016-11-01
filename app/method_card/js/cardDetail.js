@@ -1,4 +1,4 @@
-angular.module('cookbook').controller('cardDetailController',  function($scope, $http,$routeParams) {
+angular.module('cookbook').controller('cardDetailController',  function($scope, $http,$routeParams,commonService) {
 
   // $scope.order_id = $routeParams.orderId;
   // 
@@ -14,6 +14,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
     {
         $scope.card=data;
         $scope.disIdentifier=data.type+data.nid;   //temperarily put here but it's hard to pass parameter before the next controller is loaded
+        $scope.linkArray=$scope.card.field_links.und;
 
         $scope.addToCollection=function(cardType, cardID)
         {
@@ -117,7 +118,38 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             window.location.href = "/php/rtf.php"+"?content="+txtString+"&title="+$scope.card.title;
         };
 
-        
+
+        $scope.contributeLink=function()
+        {
+            if(validateLink($scope.form.link))
+            {
+                var linkObject=
+                {
+                    'url':$scope.form.link,
+                    'title':$scope.form.title
+                };
+
+                $scope.linkArray.push(linkObject);
+                var field_links={ und:$scope.linkArray };
+
+                var data={ 'field_links':field_links };
+                
+                if(!commonService.CSRFToken)
+                {
+                    commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid);
+                }
+                else
+                {
+                    commonService.updateContributeLinks(data,$routeParams.cardUid);
+                }
+
+            }
+
+            else
+            {
+                console.error('link not working!');
+            }
+        };
         
     });
 });
