@@ -55,6 +55,14 @@
 					<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
 				</ul>
 			</div>
+
+			<div ng-show="card.field_recipe_tags.und" class="recipe-tags">
+				<ul>
+				<h4>Keywords</h4>
+					<br />
+					<li ng-repeat="tag in card.field_recipe_tags.und">#{{tag.value}}</li>
+				</ul>
+			</div>
 			
 		</div>
 		<div class="right-content col-md-9">

@@ -66,7 +66,7 @@
 				console.log(response);
 			}).catch(function(response)
 			{
-				console.error('error', response);
+				console.error('error', response.statusText);
 			});
 
 		};
