@@ -230,7 +230,10 @@ html,body
 	line-height:1.2;
 }
 
-
+.view
+{
+	min-height:100%;
+}
 
 a:link,a:visited
 {
@@ -1437,7 +1440,7 @@ footer
 	// border-top-style:solid;
 	// border-top-color:#999;
 	// border-top-width:1px;
-	margin-top:100px; 
+	margin-top:30px; 
 	padding:10px 50px;
 	background-color:#DDDDDD;
 	color:#888;
