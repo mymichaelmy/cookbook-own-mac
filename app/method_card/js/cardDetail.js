@@ -136,11 +136,11 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
                 
                 if(!commonService.CSRFToken)
                 {
-                    commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid);
+                    commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid,$scope);
                 }
                 else
                 {
-                    commonService.updateContributeLinks(data,$routeParams.cardUid);
+                    commonService.updateContributeLinks(data,$routeParams.cardUid,$scope);
                 }
 
             }
