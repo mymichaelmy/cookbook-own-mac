@@ -1004,8 +1004,58 @@ form.search
 
 	form
 	{
-		
+		font-size:1.4rem;
+
 		margin-bottom: 30px;
+
+		&.contribute-form
+		{
+			margin-top: 15px;
+
+			div
+			{	
+				max-height: 150px;
+				transition: all ease 0.5s;
+				
+				&+button
+				{
+					margin-top: 10px;
+				}
+			}
+		
+			.ng-hide
+			{
+				max-height:0;
+				opacity: 0;
+			}
+
+			input
+			{
+				display: inline-block;
+				margin-left:6px;
+				margin-bottom:6px;
+				padding:4px;
+				border-style:solid;
+				border-color:#bbbbbb;
+				border-width:1px;
+				@include border-radius(2px,2px);
+				// background-color:#eeeeee;
+			}
+
+			button
+			{
+				@include border-radius(2px,2px);
+				border-style:solid;
+				color:#ffffff;
+			}
+
+			span
+			{
+				display: inline-block;
+				width:60px;
+				
+			}
+		}
 	}
 
 }

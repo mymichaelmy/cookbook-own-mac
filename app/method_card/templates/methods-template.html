@@ -56,14 +56,20 @@
 				<ul>
 				<h4>Also see</h4>
 					<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
+
+
+					<form class="contribute-form">
+						<div ng-hide="contributeForm.hide" class="fields">
+						<span>Title:</span><input type="text" name="title" required ng-model="form.title"><br />
+						<span>Link:</span><input type="text" name="link" required ng-model="form.link"><br />
+						<span>Name:</span><input type="text" name="name" required ng-model="form.name">
+						</div>
+						<button type="button" ng-click="contributeButton(contributeForm)">Contribute</button>
+					</form>
 				</ul>
 				
-				<h5>Contribute</h5>
-				<form ng-submit="contributeLink()">
-					Title: <input type="text" name="title" required ng-model="form.title"></br>
-					Link: <input type="text" name="link" required ng-model="form.link">
-					<button type="submit">Add</button>
-				</form>
+				
+				
 			</div>
 
 			<div ng-show="card.field_recipe_tags.und" class="recipe-tags">

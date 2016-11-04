@@ -119,14 +119,20 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
         };
 
 
-        $scope.contributeLink=function()
+        $scope.contributeLink=function(form)
         {
-            if(validateLink($scope.form.link))
+            if(validateLink(form.link))
             {
+                var attributeObj=
+                {
+                    title:form.name,
+                    'class':''
+                };
                 var linkObject=
                 {
-                    'url':$scope.form.link,
-                    'title':$scope.form.title
+                    'url':form.link,
+                    'title':form.title,
+                    'attributes':attributeObj
                 };
 
                 $scope.linkArray.push(linkObject);
@@ -148,6 +154,23 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             else
             {
                 console.error('link not working!');
+            }
+        };
+
+        $scope.form={};
+        $scope.contributeForm={};
+        $scope.contributeForm.hide=true;  //false is closed
+        $scope.contributeButton=function(status)
+        {
+            if(!status.hide)
+            {
+                $scope.contributeLink($scope.form);
+                status.hide=true;
+            }
+
+            else
+            {
+                status.hide=false;
             }
         };
         
