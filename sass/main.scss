@@ -1052,8 +1052,15 @@ form.search
 			button
 			{
 				@include border-radius(2px,2px);
-				border-style:solid;
+				border-style:none;
 				color:#ffffff;
+
+				transition: all ease 0.3s;
+
+				&:hover
+				{
+					background-color:#999999;
+				}
 			}
 
 			span
