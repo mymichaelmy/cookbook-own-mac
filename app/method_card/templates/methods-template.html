@@ -95,8 +95,15 @@
 					<li ng-repeat="prepStep in card.field_prep_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(prepStep.safe_value)"></p></li>
 				</ul>
 			</div>
-
-			<h4>Steps ({{card.field_recipe_estimate.und[0].value}} mins)</h4>
+			
+			<div ng-show="card.field_teach_estimate.und" >
+				<h4>Teach ({{card.field_teach_estimate.und[0].value}} mins)</h4>
+				<ul>
+					<li ng-repeat="teachStep in card.field_teach_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(teachStep.safe_value)"></p></li>
+				</ul>
+			</div>
+			
+			<h4>Facilitate ({{card.field_recipe_estimate.und[0].value}} mins)</h4>
 			<ul>
 				<li ng-repeat="recipeStep in card.field_recipe_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(recipeStep.safe_value)"></p></li>
 			</ul>
