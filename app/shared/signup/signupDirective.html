@@ -1,0 +1,18 @@
+<div class="signup-popup-wrapper popup-wrapper">
+	<div class="popup">
+		<h4>Sign up</h4>
+		<p>We're excited to have you join the community! Let's get to know each other a little better.</p>
+
+		<form ng-submit="registerSubmit()" class="sign-up-form">
+			<span>My name is </span><input type="text" name="firstname" placeholder="First name" required ng-model="firstname"> <input type="text" name="lastname" placeholder="Last name" required ng-model="lastname">
+			<span>I am a </span><input type="text" name="title" placeholder="Title" required ng-model="title"><span> at </span><input type="text" name="university" placeholder="University" required ng-model="university"> 
+			<span>I'd like to log in with </span><input type="text" name="username" placeholder="Email" required ng-model="username"><br />
+			<input type="password" name="password" placeholder="password" required ng-model="password">
+			<input type="password" name="password2" placeholder="re-enter password" required ng-model="password2">
+			<br />
+			<button type="submit">Signup</button>
+		</form>
+	</div>
+
+
+</div>
