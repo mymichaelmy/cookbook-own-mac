@@ -1359,13 +1359,22 @@ footer .mail:hover {
   border-bottom-color: #dddddd;
   border-bottom-width: 1px;
   background-color: transparent;
+  transition: all ease 0.3s;
 }
-/* line 1671, ../sass/main.scss */
+/* line 1672, ../sass/main.scss */
 .signup-popup-wrapper form input:focus {
   outline-style: none;
   box-shadow: none;
 }
 /* line 1678, ../sass/main.scss */
+.signup-popup-wrapper form input.has-error {
+  border-bottom-color: red;
+}
+/* line 1684, ../sass/main.scss */
+.signup-popup-wrapper form input.valid {
+  border-bottom-color: green;
+}
+/* line 1691, ../sass/main.scss */
 .signup-popup-wrapper form button {
   margin-top: 10px;
 }

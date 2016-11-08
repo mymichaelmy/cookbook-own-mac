@@ -1667,11 +1667,24 @@ footer
 			border-bottom-color:#dddddd;
 			border-bottom-width:1px;
 			background-color: transparent;
+			transition: all ease 0.3s;
 
 			&:focus
 			{
 				outline-style:none;
 				box-shadow:none;
+			}
+			
+			&.has-error
+			{
+				border-bottom-color:red;
+				
+			}
+
+			&.valid
+			{
+				border-bottom-color:green;
+				
 			}
 		}
 
