@@ -56,17 +56,18 @@
 				<ul>
 				<h4>Also see</h4>
 					<li ng-repeat="link in card.field_links.und">
-						<a ng-href="{{link.url}}" target="_blank">{{link.title}}</a>
+						<a ng-href="{{link.url}}" target="_blank">{{link.title}}</a><button></button>
 						<div class="contributer" ng-show="link.attributes.title">Contributed by {{link.attributes.title||SAP}}</div>
 					</li>
 
 
-					<form class="contribute-form">
+					<form class="contribute-form" id="contribute-form">
 						<div ng-hide="contributeForm.hide" class="fields">
 						<span>Title:</span><input type="text" name="title" required ng-model="form.title"><br />
 						<span>Link:</span><input type="text" name="link" required ng-model="form.link"><br />
 						<span>Name:</span><input type="text" name="name" required ng-model="form.name">
 						</div>
+						
 						<button type="button" ng-click="contributeButton(contributeForm)">Contribute</button>
 					</form>
 				</ul>
@@ -102,7 +103,7 @@
 					<li ng-repeat="teachStep in card.field_teach_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(teachStep.safe_value)"></p></li>
 				</ul>
 			</div>
-			
+
 			<h4>Facilitate ({{card.field_recipe_estimate.und[0].value}} mins)</h4>
 			<ul>
 				<li ng-repeat="recipeStep in card.field_recipe_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(recipeStep.safe_value)"></p></li>

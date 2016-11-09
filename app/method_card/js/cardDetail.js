@@ -118,7 +118,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             window.location.href = "/php/rtf.php"+"?content="+txtString+"&title="+$scope.card.title;
         };
 
-
+        
         $scope.contributeLink=function(form)
         {
             if(validateLink(form.link))
@@ -142,11 +142,11 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
                 
                 if(!commonService.CSRFToken)
                 {
-                    commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid,$scope);
+                    commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid,$scope,'contribute-form');
                 }
                 else
                 {
-                    commonService.updateContributeLinks(data,$routeParams.cardUid,$scope);
+                    commonService.updateContributeLinks(data,$routeParams.cardUid,$scope,'contribute-form');
                 }
 
             }

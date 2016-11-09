@@ -7,6 +7,21 @@ angular.module('cookbook').directive('signUp', function() {
 		link:function(scope,elem,attr)
 		{
 
+		},
+		controller:function($scope)
+		{
+			$scope.signUpShow=false;
+			$scope.passwordMatch=function()
+			{
+				if($scope.password!=$scope.password2)
+				{
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+			};
 		}
 	};
 

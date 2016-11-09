@@ -1052,6 +1052,8 @@ form.search
 
 			button
 			{
+				padding:4px 18px;
+				background-color: $methodColor1;
 				@include border-radius(2px,2px);
 				border-style:none;
 				color:#ffffff;
@@ -1060,7 +1062,7 @@ form.search
 
 				&:hover
 				{
-					background-color:#999999;
+					background-color:#F47346;
 				}
 			}
 
@@ -1649,7 +1651,7 @@ footer
 	form
 	{
 		padding: 0 30px 40px;
-		text-align: left;
+		text-align:center ;
 		font-size:1.6rem;
 		
 		span
@@ -1657,15 +1659,22 @@ footer
 			display: inline-block;
 			margin:10px 6px;
 		}
+
+		.sign-up-fields
+		{
+			text-align: left;
+		}
+
 		input
 		{
 			display: inline-block;
 			padding: 2px 2px;
 			margin:10px 6px;
+			//font-weight: bold;
 			border-style:none;
 			border-bottom-style:solid;
 			border-bottom-color:#dddddd;
-			border-bottom-width:1px;
+			border-bottom-width:2px;
 			background-color: transparent;
 			transition: all ease 0.3s;
 
@@ -1690,7 +1699,13 @@ footer
 
 		button
 		{
-			margin-top: 10px;
+			margin-top: 20px;
+			padding: 8px 30px;
+			color:#ffffff;
+			
+			background-color: $methodColor1;
+			border-style:none;
+			@include border-radius(6px);
 
 		}
 	}

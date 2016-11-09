@@ -71,7 +71,7 @@
 
 		};
 
-		commonService.updateContributeLinks=function(data,uid,$scope)
+		commonService.updateContributeLinks=function(data,uid,$scope,formID)
 		{
 			var config = {
 				headers:{
@@ -83,7 +83,7 @@
 			$http.put('/drupal/rest/node/'+uid,data,config).success(function(data)
             {
                 console.log(data);
-                
+                document.getElementById(formID).reset();
 
             }).error(function(data){
                 console.error(data);

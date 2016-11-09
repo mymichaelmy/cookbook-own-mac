@@ -879,6 +879,8 @@ form.search label i {
 }
 /* line 1053, ../sass/main.scss */
 .left-sidebar form.contribute-form button {
+  padding: 4px 18px;
+  background-color: #E98562;
   -moz-border-radius: 2px / 2px;
   -webkit-border-radius: 2px 2px;
   border-radius: 2px / 2px;
@@ -886,64 +888,64 @@ form.search label i {
   color: #ffffff;
   transition: all ease 0.3s;
 }
-/* line 1061, ../sass/main.scss */
+/* line 1063, ../sass/main.scss */
 .left-sidebar form.contribute-form button:hover {
-  background-color: #999999;
+  background-color: #F47346;
 }
-/* line 1067, ../sass/main.scss */
+/* line 1069, ../sass/main.scss */
 .left-sidebar form.contribute-form span {
   display: inline-block;
   width: 60px;
 }
 
-/* line 1078, ../sass/main.scss */
+/* line 1080, ../sass/main.scss */
 .right-content {
   padding-left: 30px;
   line-height: 1.5;
 }
-/* line 1088, ../sass/main.scss */
+/* line 1090, ../sass/main.scss */
 .right-content li {
   margin-bottom: 10px;
 }
-/* line 1092, ../sass/main.scss */
+/* line 1094, ../sass/main.scss */
 .right-content li p {
   margin-left: 30px;
   margin-top: 6px;
   margin-bottom: 8px;
 }
-/* line 1100, ../sass/main.scss */
+/* line 1102, ../sass/main.scss */
 .right-content strong.figure {
   float: left;
   position: relative;
   width: 30px;
 }
 
-/* line 1114, ../sass/main.scss */
+/* line 1116, ../sass/main.scss */
 .explore-wrapper .explore-head {
   padding-top: 126px;
 }
-/* line 1119, ../sass/main.scss */
+/* line 1121, ../sass/main.scss */
 .explore-wrapper .lower-content {
   position: relative;
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: #dcdcdc;
 }
-/* line 1129, ../sass/main.scss */
+/* line 1131, ../sass/main.scss */
 .explore-wrapper .card:nth-of-type(3n+1) {
   clear: both;
 }
-/* line 1134, ../sass/main.scss */
+/* line 1136, ../sass/main.scss */
 .explore-wrapper .explore-sort {
   display: inline-block;
 }
-/* line 1143, ../sass/main.scss */
+/* line 1145, ../sass/main.scss */
 .explore-wrapper ul h3 {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 26px 0 10px;
 }
-/* line 1150, ../sass/main.scss */
+/* line 1152, ../sass/main.scss */
 .explore-wrapper ul .options-block {
   height: 100px;
   overflow: auto;
@@ -954,12 +956,12 @@ form.search label i {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 1159, ../sass/main.scss */
+/* line 1161, ../sass/main.scss */
 .explore-wrapper ul .options-block li.current {
   background-color: #4a4a4a;
   color: #ffffff;
 }
-/* line 1166, ../sass/main.scss */
+/* line 1168, ../sass/main.scss */
 .explore-wrapper ul li {
   cursor: pointer;
   padding: 6px 10px;
@@ -969,12 +971,12 @@ form.search label i {
 /*for left sidebar and right content ended*/
 /* recipes style end  */
 /*search page start */
-/* line 1189, ../sass/main.scss */
+/* line 1191, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
 }
-/* line 1197, ../sass/main.scss */
+/* line 1199, ../sass/main.scss */
 .search-result-wrapper h3 {
   padding: 20px 8px;
   font-size: 2rem;
@@ -983,13 +985,13 @@ form.search label i {
   border-bottom-width: 1px;
 }
 
-/* line 1207, ../sass/main.scss */
+/* line 1209, ../sass/main.scss */
 ul.my-pager {
   text-align: right;
   padding-right: 20px;
   margin: 20px 0 10px;
 }
-/* line 1212, ../sass/main.scss */
+/* line 1214, ../sass/main.scss */
 ul.my-pager li {
   display: inline;
   margin-right: 6px;
@@ -1000,7 +1002,7 @@ ul.my-pager li {
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 1225, ../sass/main.scss */
+/* line 1227, ../sass/main.scss */
 ul.my-pager li.current {
   background-color: #333333;
   color: #ffffff;
@@ -1008,78 +1010,78 @@ ul.my-pager li.current {
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 1231, ../sass/main.scss */
+/* line 1233, ../sass/main.scss */
 ul.my-pager li.current:hover {
   color: #ffffff;
 }
 
-/* line 1239, ../sass/main.scss */
+/* line 1241, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
-/* line 1243, ../sass/main.scss */
+/* line 1245, ../sass/main.scss */
 #method-intro h3 strong {
   color: #E98562;
 }
-/* line 1248, ../sass/main.scss */
+/* line 1250, ../sass/main.scss */
 #tip-intro h3 strong {
   color: #66B4DD;
 }
-/* line 1253, ../sass/main.scss */
+/* line 1255, ../sass/main.scss */
 #course-intro h3 strong {
   color: #9BC85D;
 }
 
-/* line 1259, ../sass/main.scss */
+/* line 1261, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 1265, ../sass/main.scss */
+/* line 1267, ../sass/main.scss */
 .search-list {
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: #bbbbbb;
   padding-top: 20px;
 }
-/* line 1272, ../sass/main.scss */
+/* line 1274, ../sass/main.scss */
 .search-list a h4 {
   margin-bottom: 6px;
   color: #4A4A4A;
   font-weight: bold;
 }
-/* line 1278, ../sass/main.scss */
+/* line 1280, ../sass/main.scss */
 .search-list a h4:hover {
   color: #000000;
 }
-/* line 1285, ../sass/main.scss */
+/* line 1287, ../sass/main.scss */
 .search-list .thumbnail {
   height: 100px;
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 1290, ../sass/main.scss */
+/* line 1292, ../sass/main.scss */
 .search-list .thumbnail.method_card {
   background-image: url('/images/method-background-thumbnail.png?1473644267');
   background-color: #E98562;
 }
-/* line 1296, ../sass/main.scss */
+/* line 1298, ../sass/main.scss */
 .search-list .thumbnail.class_tip {
   background-image: url('/images/tip-background-thumbnail.png?1473644344');
   background-color: #66B4DD;
 }
-/* line 1302, ../sass/main.scss */
+/* line 1304, ../sass/main.scss */
 .search-list .thumbnail.course_example {
   background-image: url('/images/course-background-thumbnail.png?1473644357');
   background-color: #9BC85D;
 }
 
-/* line 1311, ../sass/main.scss */
+/* line 1313, ../sass/main.scss */
 .search-categories, .explore-categories {
   display: inline-block;
   padding: 20px 8px;
 }
-/* line 1316, ../sass/main.scss */
+/* line 1318, ../sass/main.scss */
 .search-categories li, .explore-categories li {
   display: inline-block;
   padding: 6px 10px;
@@ -1087,26 +1089,26 @@ strong {
   cursor: pointer;
   color: #959595;
 }
-/* line 1324, ../sass/main.scss */
+/* line 1326, ../sass/main.scss */
 .search-categories li.current, .explore-categories li.current {
   color: #ffffff;
   background-color: #4A4A4A;
   border-radius: 4px;
 }
-/* line 1330, ../sass/main.scss */
+/* line 1332, ../sass/main.scss */
 .search-categories li.current:hover, .explore-categories li.current:hover {
   color: #ffffff;
 }
-/* line 1336, ../sass/main.scss */
+/* line 1338, ../sass/main.scss */
 .search-categories li:hover, .explore-categories li:hover {
   color: #666666;
 }
-/* line 1347, ../sass/main.scss */
+/* line 1349, ../sass/main.scss */
 .search-categories li + li, .explore-categories li + li {
   margin-left: 10px;
 }
 
-/* line 1354, ../sass/main.scss */
+/* line 1356, ../sass/main.scss */
 .search-sort {
   display: inline-block;
   margin-left: 16px;
@@ -1114,16 +1116,16 @@ strong {
 }
 
 /*search page end*/
-/* line 1363, ../sass/main.scss */
+/* line 1365, ../sass/main.scss */
 .collection-wrapper {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-/* line 1367, ../sass/main.scss */
+/* line 1369, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
-/* line 1374, ../sass/main.scss */
+/* line 1376, ../sass/main.scss */
 .collection-wrapper .card input[type=checkbox] {
   position: absolute;
   top: 10px;
@@ -1132,22 +1134,22 @@ strong {
   height: 20px;
   z-index: 9;
 }
-/* line 1384, ../sass/main.scss */
+/* line 1386, ../sass/main.scss */
 .collection-wrapper .card div.card-heading {
   margin-top: 26px;
 }
-/* line 1391, ../sass/main.scss */
+/* line 1393, ../sass/main.scss */
 .collection-wrapper .configure-bar {
   margin-bottom: 50px;
   font-size: 1.6rem;
 }
-/* line 1396, ../sass/main.scss */
+/* line 1398, ../sass/main.scss */
 .collection-wrapper .configure-bar .select-all-button {
   display: inline-block;
   padding-top: 12px;
   padding-bottom: 13px;
 }
-/* line 1402, ../sass/main.scss */
+/* line 1404, ../sass/main.scss */
 .collection-wrapper .configure-bar button {
   margin-left: 20px;
   margin-top: 0;
@@ -1159,7 +1161,7 @@ strong {
   background-color: transparent;
 }
 
-/* line 1424, ../sass/main.scss */
+/* line 1426, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1168,31 +1170,31 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 1435, ../sass/main.scss */
+/* line 1437, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }
 
-/* line 1454, ../sass/main.scss */
+/* line 1456, ../sass/main.scss */
 .about-wrapper {
   height: 100%;
   padding-top: 80px;
   padding-bottom: 70px;
 }
-/* line 1460, ../sass/main.scss */
+/* line 1462, ../sass/main.scss */
 .about-wrapper h2 {
   margin-bottom: 20px;
   margin-top: 36px;
 }
-/* line 1466, ../sass/main.scss */
+/* line 1468, ../sass/main.scss */
 .about-wrapper .member {
   text-align: left;
 }
-/* line 1469, ../sass/main.scss */
+/* line 1471, ../sass/main.scss */
 .about-wrapper .member div, .about-wrapper .member p {
   display: inline-block;
 }
-/* line 1473, ../sass/main.scss */
+/* line 1475, ../sass/main.scss */
 .about-wrapper .member i {
   width: 100%;
   height: 120px;
@@ -1200,64 +1202,64 @@ form select::-ms-expand {
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 1481, ../sass/main.scss */
+/* line 1483, ../sass/main.scss */
 .about-wrapper .member i.sap {
   background-image: url('/images/sap.png?1475283114');
 }
-/* line 1486, ../sass/main.scss */
+/* line 1488, ../sass/main.scss */
 .about-wrapper .member i.ucsd {
   background-image: url('/images/ucsd.png?1475283160');
 }
 
-/* line 1496, ../sass/main.scss */
+/* line 1498, ../sass/main.scss */
 .recipe-list-wrapper {
   padding-top: 100px;
 }
 
-/* line 1503, ../sass/main.scss */
+/* line 1505, ../sass/main.scss */
 footer {
   margin-top: 30px;
   padding: 10px 50px;
   background-color: #DDDDDD;
   color: #888;
 }
-/* line 1513, ../sass/main.scss */
+/* line 1515, ../sass/main.scss */
 footer img {
   display: inline-block;
   width: 120px;
   margin-right: 16px;
 }
-/* line 1523, ../sass/main.scss */
+/* line 1525, ../sass/main.scss */
 footer .right {
   float: right;
 }
-/* line 1528, ../sass/main.scss */
+/* line 1530, ../sass/main.scss */
 footer .copy-info {
   overflow: hidden;
 }
-/* line 1533, ../sass/main.scss */
+/* line 1535, ../sass/main.scss */
 footer .left {
   float: left;
 }
-/* line 1537, ../sass/main.scss */
+/* line 1539, ../sass/main.scss */
 footer a:link, footer a:visited {
   color: inherit;
 }
-/* line 1542, ../sass/main.scss */
+/* line 1544, ../sass/main.scss */
 footer .mail {
   text-decoration: underline;
   color: #333;
 }
-/* line 1547, ../sass/main.scss */
+/* line 1549, ../sass/main.scss */
 footer .mail:link, footer .mail :visited {
   color: #333;
 }
-/* line 1552, ../sass/main.scss */
+/* line 1554, ../sass/main.scss */
 footer .mail:hover {
   color: #111;
 }
 
-/* line 1560, ../sass/main.scss */
+/* line 1562, ../sass/main.scss */
 .popup-wrapper {
   position: fixed;
   width: 100%;
@@ -1267,7 +1269,7 @@ footer .mail:hover {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
 }
-/* line 1571, ../sass/main.scss */
+/* line 1573, ../sass/main.scss */
 .popup-wrapper .popup {
   position: absolute;
   top: 50%;
@@ -1285,12 +1287,12 @@ footer .mail:hover {
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 1585, ../sass/main.scss */
+/* line 1587, ../sass/main.scss */
 .popup-wrapper .popup p {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-/* line 1591, ../sass/main.scss */
+/* line 1593, ../sass/main.scss */
 .popup-wrapper .popup i.cross {
   position: absolute;
   top: 12px;
@@ -1303,29 +1305,29 @@ footer .mail:hover {
 }
 
 /* start of register page */
-/* line 1610, ../sass/main.scss */
+/* line 1612, ../sass/main.scss */
 .register-wrapper, .login-wrapper {
   padding-top: 100px;
   padding-bottom: 80px;
 }
-/* line 1615, ../sass/main.scss */
+/* line 1617, ../sass/main.scss */
 .register-wrapper .input-title, .login-wrapper .input-title {
   display: inline-block;
   width: 80px;
 }
 
-/* line 1622, ../sass/main.scss */
+/* line 1624, ../sass/main.scss */
 .activation-wrapper {
   padding-top: 100px;
   padding-bottom: 80px;
 }
-/* line 1627, ../sass/main.scss */
+/* line 1629, ../sass/main.scss */
 .activation-wrapper .input-title {
   display: inline-block;
   width: 80px;
 }
 
-/* line 1637, ../sass/main.scss */
+/* line 1639, ../sass/main.scss */
 .signup-popup-wrapper h4 {
   background-color: #F4F4F4;
   padding: 20px;
@@ -1333,23 +1335,27 @@ footer .mail:hover {
   -webkit-border-radius: 6px;
   border-radius: 6px 6px 0 0;
 }
-/* line 1643, ../sass/main.scss */
+/* line 1645, ../sass/main.scss */
 .signup-popup-wrapper p {
   text-align: left;
   padding: 0 30px;
 }
-/* line 1649, ../sass/main.scss */
+/* line 1651, ../sass/main.scss */
 .signup-popup-wrapper form {
   padding: 0 30px 40px;
-  text-align: left;
+  text-align: center;
   font-size: 1.6rem;
 }
-/* line 1655, ../sass/main.scss */
+/* line 1657, ../sass/main.scss */
 .signup-popup-wrapper form span {
   display: inline-block;
   margin: 10px 6px;
 }
-/* line 1660, ../sass/main.scss */
+/* line 1663, ../sass/main.scss */
+.signup-popup-wrapper form .sign-up-fields {
+  text-align: left;
+}
+/* line 1668, ../sass/main.scss */
 .signup-popup-wrapper form input {
   display: inline-block;
   padding: 2px 2px;
@@ -1357,26 +1363,33 @@ footer .mail:hover {
   border-style: none;
   border-bottom-style: solid;
   border-bottom-color: #dddddd;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
   background-color: transparent;
   transition: all ease 0.3s;
 }
-/* line 1672, ../sass/main.scss */
+/* line 1681, ../sass/main.scss */
 .signup-popup-wrapper form input:focus {
   outline-style: none;
   box-shadow: none;
 }
-/* line 1678, ../sass/main.scss */
+/* line 1687, ../sass/main.scss */
 .signup-popup-wrapper form input.has-error {
   border-bottom-color: red;
 }
-/* line 1684, ../sass/main.scss */
+/* line 1693, ../sass/main.scss */
 .signup-popup-wrapper form input.valid {
   border-bottom-color: green;
 }
-/* line 1691, ../sass/main.scss */
+/* line 1700, ../sass/main.scss */
 .signup-popup-wrapper form button {
-  margin-top: 10px;
+  margin-top: 20px;
+  padding: 8px 30px;
+  color: #ffffff;
+  background-color: #E98562;
+  border-style: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
 }
 
 /*end of register page*/
