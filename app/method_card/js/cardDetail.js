@@ -118,7 +118,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             window.location.href = "/php/rtf.php"+"?content="+txtString+"&title="+$scope.card.title;
         };
 
-        
+
         $scope.contributeLink=function(form)
         {
             if(validateLink(form.link))
@@ -172,6 +172,11 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             {
                 status.hide=false;
             }
+        };
+
+        $scope.removeLink=function(index)
+        {
+            $scope.card.field_links.und.splice(index,1);
         };
         
     });
