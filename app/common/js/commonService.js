@@ -83,7 +83,7 @@
 			$http.put('/drupal/rest/node/'+uid,data,config).success(function(data)
             {
                 console.log(data);
-                document.getElementById(formID).reset();
+                document.getElementById(formID).reset();   //reset the form, clean the buffer
 
             }).error(function(data){
                 console.error(data);

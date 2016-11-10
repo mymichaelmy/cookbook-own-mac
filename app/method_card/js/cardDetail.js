@@ -177,6 +177,17 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
         $scope.removeLink=function(index)
         {
             $scope.card.field_links.und.splice(index,1);
+
+            var data={ 'field_links':$scope.card.field_links };
+
+            if(!commonService.CSRFToken)
+            {
+                commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid,$scope,'contribute-form');
+            }
+            else
+            {
+                commonService.updateContributeLinks(data,$routeParams.cardUid,$scope,'contribute-form');
+            }
         };
         
     });
