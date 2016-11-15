@@ -178,7 +178,20 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
         {
             $scope.card.field_links.und.splice(index,1);
 
-            var data={ 'field_links':$scope.card.field_links };
+            var duplicateObj=JSON.parse(JSON.stringify($scope.card.field_links));
+            var emptyObj={
+                'url':'',
+                'title':'',
+                'attributes':
+                {
+                    'title':'',
+                    'class':''
+                }
+            };
+
+            duplicateObj.und.push(emptyObj);
+
+            var data={ 'field_links':duplicateObj };
 
             if(!commonService.CSRFToken)
             {
