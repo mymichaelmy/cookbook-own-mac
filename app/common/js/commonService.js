@@ -71,7 +71,7 @@
 
 		};
 
-		commonService.updateContributeLinks=function(data,uid,$scope,formID)
+		commonService.updateContributeLinks=function(data,uid,scope,formID,index) //data: data to be sent, uid:uid of the card, scope:$scope, formID: id of the contribute form to reset the form, index: index of the item to be removed
 		{
 			var config = {
 				headers:{
@@ -80,9 +80,9 @@
 				},
 			};
 
-			$http.put('/drupal/rest/node/'+uid,data,config).success(function(data)
+			$http.put('/drupal/rest/node/'+uid,data,config).success(function(responseData)
             {
-                console.log(data);
+                scope.card.field_links.und.splice(index,1);
                 document.getElementById(formID).reset();   //reset the form, clean the buffer
 
             }).error(function(data){

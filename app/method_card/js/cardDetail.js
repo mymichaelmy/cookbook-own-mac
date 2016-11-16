@@ -84,7 +84,6 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             txtString+="\\par \\b "+"Resources"+" \\b0\\par ";
             $scope.card.field_arsenal_files.und.forEach(function(value,index)
             {
-
                 txtString+=(index+1)+". "+value.filename+"\\par ";
                 txtString+=linkToRtf(value.uri,true);
             });
@@ -176,9 +175,9 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
         $scope.removeLink=function(index)
         {
-            $scope.card.field_links.und.splice(index,1);
 
             var duplicateObj=JSON.parse(JSON.stringify($scope.card.field_links));
+            duplicateObj.und.splice(index,1);
             var emptyObj={
                 'url':'',
                 'title':'',
@@ -195,15 +194,45 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
             if(!commonService.CSRFToken)
             {
-                commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid,$scope,'contribute-form');
+                commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid,$scope,'contribute-form',index);
             }
             else
             {
-                commonService.updateContributeLinks(data,$routeParams.cardUid,$scope,'contribute-form');
+                commonService.updateContributeLinks(data,$routeParams.cardUid,$scope,'contribute-form',index);
             }
         };
+
+        
         
     });
+});
+
+angular.module('cookbook').controller('singleLinkController',  function($scope, $http,$routeParams,commonService) {
+
+    $scope.editShow=false;
+    $scope.toggleShowEdit=function(index)
+    {
+        $scope.editShow=!$scope.editShow;
+    };
+
+});
+
+angular.module('cookbook').directive('editForm',function()
+{
+    return {
+        restrict:'E',
+        template: '<form ng-show="editShow"><div class="link-left"><input type="text" name="title" placeholder="{{link.title}}" required value="{{link.title}}"><br /><input type="text" name="link" placeholder="{{link.url}}"required value="{{link.url}}"><br /><input type="text" name="name" placeholder="{{link.attributes.title}}" required value="{{link.attributes.title}}"></div><button type="button" class="edit-button" ng-click="updateLink($index)">submit</button><button type="button" class="remove-button" ng-click="toggleShowEdit($index)">cancel</button></form>',
+        replace:true,
+        link:
+        function(scope, element, attrs)
+        {
+            scope.updateLink=function(index)
+            {
+                console.log(element[0].elements['link'].value);
+            };
+        }
+       
+    };
 });
 
 
