@@ -134,6 +134,9 @@ $cardTextColor:#535353;
 $categoryTabColor:#959595;
 $navColor:#F4F4F4;
 
+//for adjust button position
+$adjustedTopForEditButton: 6;
+
 @mixin clearfix
 {
 	&:after
@@ -1005,12 +1008,13 @@ form.search
 	
 	.link-left
 	{
+		font-size: 1.4rem;
 		display: inline-block;
 		width:66%;
-		vertical-align: text-top;
-		white-space: nowrap;
-  		overflow: hidden;
-  		text-overflow: ellipsis;
+		vertical-align: top;
+		// white-space: nowrap;
+  // 		overflow: hidden;
+  // 		text-overflow: ellipsis;
 	}
 
 
@@ -1055,12 +1059,40 @@ form.search
 
 		li
 		{
+			font-size: 0; //to fix inline-block position
+			
 			button
 			{
 				font-size: 1.0rem;
 				padding:0;
 				background-color: transparent;
 				border-style:none;
+				vertical-align: middle;
+			}
+
+			&:hover
+			{
+				.edit-buttons-set
+				{
+					display: inline-block;
+					margin:0;
+				}
+			}
+
+			.edit-buttons-set
+			{
+				display: none;
+				
+				.edit-button
+				{
+					margin-left: 4px;
+					padding-top: $adjustedTopForEditButton+px;
+				}
+
+				.remove-button
+				{
+					padding-top: $adjustedTopForEditButton+px;
+				}
 			}
 		}
 
@@ -1076,12 +1108,12 @@ form.search
 	{
 		font-size:1.4rem;
 
-		margin-bottom: 30px;
+		
 
 		&.contribute-form
 		{
 			margin-top: 15px;
-
+			margin-bottom: 30px;
 			div
 			{	
 				max-height: 150px;

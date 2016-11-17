@@ -221,7 +221,7 @@ angular.module('cookbook').directive('editForm',function($routeParams,commonServ
 {
     return {
         restrict:'E',
-        template: '<form ng-show="editShow"><div class="link-left"><input type="text" name="title" placeholder="{{link.title}}" required value="{{link.title}}"><br /><input type="text" name="link" placeholder="{{link.url}}"required value="{{link.url}}"><br /><input type="text" name="name" placeholder="{{link.attributes.title}}" required value="{{link.attributes.title}}"></div><button type="button" class="edit-button" ng-click="updateLink($index)">submit</button><button type="button" class="remove-button" ng-click="toggleShowEdit($index)">cancel</button></form>',
+        template: '<form ng-show="editShow"><div class="link-left"><input type="text" name="title" placeholder="{{link.title}}" required value="{{link.title}}"><br /><input type="text" name="link" placeholder="{{link.url}}"required value="{{link.url}}"><br /><input type="text" name="name" placeholder="{{link.attributes.title}}" required value="{{link.attributes.title}}"></div><button type="button" class="edit-button" ng-click="updateLink($index)">Submit</button><button type="button" class="remove-button" ng-click="toggleShowEdit($index)">Cancel</button></form>',
         replace:true,
         link:
         function(scope, element, attrs)

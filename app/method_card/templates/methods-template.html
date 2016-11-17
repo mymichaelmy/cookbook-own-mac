@@ -64,10 +64,12 @@
 								
 							</div>
 							<edit-form></edit-form>
-							<button type="button" class="edit-button" ng-hide="editShow" ng-click="toggleShowEdit($index)">Edit</button>
-							<button type="button" class="remove-button" ng-hide="editShow" ng-click="removeLink($index)">
-								Remove
-							</button>
+							<div class="edit-buttons-set">
+								<button type="button" class="edit-button" ng-show="!editShow" ng-click="toggleShowEdit($index)">Edit</button>
+								<button type="button" class="remove-button" ng-show="!editShow" ng-click="removeLink($index)">
+									Remove
+								</button>
+							</div>
 						
 						</div>
 						
