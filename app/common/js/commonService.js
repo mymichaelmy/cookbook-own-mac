@@ -71,7 +71,7 @@
 
 		};
 
-		commonService.updateContributeLinks=function(data,uid,scope,formID,index) //data: data to be sent, uid:uid of the card, scope:$scope, formID: id of the contribute form to reset the form, index: index of the item to be removed
+		commonService.updateContributeLinks=function(data,uid,scope,formID,index) //data: data to be sent, uid:uid of the card, scope:$scope, formID: id of the contribute form to reset the form, index: index of the item to be removed -1 if intend to update a link
 		{
 			var config = {
 				headers:{
@@ -82,8 +82,23 @@
 
 			$http.put('/drupal/rest/node/'+uid,data,config).success(function(responseData)
             {
-                scope.card.field_links.und.splice(index,1);
-                document.getElementById(formID).reset();   //reset the form, clean the buffer
+				if(index===-1)   //judge if it's for remove
+				{
+					scope.card.field_links=data.field_links;
+				}
+
+				else
+				{
+					scope.card.field_links.und.splice(index,1);
+				}
+
+                
+
+                if(formID!=='')
+                {
+					document.getElementById(formID).reset();   //reset the form, clean the buffer
+                }
+                
 
             }).error(function(data){
                 console.error(data);

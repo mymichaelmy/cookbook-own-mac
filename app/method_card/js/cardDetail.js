@@ -14,7 +14,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
     {
         $scope.card=data;
         $scope.disIdentifier=data.type+data.nid;   //temperarily put here but it's hard to pass parameter before the next controller is loaded
-        $scope.linkArray=$scope.card.field_links.und;
+        // $scope.linkArray=$scope.card.field_links.und;
 
         $scope.addToCollection=function(cardType, cardID)
         {
@@ -134,18 +134,18 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
                     'attributes':attributeObj
                 };
 
-                $scope.linkArray.push(linkObject);
-                var field_links={ und:$scope.linkArray };
+                var duplicateObj=JSON.parse(JSON.stringify($scope.card.field_links));
 
-                var data={ 'field_links':field_links };
+                duplicateObj.und.push(linkObject);
+                var data={ 'field_links':duplicateObj };
                 
                 if(!commonService.CSRFToken)
                 {
-                    commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid,$scope,'contribute-form');
+                    commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid,$scope,'contribute-form',-1);
                 }
                 else
                 {
-                    commonService.updateContributeLinks(data,$routeParams.cardUid,$scope,'contribute-form');
+                    commonService.updateContributeLinks(data,$routeParams.cardUid,$scope,'contribute-form',-1);
                 }
 
             }
@@ -217,7 +217,7 @@ angular.module('cookbook').controller('singleLinkController',  function($scope, 
 
 });
 
-angular.module('cookbook').directive('editForm',function()
+angular.module('cookbook').directive('editForm',function($routeParams,commonService)
 {
     return {
         restrict:'E',
@@ -229,7 +229,35 @@ angular.module('cookbook').directive('editForm',function()
             scope.updateLink=function(index)
             {
                 console.log(element[0].elements['link'].value);
+                console.log(scope.card);
+
+                var duplicateObj=JSON.parse(JSON.stringify(scope.card.field_links));
+
+                var updatedObj={
+                    'url':element[0].elements['link'].value,
+                    'title':element[0].elements['title'].value,
+                    'attributes':
+                    {
+                        'title':element[0].elements['name'].value,
+                        'class':''
+                    }
+                };
+
+                duplicateObj.und.splice(index,1,updatedObj);
+
+                var data={ 'field_links':duplicateObj };
+
+                if(!commonService.CSRFToken)
+                {
+                    commonService.getCSRF(commonService.updateContributeLinks,data,$routeParams.cardUid,scope,'',-1);
+                }
+                else
+                {
+                    commonService.updateContributeLinks(data,$routeParams.cardUid,scope,'',-1);
+                }
             };
+
+            
         }
        
     };
