@@ -10,6 +10,13 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
 
             return textFile;
     }
+
+    //init form hide
+    $scope.form={};
+    $scope.contributeForm={};
+    $scope.contributeForm.hide=true;
+
+
     $http.get('/drupal/rest/node/'+$routeParams.cardUid).success(function(data)
     {
         $scope.card=data;
@@ -171,6 +178,11 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
             {
                 status.hide=false;
             }
+        };
+
+        $scope.quitContributeButton=function()
+        {
+            $scope.contributeForm.hide=true;
         };
 
         $scope.removeLink=function(index)

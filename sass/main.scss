@@ -1060,7 +1060,7 @@ form.search
 		li
 		{
 			font-size: 0; //to fix inline-block position
-			
+
 			button
 			{
 				font-size: 1.0rem;
@@ -1158,6 +1158,11 @@ form.search
 				&:hover
 				{
 					background-color:#F47346;
+				}
+
+				&.cancel-button
+				{
+					background-color: #bbb;
 				}
 			}
 

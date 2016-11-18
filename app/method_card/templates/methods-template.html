@@ -42,7 +42,7 @@
 			</div>
 			<h4>Ingredients</h4>
 			<ul>
-				<li ng-repeat="ingredent in card.field_ingredients.und">{{ingredent.value}}</li>
+				<li ng-repeat="ingredent in card.field_ingredients.und"><span ng-bind-html="toTrustedHTML(ingredent.value)"></span></li>
 			</ul>
 			<div ng-show="card.field_arsenal_files.und">
 				<h4>Resources</h4>
@@ -52,7 +52,7 @@
 			</div>
 			
 			
-			<div ng-show="card.field_links.und" class="also-see">
+			<div class="also-see">
 				<ul>
 				<h4>Also see</h4>
 					<li ng-repeat="link in card.field_links.und" ng-controller="singleLinkController">
@@ -61,6 +61,7 @@
 							<div class="link-left" ng-hide="editShow">
 								<a ng-href="{{link.url}}" target="_blank" >{{link.title}}</a>
 								<div class="contributer"  ng-show="link.attributes.title">Contributed by {{link.attributes.title||SAP}}</div>
+
 								
 							</div>
 							<edit-form></edit-form>
@@ -84,12 +85,13 @@
 
 					<form class="contribute-form" id="contribute-form">
 						<div ng-hide="contributeForm.hide" class="fields">
-						<span>Title:</span><input type="text" name="title" required ng-model="form.title"><br />
-						<span>Link:</span><input type="text" name="link" required ng-model="form.link"><br />
-						<span>Name:</span><input type="text" name="name" required ng-model="form.name">
+							<span>Title:</span><input type="text" name="title" required ng-model="form.title"><br />
+							<span>Link:</span><input type="text" name="link" required ng-model="form.link"><br />
+							<span>Name:</span><input type="text" name="name" required ng-model="form.name">
 						</div>
 						
 						<button type="button" ng-click="contributeButton(contributeForm)">Contribute</button>
+						<button type="button" class="cancel-button" ng-click="quitContributeButton()" ng-hide="contributeForm.hide" >Cancel</button>
 					</form>
 				</ul>
 				
