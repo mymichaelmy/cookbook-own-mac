@@ -217,6 +217,11 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
         
         
     });
+
+    $scope.onAfterValidateFunc=function()
+    {
+        console.log($scope.form.file);
+    };
 });
 
 angular.module('cookbook').controller('singleLinkController',  function($scope, $http,$routeParams,commonService) {

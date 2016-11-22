@@ -1,0 +1,11 @@
+<form class="contribute-form" id="contribute-form">
+	<div ng-hide="contributeForm.hide" class="fields">
+		<span>Title:</span><input type="text" name="title" required ng-model="form.title"><br />
+		<span>Link:</span><input type="text" name="link" required ng-model="form.link"><br />
+		<input type="file" id="file-upload" ng-model="form.file" base-sixty-four-input on-after-validate="onAfterValidateFunc"><label for="file-upload">Upload</label> <!-- this maynot work in firefox -->
+		<span>Name:</span><input type="text" name="name" required ng-model="form.name">
+	</div>
+	
+	<button type="button" ng-click="contributeButton(contributeForm)">Contribute</button>
+	<button type="button" class="cancel-button" ng-click="quitContributeButton()" ng-hide="contributeForm.hide" >Cancel</button>
+</form>
