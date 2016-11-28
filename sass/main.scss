@@ -134,6 +134,8 @@ $cardTextColor:#535353;
 $categoryTabColor:#959595;
 $navColor:#F4F4F4;
 
+$linkColor:#3d87d2;
+$linkColorHover:#1E5AD8;
 //for adjust button position
 $adjustedTopForEditButton: 6;
 
@@ -1114,6 +1116,7 @@ form.search
 		{
 			margin-top: 15px;
 			margin-bottom: 30px;
+			font-size: 0;
 			div
 			{	
 				max-height: 150px;
@@ -1136,7 +1139,7 @@ form.search
 				display: inline-block;
 				font-size: 1.2rem;
 				margin-left:6px;
-				margin-bottom:6px;
+				margin-bottom:12px;
 				padding:4px;
 				border-style:solid;
 				border-color:#bbbbbb;
@@ -1152,7 +1155,7 @@ form.search
 				@include border-radius(2px,2px);
 				border-style:none;
 				color:#ffffff;
-
+				// font-size: 1.4rem;
 				transition: all ease 0.3s;
 
 				&:hover
@@ -1163,6 +1166,27 @@ form.search
 				&.cancel-button
 				{
 					background-color: #bbb;
+					margin-left:6px;
+				}
+
+
+			}
+
+			label
+			{
+				font-size: 1.4rem;
+				margin-left:6px;
+
+				&.upload-button
+				{
+					font-size: 1rem;
+					color:$linkColor;
+					cursor:pointer;
+
+					&:hover
+					{
+						color:$linkColorHover;
+					}
 				}
 			}
 
@@ -1170,7 +1194,36 @@ form.search
 			{
 				display: inline-block;
 				width:60px;
+				font-size: 1.4rem;
 				
+			}
+
+			.link-group   //style of link group
+			{
+				display: inline-block;
+				position:relative;
+				margin-left: 6px;
+				margin-bottom:12px;
+
+				input
+				{
+					margin-left:0;
+					margin-bottom: 0;
+				}
+
+				#progressBar
+				{
+					position: absolute;
+					top:0;
+					bottom:0;
+					width:0%;
+					background-color: #25B135;
+					opacity: 0.7;
+					@include transition(width linear 0.08s, opacity linear 1s);
+					@include border-radius(2px);
+
+					
+				}
 			}
 		}
 	}

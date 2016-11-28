@@ -166,24 +166,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
         $scope.form={};
         $scope.contributeForm={};
         $scope.contributeForm.hide=true;  //false is closed
-        $scope.contributeButton=function(status)
-        {
-            if(!status.hide)
-            {
-                $scope.contributeLink($scope.form);
-                status.hide=true;
-            }
-
-            else
-            {
-                status.hide=false;
-            }
-        };
-
-        $scope.quitContributeButton=function()
-        {
-            $scope.contributeForm.hide=true;
-        };
+        
 
         $scope.removeLink=function(index)
         {
@@ -218,10 +201,7 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
         
     });
 
-    $scope.onAfterValidateFunc=function()
-    {
-        console.log($scope.form.file);
-    };
+    
 });
 
 angular.module('cookbook').controller('singleLinkController',  function($scope, $http,$routeParams,commonService) {

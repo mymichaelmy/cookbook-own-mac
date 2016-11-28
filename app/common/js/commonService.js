@@ -105,6 +105,130 @@
             });
 		};
 
+		commonService.getFileLink=function(link,scope)//get link
+		{
+			responseObj=JSON.parse(link);
+			$http.get(responseObj.uri).then(function(response)
+			{
+				scope.form.link=response.data.uri_full;
+			}).catch(function(response)
+			{
+				console.error('error', response.statusText);
+			});
+	
+		};
+
+		commonService.startUploadFile=function(filename,filedata,subfolder,scope)
+		{
+			//check CSRF
+			if(!commonService.CSRFToken)
+			{
+				commonService.getCSRF(commonService.processUploadXHR,filename,filedata,subfolder,scope);
+			}
+
+			else
+			{
+				commonService.processUploadXHR(filename,filedata,subfolder,scope);
+			}
+
+		};
+
+		commonService.processUpload=function(filename,filedata,subfolder,scope)
+		{
+			var config = {
+				headers:{
+					'Content-Type': 'application/json',
+					'X-CSRF-Token': commonService.CSRFToken
+				},
+			};
+
+			var submitObj=
+			{
+				file:
+				{
+					filename:filename,
+					file:filedata,
+					filepath:'public://'+subfolder+'/'+filename
+				}
+				
+			};
+
+			$http.post('/drupal/rest/file',submitObj,config).then(function(response)   //need to modify ip address before upload
+			{
+			//login or email verification
+				console.log(response);
+				scope.form.link=filename;
+			}).catch(function(response)
+			{
+				console.error('error', response.statusText);
+			});
+
+
+		};
+
+		commonService.processUploadXHR=function(filename,filedata,subfolder,scope)
+		{
+			var xhr=new XMLHttpRequest();
+			xhr.open('POST','/drupal/rest/file');
+			xhr.setRequestHeader('Content-Type', 'application/json');
+			xhr.setRequestHeader('X-CSRF-Token', commonService.CSRFToken);
+
+
+			var submitObj=
+			{
+				file:
+				{
+					filename:filename,
+					file:filedata,
+					filepath:'public://'+subfolder+'/'+filename
+				}
+			};
+
+			xhr.addEventListener("load", uploadComplete, false);
+			xhr.addEventListener("error", uploadFailed, false);
+			xhr.upload.addEventListener("progress", uploadProgress, false);
+			xhr.send(JSON.stringify(submitObj));
+
+			function uploadComplete(evt)
+			{
+				function hideProgressBar()
+				{
+					scope.barShow=false;
+				}
+
+				if(xhr.status==200)
+				{
+					
+					scope.$apply(function(){
+						commonService.getFileLink(xhr.responseText,scope);
+						scope.form.title=filename;
+						scope.barOpacity=0;
+					});
+				}
+				
+			}
+
+			function uploadFailed(evt)
+			{
+				console.error(evt);
+			}
+
+			function uploadProgress(evt)
+			{
+				if(evt.lengthComputable)
+				{
+					scope.progress=evt.loaded * 100 / evt.total;
+					console.log(evt.loaded * 100 / evt.total+'%');
+				}
+				else
+				{
+					scope.progress=0;
+					console.log("Progress not computable");
+				}
+			}
+
+		};
+
 		return commonService;
 	}]);
 }());
