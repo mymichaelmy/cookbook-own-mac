@@ -202,7 +202,7 @@
 					scope.$apply(function(){
 						commonService.getFileLink(xhr.responseText,scope);
 						scope.form.title=filename;
-						scope.barOpacity=0;
+						
 					});
 				}
 				
@@ -210,7 +210,7 @@
 
 			function uploadFailed(evt)
 			{
-				console.error(evt);
+				console.error(evt); //should add code here to let users know it failes
 			}
 
 			function uploadProgress(evt)

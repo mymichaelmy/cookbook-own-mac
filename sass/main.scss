@@ -135,7 +135,7 @@ $categoryTabColor:#959595;
 $navColor:#F4F4F4;
 
 $linkColor:#3d87d2;
-$linkColorHover:#1E5AD8;
+$linkColorHover:#2F68E0;
 //for adjust button position
 $adjustedTopForEditButton: 6;
 
@@ -1176,6 +1176,8 @@ form.search
 			{
 				font-size: 1.4rem;
 				margin-left:6px;
+				display: inline-block;
+				
 
 				&.upload-button
 				{
