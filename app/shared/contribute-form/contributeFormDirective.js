@@ -41,6 +41,7 @@ angular.module('cookbook').directive('contributeForm',function($http,commonServi
 			{
 				scope.progressShow=true;
 				scope.barOpacity=0.8;
+				scope.backColor='#25B135';
 				commonService.startUploadFile(scope.form.file.filename,scope.form.file.base64,'alsoSee',scope);
 			};
 
@@ -48,6 +49,7 @@ angular.module('cookbook').directive('contributeForm',function($http,commonServi
 			{
 				scope.progressShow=true;
 				scope.barOpacity=0.8;
+				scope.backColor='#25B135';
 				scope.progress=2;
 			};
 		}

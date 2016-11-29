@@ -1224,7 +1224,7 @@ form.search
 					border-style:none;
 					border-color:#bbbbbb;
 					border-width:1px;
-					@include transition(width 0.08s linear 0s, background-color 0.5s linear 1.2s);
+					@include transition(width 0.08s linear 0s, background-color 0.5s linear 1s);
 					@include border-radius(2px);
 					
 					

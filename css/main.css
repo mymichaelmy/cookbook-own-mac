@@ -1009,11 +1009,11 @@ form.search label i {
   border-style: none;
   border-color: #bbbbbb;
   border-width: 1px;
-  -moz-transition: width 0.08s linear 0s, background-color 0.5s linear 1.2s;
-  -o-transition: width 0.08s linear 0s, background-color 0.5s linear 1.2s;
+  -moz-transition: width 0.08s linear 0s, background-color 0.5s linear 1s;
+  -o-transition: width 0.08s linear 0s, background-color 0.5s linear 1s;
   -webkit-transition: width 0.08s linear, background-color 0.5s linear;
-  -webkit-transition-delay: 0s, 1.2s;
-  transition: width 0.08s linear 0s, background-color 0.5s linear 1.2s;
+  -webkit-transition-delay: 0s, 1s;
+  transition: width 0.08s linear 0s, background-color 0.5s linear 1s;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
