@@ -4,11 +4,11 @@
 		<span>Link:</span>
 		<div class="link-group">
 			<input type="text" name="link" required ng-model="form.link">
-			<div id="progressBar" ng-style="{'width': progress+'%','backgroundColor':backColor,'borderStyle':borderStyle}" ><span>{{form.filenamePlaceholder}}</span></div>
+			<div id="progressBar" ng-style="{'width': progress+'%','backgroundColor':backColor,'borderStyle':borderStyle}" ng-show="progressShow"><span>{{form.filenamePlaceholder}}</span></div>
 			
 		</div>
 		
-		<input type="file" id="file-upload" ng-model="form.file" base-sixty-four-input on-after-validate="onAfterValidateFunc" ng-show="false">
+		<input type="file" id="file-upload" ng-model="form.file" base-sixty-four-input on-after-validate="onAfterValidateFunc" on-change="startLoad" ng-show="false">
 		<label for="file-upload" class="upload-button">Upload</label> <!-- this maynot work in firefox -->
 		<span>Name:</span><input type="text" name="name" required ng-model="form.name">
 	</div>
