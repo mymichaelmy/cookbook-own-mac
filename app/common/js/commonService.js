@@ -202,7 +202,7 @@
 					scope.$apply(function(){
 						commonService.getFileLink(xhr.responseText,scope);
 						scope.form.title=filename;
-						
+						scope.barOpacity=0;
 					});
 				}
 				
