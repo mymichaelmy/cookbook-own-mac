@@ -201,8 +201,9 @@
 					
 					scope.$apply(function(){
 						commonService.getFileLink(xhr.responseText,scope);
-						scope.form.title=filename;
-						scope.barOpacity=0;
+						scope.form.filenamePlaceholder=filename;
+						scope.backColor='#ffffff';
+						scope.borderStyle='solid';
 					});
 				}
 				

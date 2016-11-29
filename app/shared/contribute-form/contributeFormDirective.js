@@ -10,6 +10,10 @@ angular.module('cookbook').directive('contributeForm',function($http,commonServi
 			scope.contributeForm={};
 			scope.contributeForm.hide=true;
 			scope.barOpacity=0.8;   //opacity of the bar
+			scope.backColor='#25B135';
+			scope.borderStyle='none';
+
+			scope.form.filenamePlaceholder='';
 
 			scope.contributeButton=function(status)
 			{
