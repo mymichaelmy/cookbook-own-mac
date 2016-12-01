@@ -1004,7 +1004,7 @@ form.search label i {
   top: 0;
   bottom: 0;
   width: 0%;
-  background-color: #25B135;
+  background-color: #18DD2E;
   opacity: 1;
   border-style: none;
   border-color: #bbbbbb;
@@ -1024,55 +1024,62 @@ form.search label i {
   margin-top: 4px;
   margin-left: 4px;
 }
+/* line 1241, ../sass/main.scss */
+.left-sidebar form.contribute-form .link-group .error-message {
+  position: absolute;
+  top: 100%;
+  font-size: 0.8rem;
+  color: #E98562;
+}
 
-/* line 1246, ../sass/main.scss */
+/* line 1254, ../sass/main.scss */
 .right-content {
   padding-left: 30px;
   line-height: 1.5;
 }
-/* line 1256, ../sass/main.scss */
+/* line 1264, ../sass/main.scss */
 .right-content li {
   margin-bottom: 10px;
 }
-/* line 1260, ../sass/main.scss */
+/* line 1268, ../sass/main.scss */
 .right-content li p {
   margin-left: 30px;
   margin-top: 6px;
   margin-bottom: 8px;
 }
-/* line 1268, ../sass/main.scss */
+/* line 1276, ../sass/main.scss */
 .right-content strong.figure {
   float: left;
   position: relative;
   width: 30px;
 }
 
-/* line 1282, ../sass/main.scss */
+/* line 1290, ../sass/main.scss */
 .explore-wrapper .explore-head {
   padding-top: 126px;
 }
-/* line 1287, ../sass/main.scss */
+/* line 1295, ../sass/main.scss */
 .explore-wrapper .lower-content {
   position: relative;
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: #dcdcdc;
 }
-/* line 1297, ../sass/main.scss */
+/* line 1305, ../sass/main.scss */
 .explore-wrapper .card:nth-of-type(3n+1) {
   clear: both;
 }
-/* line 1302, ../sass/main.scss */
+/* line 1310, ../sass/main.scss */
 .explore-wrapper .explore-sort {
   display: inline-block;
 }
-/* line 1311, ../sass/main.scss */
+/* line 1319, ../sass/main.scss */
 .explore-wrapper ul h3 {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 26px 0 10px;
 }
-/* line 1318, ../sass/main.scss */
+/* line 1326, ../sass/main.scss */
 .explore-wrapper ul .options-block {
   height: 100px;
   overflow: auto;
@@ -1083,12 +1090,12 @@ form.search label i {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 1327, ../sass/main.scss */
+/* line 1335, ../sass/main.scss */
 .explore-wrapper ul .options-block li.current {
   background-color: #4a4a4a;
   color: #ffffff;
 }
-/* line 1334, ../sass/main.scss */
+/* line 1342, ../sass/main.scss */
 .explore-wrapper ul li {
   cursor: pointer;
   padding: 6px 10px;
@@ -1098,12 +1105,12 @@ form.search label i {
 /*for left sidebar and right content ended*/
 /* recipes style end  */
 /*search page start */
-/* line 1357, ../sass/main.scss */
+/* line 1365, ../sass/main.scss */
 .search-result-wrapper {
   margin: 84px auto;
   padding-top: 42px;
 }
-/* line 1365, ../sass/main.scss */
+/* line 1373, ../sass/main.scss */
 .search-result-wrapper h3 {
   padding: 20px 8px;
   font-size: 2rem;
@@ -1112,13 +1119,13 @@ form.search label i {
   border-bottom-width: 1px;
 }
 
-/* line 1375, ../sass/main.scss */
+/* line 1383, ../sass/main.scss */
 ul.my-pager {
   text-align: right;
   padding-right: 20px;
   margin: 20px 0 10px;
 }
-/* line 1380, ../sass/main.scss */
+/* line 1388, ../sass/main.scss */
 ul.my-pager li {
   display: inline;
   margin-right: 6px;
@@ -1129,7 +1136,7 @@ ul.my-pager li {
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 1393, ../sass/main.scss */
+/* line 1401, ../sass/main.scss */
 ul.my-pager li.current {
   background-color: #333333;
   color: #ffffff;
@@ -1137,78 +1144,78 @@ ul.my-pager li.current {
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 1399, ../sass/main.scss */
+/* line 1407, ../sass/main.scss */
 ul.my-pager li.current:hover {
   color: #ffffff;
 }
 
-/* line 1407, ../sass/main.scss */
+/* line 1415, ../sass/main.scss */
 strong {
   font-weight: bold;
 }
-/* line 1411, ../sass/main.scss */
+/* line 1419, ../sass/main.scss */
 #method-intro h3 strong {
   color: #E98562;
 }
-/* line 1416, ../sass/main.scss */
+/* line 1424, ../sass/main.scss */
 #tip-intro h3 strong {
   color: #66B4DD;
 }
-/* line 1421, ../sass/main.scss */
+/* line 1429, ../sass/main.scss */
 #course-intro h3 strong {
   color: #9BC85D;
 }
 
-/* line 1427, ../sass/main.scss */
+/* line 1435, ../sass/main.scss */
 .search-result {
   margin-bottom: 20px;
 }
 
-/* line 1433, ../sass/main.scss */
+/* line 1441, ../sass/main.scss */
 .search-list {
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: #bbbbbb;
   padding-top: 20px;
 }
-/* line 1440, ../sass/main.scss */
+/* line 1448, ../sass/main.scss */
 .search-list a h4 {
   margin-bottom: 6px;
   color: #4A4A4A;
   font-weight: bold;
 }
-/* line 1446, ../sass/main.scss */
+/* line 1454, ../sass/main.scss */
 .search-list a h4:hover {
   color: #000000;
 }
-/* line 1453, ../sass/main.scss */
+/* line 1461, ../sass/main.scss */
 .search-list .thumbnail {
   height: 100px;
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 1458, ../sass/main.scss */
+/* line 1466, ../sass/main.scss */
 .search-list .thumbnail.method_card {
   background-image: url('/images/method-background-thumbnail.png?1473644267');
   background-color: #E98562;
 }
-/* line 1464, ../sass/main.scss */
+/* line 1472, ../sass/main.scss */
 .search-list .thumbnail.class_tip {
   background-image: url('/images/tip-background-thumbnail.png?1473644344');
   background-color: #66B4DD;
 }
-/* line 1470, ../sass/main.scss */
+/* line 1478, ../sass/main.scss */
 .search-list .thumbnail.course_example {
   background-image: url('/images/course-background-thumbnail.png?1473644357');
   background-color: #9BC85D;
 }
 
-/* line 1479, ../sass/main.scss */
+/* line 1487, ../sass/main.scss */
 .search-categories, .explore-categories {
   display: inline-block;
   padding: 20px 8px;
 }
-/* line 1484, ../sass/main.scss */
+/* line 1492, ../sass/main.scss */
 .search-categories li, .explore-categories li {
   display: inline-block;
   padding: 6px 10px;
@@ -1216,26 +1223,26 @@ strong {
   cursor: pointer;
   color: #959595;
 }
-/* line 1492, ../sass/main.scss */
+/* line 1500, ../sass/main.scss */
 .search-categories li.current, .explore-categories li.current {
   color: #ffffff;
   background-color: #4A4A4A;
   border-radius: 4px;
 }
-/* line 1498, ../sass/main.scss */
+/* line 1506, ../sass/main.scss */
 .search-categories li.current:hover, .explore-categories li.current:hover {
   color: #ffffff;
 }
-/* line 1504, ../sass/main.scss */
+/* line 1512, ../sass/main.scss */
 .search-categories li:hover, .explore-categories li:hover {
   color: #666666;
 }
-/* line 1515, ../sass/main.scss */
+/* line 1523, ../sass/main.scss */
 .search-categories li + li, .explore-categories li + li {
   margin-left: 10px;
 }
 
-/* line 1522, ../sass/main.scss */
+/* line 1530, ../sass/main.scss */
 .search-sort {
   display: inline-block;
   margin-left: 16px;
@@ -1243,16 +1250,16 @@ strong {
 }
 
 /*search page end*/
-/* line 1531, ../sass/main.scss */
+/* line 1539, ../sass/main.scss */
 .collection-wrapper {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-/* line 1535, ../sass/main.scss */
+/* line 1543, ../sass/main.scss */
 .collection-wrapper .card:nth-of-type(4n+1) {
   clear: both;
 }
-/* line 1542, ../sass/main.scss */
+/* line 1550, ../sass/main.scss */
 .collection-wrapper .card input[type=checkbox] {
   position: absolute;
   top: 10px;
@@ -1261,22 +1268,22 @@ strong {
   height: 20px;
   z-index: 9;
 }
-/* line 1552, ../sass/main.scss */
+/* line 1560, ../sass/main.scss */
 .collection-wrapper .card div.card-heading {
   margin-top: 26px;
 }
-/* line 1559, ../sass/main.scss */
+/* line 1567, ../sass/main.scss */
 .collection-wrapper .configure-bar {
   margin-bottom: 50px;
   font-size: 1.6rem;
 }
-/* line 1564, ../sass/main.scss */
+/* line 1572, ../sass/main.scss */
 .collection-wrapper .configure-bar .select-all-button {
   display: inline-block;
   padding-top: 12px;
   padding-bottom: 13px;
 }
-/* line 1570, ../sass/main.scss */
+/* line 1578, ../sass/main.scss */
 .collection-wrapper .configure-bar button {
   margin-left: 20px;
   margin-top: 0;
@@ -1288,7 +1295,7 @@ strong {
   background-color: transparent;
 }
 
-/* line 1592, ../sass/main.scss */
+/* line 1600, ../sass/main.scss */
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1297,31 +1304,31 @@ form select {
   padding: 6px 8px;
   font-size: 1.6rem;
 }
-/* line 1603, ../sass/main.scss */
+/* line 1611, ../sass/main.scss */
 form select::-ms-expand {
   display: none;
 }
 
-/* line 1622, ../sass/main.scss */
+/* line 1630, ../sass/main.scss */
 .about-wrapper {
   height: 100%;
   padding-top: 80px;
   padding-bottom: 70px;
 }
-/* line 1628, ../sass/main.scss */
+/* line 1636, ../sass/main.scss */
 .about-wrapper h2 {
   margin-bottom: 20px;
   margin-top: 36px;
 }
-/* line 1634, ../sass/main.scss */
+/* line 1642, ../sass/main.scss */
 .about-wrapper .member {
   text-align: left;
 }
-/* line 1637, ../sass/main.scss */
+/* line 1645, ../sass/main.scss */
 .about-wrapper .member div, .about-wrapper .member p {
   display: inline-block;
 }
-/* line 1641, ../sass/main.scss */
+/* line 1649, ../sass/main.scss */
 .about-wrapper .member i {
   width: 100%;
   height: 120px;
@@ -1329,64 +1336,64 @@ form select::-ms-expand {
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 1649, ../sass/main.scss */
+/* line 1657, ../sass/main.scss */
 .about-wrapper .member i.sap {
   background-image: url('/images/sap.png?1475283114');
 }
-/* line 1654, ../sass/main.scss */
+/* line 1662, ../sass/main.scss */
 .about-wrapper .member i.ucsd {
   background-image: url('/images/ucsd.png?1475283160');
 }
 
-/* line 1664, ../sass/main.scss */
+/* line 1672, ../sass/main.scss */
 .recipe-list-wrapper {
   padding-top: 100px;
 }
 
-/* line 1671, ../sass/main.scss */
+/* line 1679, ../sass/main.scss */
 footer {
   margin-top: 30px;
   padding: 10px 50px;
   background-color: #DDDDDD;
   color: #888;
 }
-/* line 1681, ../sass/main.scss */
+/* line 1689, ../sass/main.scss */
 footer img {
   display: inline-block;
   width: 120px;
   margin-right: 16px;
 }
-/* line 1691, ../sass/main.scss */
+/* line 1699, ../sass/main.scss */
 footer .right {
   float: right;
 }
-/* line 1696, ../sass/main.scss */
+/* line 1704, ../sass/main.scss */
 footer .copy-info {
   overflow: hidden;
 }
-/* line 1701, ../sass/main.scss */
+/* line 1709, ../sass/main.scss */
 footer .left {
   float: left;
 }
-/* line 1705, ../sass/main.scss */
+/* line 1713, ../sass/main.scss */
 footer a:link, footer a:visited {
   color: inherit;
 }
-/* line 1710, ../sass/main.scss */
+/* line 1718, ../sass/main.scss */
 footer .mail {
   text-decoration: underline;
   color: #333;
 }
-/* line 1715, ../sass/main.scss */
+/* line 1723, ../sass/main.scss */
 footer .mail:link, footer .mail :visited {
   color: #333;
 }
-/* line 1720, ../sass/main.scss */
+/* line 1728, ../sass/main.scss */
 footer .mail:hover {
   color: #111;
 }
 
-/* line 1728, ../sass/main.scss */
+/* line 1736, ../sass/main.scss */
 .popup-wrapper {
   position: fixed;
   width: 100%;
@@ -1396,7 +1403,7 @@ footer .mail:hover {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
 }
-/* line 1739, ../sass/main.scss */
+/* line 1747, ../sass/main.scss */
 .popup-wrapper .popup {
   position: absolute;
   top: 50%;
@@ -1414,12 +1421,12 @@ footer .mail:hover {
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 1753, ../sass/main.scss */
+/* line 1761, ../sass/main.scss */
 .popup-wrapper .popup p {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-/* line 1759, ../sass/main.scss */
+/* line 1767, ../sass/main.scss */
 .popup-wrapper .popup i.cross {
   position: absolute;
   top: 12px;
@@ -1432,29 +1439,29 @@ footer .mail:hover {
 }
 
 /* start of register page */
-/* line 1778, ../sass/main.scss */
+/* line 1786, ../sass/main.scss */
 .register-wrapper, .login-wrapper {
   padding-top: 100px;
   padding-bottom: 80px;
 }
-/* line 1783, ../sass/main.scss */
+/* line 1791, ../sass/main.scss */
 .register-wrapper .input-title, .login-wrapper .input-title {
   display: inline-block;
   width: 80px;
 }
 
-/* line 1790, ../sass/main.scss */
+/* line 1798, ../sass/main.scss */
 .activation-wrapper {
   padding-top: 100px;
   padding-bottom: 80px;
 }
-/* line 1795, ../sass/main.scss */
+/* line 1803, ../sass/main.scss */
 .activation-wrapper .input-title {
   display: inline-block;
   width: 80px;
 }
 
-/* line 1805, ../sass/main.scss */
+/* line 1813, ../sass/main.scss */
 .signup-popup-wrapper h4 {
   background-color: #F4F4F4;
   padding: 20px;
@@ -1462,27 +1469,27 @@ footer .mail:hover {
   -webkit-border-radius: 6px;
   border-radius: 6px 6px 0 0;
 }
-/* line 1811, ../sass/main.scss */
+/* line 1819, ../sass/main.scss */
 .signup-popup-wrapper p {
   text-align: left;
   padding: 0 30px;
 }
-/* line 1817, ../sass/main.scss */
+/* line 1825, ../sass/main.scss */
 .signup-popup-wrapper form {
   padding: 0 30px 40px;
   text-align: center;
   font-size: 1.6rem;
 }
-/* line 1823, ../sass/main.scss */
+/* line 1831, ../sass/main.scss */
 .signup-popup-wrapper form span {
   display: inline-block;
   margin: 10px 6px;
 }
-/* line 1829, ../sass/main.scss */
+/* line 1837, ../sass/main.scss */
 .signup-popup-wrapper form .sign-up-fields {
   text-align: left;
 }
-/* line 1834, ../sass/main.scss */
+/* line 1842, ../sass/main.scss */
 .signup-popup-wrapper form input {
   display: inline-block;
   padding: 2px 2px;
@@ -1494,20 +1501,20 @@ footer .mail:hover {
   background-color: transparent;
   transition: all ease 0.3s;
 }
-/* line 1847, ../sass/main.scss */
+/* line 1855, ../sass/main.scss */
 .signup-popup-wrapper form input:focus {
   outline-style: none;
   box-shadow: none;
 }
-/* line 1853, ../sass/main.scss */
+/* line 1861, ../sass/main.scss */
 .signup-popup-wrapper form input.has-error {
   border-bottom-color: red;
 }
-/* line 1859, ../sass/main.scss */
+/* line 1867, ../sass/main.scss */
 .signup-popup-wrapper form input.valid {
   border-bottom-color: green;
 }
-/* line 1866, ../sass/main.scss */
+/* line 1874, ../sass/main.scss */
 .signup-popup-wrapper form button {
   margin-top: 20px;
   padding: 8px 30px;

@@ -14,6 +14,7 @@ angular.module('cookbook').directive('contributeForm',function($http,commonServi
 			scope.borderStyle='none';
 			scope.progress=0;
 			scope.progressShow=false; //decide the show of the bar
+			scope.uploadErrorShow=false; //hide the error message
 			scope.form.filenamePlaceholder='';
 
 			scope.contributeButton=function(status)
@@ -50,6 +51,7 @@ angular.module('cookbook').directive('contributeForm',function($http,commonServi
 				scope.progressShow=true;
 				scope.barOpacity=0.8;
 				scope.backColor='#25B135';
+				scope.uploadErrorShow=false; //remove error message
 				scope.progress=2;
 			};
 		}

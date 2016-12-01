@@ -5,7 +5,7 @@
 		<div class="link-group">
 			<input type="text" name="link" required ng-model="form.link">
 			<div id="progressBar" ng-style="{'width': progress+'%','backgroundColor':backColor,'borderStyle':borderStyle}" ng-show="progressShow"><span>{{form.filenamePlaceholder}}</span></div>
-			
+			<p class="error-message" ng-show="uploadErrorShow">Sorry, upload failed.</p>
 		</div>
 		
 		<input type="file" id="file-upload" ng-model="form.file" base-sixty-four-input on-after-validate="onAfterValidateFunc" on-change="startLoad" ng-show="false">

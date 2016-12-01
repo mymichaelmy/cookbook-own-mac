@@ -187,6 +187,7 @@
 			xhr.addEventListener("load", uploadComplete, false);
 			xhr.addEventListener("error", uploadFailed, false);
 			xhr.upload.addEventListener("progress", uploadProgress, false);
+			xhr.addEventListener('abort',uploadAbort,false);
 			xhr.send(JSON.stringify(submitObj));
 
 			function uploadComplete(evt)
@@ -226,6 +227,11 @@
 					scope.progress=0;
 					console.log("Progress not computable");
 				}
+			}
+
+			function uploadAbort(evt)
+			{
+
 			}
 
 		};

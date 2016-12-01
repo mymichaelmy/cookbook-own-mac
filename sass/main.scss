@@ -1219,7 +1219,7 @@ form.search
 					top:0;
 					bottom:0;
 					width:0%;
-					background-color: #25B135;
+					background-color: #18DD2E;
 					opacity: 1;
 					border-style:none;
 					border-color:#bbbbbb;
@@ -1236,6 +1236,14 @@ form.search
 					}
 
 					
+				}
+
+				.error-message
+				{
+					position:absolute;
+					top:100%;
+					font-size: 0.8rem;
+					color:$methodColor1;
 				}
 			}
 		}
