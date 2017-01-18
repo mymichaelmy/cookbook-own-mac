@@ -213,13 +213,14 @@
 			function uploadFailed(evt)
 			{
 				console.error(evt); //should add code here to let users know it failes
+				scope.uploadErrorShow=true;  //should add apply to update scope
 			}
 
 			function uploadProgress(evt)
 			{
 				if(evt.lengthComputable)
 				{
-					scope.progress=evt.loaded * 100 / evt.total;
+					scope.progress=evt.loaded * 100 / evt.total;  //should add apply to update scope
 					console.log(evt.loaded * 100 / evt.total+'%');
 				}
 				else
@@ -231,7 +232,7 @@
 
 			function uploadAbort(evt)
 			{
-
+				scope.uploadErrorShow=true; //should add apply to update scope
 			}
 
 		};
