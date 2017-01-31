@@ -21,10 +21,12 @@ angular.module('cookbook').controller('homeCardsController',function($http,$scop
     {
         $scope.cards=(function()
         {
-        
+
             return data.nodes;
 
         }());
+
+        $scope.haveContent=(data.nodes&&data.nodes.length);
     });
 
 

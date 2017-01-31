@@ -29,11 +29,11 @@ angular.module('cookbook').config(['$locationProvider',function ($locationProvid
 
 	}]);
 
-var rootURL="http://54.153.57.8";   //save root url
+var rootURL="http://172.18.0.22";   //save root url
 var mainPort=":80";
-var solrPort=":8983";
+var solrPort=":443";
 var searchFragsize=200;
-var numberPerPage=12;
+var numberPerPage=12;     //num of items on a serach page
 
 /*init part*/
 
