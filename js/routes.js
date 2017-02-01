@@ -11,17 +11,25 @@ angular.module('cookbook')
             templateUrl: '/app/index/templates/index-template.html',
             controller: 'homeController'
         })
+        //for DT lessons
         .when('/method_card/:cardUid', {
-            templateUrl: '/app/method_card/templates/methods-template.html',
+            templateUrl: '/app/method-card/templates/methods-template.html',
             controller: 'cardDetailController'
         })
+        //for classroom management
         .when('/class_tip/:cardUid', {
             templateUrl: '/app/classroom-tip/templates/classroom-tip-template.html',
             controller: 'tipDetailController'
         })
+        //for Courses
         .when('/course_example/:cardUid', {
             templateUrl: '/app/method_card/templates/methods-template.html',
             controller: 'cardDetailController'
+        })
+        //Creative Mindsets
+        .when('/stoke/:cardUid', {
+            templateUrl: '/app/creative-mindset/templates/mindset-template.html',
+            controller: 'mindsetDetailController'
         })
         .when('/search/:searchTerm', {
             templateUrl: '/app/search/search-template.html',

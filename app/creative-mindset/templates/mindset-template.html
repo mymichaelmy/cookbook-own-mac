@@ -1,0 +1,150 @@
+ <div class="stoke-wrapper recipe-detail">
+ 	<div class="container-fluid card-head">
+ 		<div class="container">
+			<div class="row">	
+				<img class="col-md-2" src="/images/method-head.png" />
+				<div class="col-md-8">
+					<h4>CREATIVE MINDSET</h4>
+					<h2>{{card.title}}</h2>
+					<div class="small">
+						<i></i><span>{{card.field_recommended.und[0].value}} recommendations</span> | <span>{{card.field_difficulty.und[0].value}} Difficulty</span>
+						 | <span>{{card.field_time_estimate.und[0].value}} minutes</span>	
+					</div>
+				</div>
+				<div class="cta col-md-2 ">
+					<button ng-click="recommendCard(card.type,card.nid,card.field_recommended.und[0].value)" class="small"><i class="icons-red-rec"></i>Recommend</button>
+					<button ng-click="addToCollection(card.type,card.nid)" class="small" ng-show="card.field_zip_files.und"><i class="icons-red-add"></i>Add to collection</button>
+					<!-- <button class="small"><a ng-href="/drupal/sites/default/files/{{card.field_zip_files.und[0].uri|fileName}}"><i class="icons-red-download"></i>Download</a></button> -->
+					
+					<button class="small" ng-click="downloadDoc()"><i class="icons-red-download"></i>Download</button>
+					<!-- <button class="small"><a download="info.txt" id="downloadTxt" href=""><i class="icons-red-download"></i>Download .txt</a></button>
+					<form action="/php/doc.php">
+						<button type="submit">download doc</button>
+					</form>
+					<button ng-click="downloadDoc()">Download doc</button> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="lower-content container">
+		<div class="left-sidebar col-md-3">
+			<div class="author bottom-margin">
+				<h4>Author</h4>
+				<p class="bold">{{card.field_author.und[0].value}}</p>
+				<p>{{card.field_author_title.und[0].value}}</p>
+				<p>{{card.field_author_university.und[0].value}}</p>
+			</div>
+			<div class="author bottom-margin" ng-show="card.field_editor.und">
+				<h4>Editor</h4>
+				<p class="bold">{{card.field_editor.und[0].value}}</p>
+				<p>{{card.field_editor_title.und[0].value}}</p>
+				<p>{{card.field_editor_university.und[0].value}}</p>
+			</div>
+			<h4>Ingredients</h4>
+			<ul>
+				<li ng-repeat="ingredent in card.field_ingredients.und"><span ng-bind-html="toTrustedHTML(ingredent.value)"></span></li>
+			</ul>
+			<div ng-show="card.field_arsenal_files.und">
+				<h4>Resources</h4>
+				<ul>
+					<li ng-repeat="resource in card.field_arsenal_files.und"><a ng-href="/drupal/sites/default/files/{{resource.uri|fileName}}" target="_blank">{{resource.filename}}</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="also-see">
+				<ul>
+				<h4>Also see</h4>
+					<li ng-repeat="link in card.field_links.und" ng-controller="singleLinkController">
+						<div>
+
+							<div class="link-left" ng-hide="editShow">
+								<a ng-href="{{link.url}}" target="_blank" >{{link.title}}</a>
+								<div class="contributer"  ng-show="link.attributes.title">Contributed by {{link.attributes.title||SAP}}</div>
+
+								
+							</div>
+							<edit-form></edit-form>
+							<div class="edit-buttons-set">
+								<button type="button" class="edit-button" ng-show="!editShow" ng-click="toggleShowEdit($index)">Edit</button>
+								<button type="button" class="remove-button" ng-show="!editShow" ng-click="removeLink($index)">
+									Remove
+								</button>
+							</div>
+						
+						</div>
+						
+						<!-- <form>
+							<input type="text" name="title" placeholder="{{link.title}}" required ng-model="form.title"><br />
+							<input type="text" name="link" placeholder="{{link.url}}"required ng-model="form.link"><br />
+							<input type="text" name="name" placeholder="{{link.attributes.title}}" required ng-model="form.name">
+						</form> -->
+
+					</li>
+
+
+					<contribute-form></contribute-form>
+				</ul>
+				
+				
+				
+			</div>
+
+			<div ng-show="card.field_recipe_tags.und" class="recipe-tags">
+				<ul>
+				<h4>Keywords</h4>
+					<br />
+					<li ng-repeat="tag in card.field_recipe_tags.und">#{{tag.value}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="right-content col-md-9">
+			
+			<p>{{card.field_summary.und[0].value}}</p>
+			<figure>
+				<img ng-src="/drupal/sites/default/files/{{card.field_key_images.und[0].filename}}" class="key-image" />
+			</figure>
+			<div ng-show="card.field_prep_estimate.und" >
+				<h4>Prep ({{card.field_prep_estimate.und[0].value}} mins)</h4>
+				<ul>
+					<li ng-repeat="prepStep in card.field_prep_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(prepStep.safe_value)"></p></li>
+				</ul>
+			</div>
+			
+			<div ng-show="card.field_teach_estimate.und" >
+				<h4>Teach ({{card.field_teach_estimate.und[0].value}} mins)</h4>
+				<ul>
+					<li ng-repeat="teachStep in card.field_teach_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(teachStep.safe_value)"></p></li>
+				</ul>
+			</div>
+
+			<h4>Facilitate ({{card.field_recipe_estimate.und[0].value}} mins)</h4>
+			<ul>
+				<li ng-repeat="recipeStep in card.field_recipe_steps_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(recipeStep.safe_value)"></p></li>
+			</ul>
+			
+			<div ng-show="card.field_watch_for_text.und" >
+				<h4>Watch for</h4>
+				<ul>
+					<li ng-repeat="watchFor in card.field_watch_for_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(watchFor.safe_value)"></p></li>
+				</ul>
+			</div>
+
+			<div ng-show="card.field_notes_text.und" >
+				<h4>Notes</h4>
+				<ul>
+					<li ng-repeat="note in card.field_notes_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(note.safe_value)"></p></li>
+					
+				</ul>
+			</div>
+
+			<div ng-controller="DisqusController as disqus" identifier="disIdentifier">
+			<dir-disqus config="disqusConfig"></dir-disqus>
+			</div>
+		</div>
+		
+
+		
+		
+	</div>
+</div>

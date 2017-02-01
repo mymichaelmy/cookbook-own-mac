@@ -129,6 +129,8 @@ $tipColor1:#66B4DD;
 $tipColor2:#205D7D;
 $courseColor1:#9BC85D;
 $courseColor2:#4E6E20;
+$mindsetColor1:#ea6547;
+$mindsetColor2:#c54122;
 
 $cardTextColor:#535353;
 $categoryTabColor:#959595;
@@ -591,6 +593,23 @@ header
 			}
 		}
 
+		.stoke
+		{
+			.bg-image
+			{
+				background-image:image-url('method-background-thumbnail.png');
+				background-color:$mindsetColor1;
+				background-repeat:no-repeat;
+				background-size: 90px 81px;
+				background-position: right 16px bottom 16px;
+			}
+
+			.small
+			{
+				color:$mindsetColor2;
+			}
+		}
+
 		h2   //to be overrided by .section-method h2
 		{
 			display: inline-block;
@@ -843,7 +862,7 @@ form.search
 	}
 }
 
-.methods-wrapper
+.methods-wrapper   //seperate style for method cards
 {
 	
 	line-height:1.5;
@@ -863,7 +882,7 @@ form.search
 
 }
 
-.tip-wrapper
+.tip-wrapper	//seperate style for method cards
 {
 	
 	line-height:1.5;
@@ -881,6 +900,24 @@ form.search
 	}
 	
 
+}
+
+.stoke-wrapper   //seperate style for creative mindset
+{
+
+	ine-height:1.5;
+
+	strong
+	{
+		color:$mindsetColor1;
+		font-size: 2.4rem;
+		
+	}
+
+	.card-head.container-fluid
+	{
+		background-color:$mindsetColor1;
+	}
 }
 
 .card-detail-wrapper
