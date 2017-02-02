@@ -29,9 +29,9 @@ angular.module('cookbook').config(['$locationProvider',function ($locationProvid
 
 	}]);
 
-var rootURL="http://127.0.0.1";   //save root url
-var mainPort=":8080";
-var solrPort=":8983";
+var rootURL="http://172.18.0.22";   //save root url
+var mainPort=":80";
+var solrPort=":443";
 var searchFragsize=200;
 var numberPerPage=12;     //num of items on a serach page
 
@@ -79,7 +79,7 @@ angular.module('cookbook').filter('noDash',function() {
 			case 'stoke':
 				result='Creative Mindset';
 				break;
-				
+
 			default:
 				result='';
         }
