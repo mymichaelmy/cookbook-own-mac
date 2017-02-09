@@ -2,7 +2,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
 /* line 5, ../sass/print.scss */
-header, footer {
+header {
   display: none;
 }
 
@@ -12,10 +12,10 @@ img {
 }
 
 @page {
-  margin: 50px 0 30px;
+  margin: 50px 0 40px;
 }
 @page :first {
-  margin: 0px 0 30px;
+  margin: 0px 0 40px;
 }
 /* line 22, ../sass/print.scss */
 button {
@@ -26,16 +26,11 @@ button {
 .card-head {
   -webkit-print-color-adjust: exact !important;
   background-color: #e98562 !important;
-  color: #ffffff !important;
-  padding: 60px 50px;
+  padding: 80px 50px 30px !important;
 }
 /* line 34, ../sass/print.scss */
 .card-head .cta {
   display: none;
-}
-/* line 39, ../sass/print.scss */
-.card-head h4, .card-head h2, .card-head div, .card-head div span {
-  color: #ffffff !important;
 }
 /* line 44, ../sass/print.scss */
 .card-head h4 {
@@ -46,19 +41,33 @@ button {
   display: inline-block !important;
   vertical-align: middle;
 }
-/* line 55, ../sass/print.scss */
+/* line 56, ../sass/print.scss */
 .card-head .col-md-8 {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 62, ../sass/print.scss */
+/* line 63, ../sass/print.scss */
 .lower-content {
   padding-left: 50px !important;
   padding-right: 50px !important;
 }
-/* line 67, ../sass/print.scss */
+/* line 68, ../sass/print.scss */
 .lower-content .right-content {
   padding-left: 10px;
   border-left-style: none;
+}
+
+/* line 75, ../sass/print.scss */
+footer p {
+  display: none;
+}
+
+/* line 82, ../sass/print.scss */
+.copy-info img {
+  display: inline-block;
+}
+/* line 87, ../sass/print.scss */
+.copy-info div .small {
+  display: inline-block;
 }

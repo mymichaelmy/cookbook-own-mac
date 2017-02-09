@@ -2,7 +2,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
 
-header, footer {
+header{
   display: none;
 }
 
@@ -12,12 +12,12 @@ img {
 
 @page
 {
-	margin:50px 0 30px;
+	margin:50px 0 40px;
 }
 
 @page:first
 {
-	margin:0px 0 30px;
+	margin:0px 0 40px;
 }
 button
 {
@@ -27,9 +27,9 @@ button
 .card-head {
 	-webkit-print-color-adjust: exact !important ;
 	background-color:#e98562 !important;
-	color:#ffffff !important;
+	// color:#ffffff !important;
 	
-	padding:60px 50px;
+	padding:80px 50px 30px !important;
 
 	.cta
 	{
@@ -38,7 +38,7 @@ button
 
 	h4,h2,div,div span
 	{
-		color:#ffffff !important;
+		// color:#ffffff !important;
 	}
 
 	h4
@@ -48,6 +48,7 @@ button
 
 	img
 	{
+		
 		display: inline-block !important;
 		vertical-align: middle;
 	}
@@ -68,6 +69,24 @@ button
 	{
 		padding-left:10px;
 		border-left-style:none;
+	}
+}
+
+footer p
+{
+	display:none;
+}
+
+.copy-info
+{
+	img
+	{
+		display: inline-block;
+	}
+
+	div .small
+	{
+		 display: inline-block;
 	}
 }
 
