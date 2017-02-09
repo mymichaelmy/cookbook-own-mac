@@ -1,3 +1,64 @@
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* line 5, ../sass/print.scss */
+header, footer {
+  display: none;
+}
+
+/* line 9, ../sass/print.scss */
+img {
+  max-width: 500px !important;
+}
+
+@page {
+  margin: 50px 0 30px;
+}
+@page :first {
+  margin: 0px 0 30px;
+}
+/* line 22, ../sass/print.scss */
+button {
+  display: none;
+}
+
+/* line 27, ../sass/print.scss */
+.card-head {
+  -webkit-print-color-adjust: exact !important;
+  background-color: #e98562 !important;
+  color: #ffffff !important;
+  padding: 30px 50px;
+}
+/* line 34, ../sass/print.scss */
+.card-head .cta {
+  display: none;
+}
+/* line 39, ../sass/print.scss */
+.card-head h4, .card-head h2, .card-head div, .card-head div span {
+  color: #ffffff !important;
+}
+/* line 44, ../sass/print.scss */
+.card-head h4 {
+  margin-top: 0px !important;
+}
+/* line 49, ../sass/print.scss */
+.card-head img {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+/* line 55, ../sass/print.scss */
+.card-head .col-md-8 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 62, ../sass/print.scss */
+.lower-content {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+/* line 67, ../sass/print.scss */
+.lower-content .right-content {
+  padding-left: 10px;
+  border-left-style: none;
+}
