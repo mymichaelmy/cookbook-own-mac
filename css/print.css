@@ -27,7 +27,7 @@ button {
   -webkit-print-color-adjust: exact !important;
   background-color: #e98562 !important;
   color: #ffffff !important;
-  padding: 30px 50px;
+  padding: 60px 50px;
 }
 /* line 34, ../sass/print.scss */
 .card-head .cta {
