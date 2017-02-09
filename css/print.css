@@ -2,7 +2,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
 /* line 5, ../sass/print.scss */
-header {
+header, footer {
   display: none;
 }
 
@@ -58,16 +58,13 @@ button {
   border-left-style: none;
 }
 
-/* line 75, ../sass/print.scss */
-footer p {
-  display: none;
+/* line 76, ../sass/print.scss */
+.print {
+  display: block;
+  padding: 0 60px;
 }
-
-/* line 82, ../sass/print.scss */
-.copy-info img {
-  display: inline-block;
-}
-/* line 87, ../sass/print.scss */
-.copy-info div .small {
-  display: inline-block;
+/* line 81, ../sass/print.scss */
+.print .small {
+  margin-top: 20px;
+  font-size: 12px;
 }

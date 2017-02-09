@@ -1553,3 +1553,7 @@ footer .mail:hover {
 }
 
 /*end of register page*/
+/* line 1929, ../sass/main.scss */
+.print {
+  display: none;
+}
