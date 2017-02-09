@@ -1,70 +1,72 @@
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
-/* line 5, ../sass/print.scss */
-header, footer {
-  display: none;
-}
+@media print {
+  /* line 7, ../sass/print.scss */
+  header, footer {
+    display: none;
+  }
 
-/* line 9, ../sass/print.scss */
-img {
-  max-width: 500px !important;
-}
+  /* line 11, ../sass/print.scss */
+  img {
+    max-width: 500px !important;
+  }
 
-@page {
-  margin: 50px 0 40px;
-}
-@page :first {
-  margin: 0px 0 40px;
-}
-/* line 22, ../sass/print.scss */
-button {
-  display: none;
-}
+  @page {
+    margin: 50px 0 40px;
+  }
+  @page :first {
+    margin: 0px 0 40px;
+  }
+  /* line 24, ../sass/print.scss */
+  button {
+    display: none;
+  }
 
-/* line 27, ../sass/print.scss */
-.card-head {
-  -webkit-print-color-adjust: exact !important;
-  background-color: #e98562 !important;
-  padding: 80px 50px 30px !important;
-}
-/* line 34, ../sass/print.scss */
-.card-head .cta {
-  display: none;
-}
-/* line 44, ../sass/print.scss */
-.card-head h4 {
-  margin-top: 0px !important;
-}
-/* line 49, ../sass/print.scss */
-.card-head img {
-  display: inline-block !important;
-  vertical-align: middle;
-}
-/* line 56, ../sass/print.scss */
-.card-head .col-md-8 {
-  display: inline-block;
-  vertical-align: middle;
-}
+  /* line 29, ../sass/print.scss */
+  .card-head {
+    -webkit-print-color-adjust: exact !important;
+    background-color: #e98562 !important;
+    padding: 80px 50px 30px !important;
+  }
+  /* line 36, ../sass/print.scss */
+  .card-head .cta {
+    display: none;
+  }
+  /* line 46, ../sass/print.scss */
+  .card-head h4 {
+    margin-top: 0px !important;
+  }
+  /* line 51, ../sass/print.scss */
+  .card-head img {
+    display: inline-block !important;
+    vertical-align: middle;
+  }
+  /* line 58, ../sass/print.scss */
+  .card-head .col-md-8 {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-/* line 63, ../sass/print.scss */
-.lower-content {
-  padding-left: 50px !important;
-  padding-right: 50px !important;
-}
-/* line 68, ../sass/print.scss */
-.lower-content .right-content {
-  padding-left: 10px;
-  border-left-style: none;
-}
+  /* line 65, ../sass/print.scss */
+  .lower-content {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  /* line 70, ../sass/print.scss */
+  .lower-content .right-content {
+    padding-left: 10px;
+    border-left-style: none;
+  }
 
-/* line 76, ../sass/print.scss */
-.print {
-  display: block;
-  padding: 0 60px;
-}
-/* line 81, ../sass/print.scss */
-.print .small {
-  margin-top: 20px;
-  font-size: 12px;
+  /* line 78, ../sass/print.scss */
+  .print {
+    display: block;
+    padding: 0 60px;
+  }
+  /* line 83, ../sass/print.scss */
+  .print .small {
+    margin-top: 20px;
+    font-size: 12px;
+  }
 }

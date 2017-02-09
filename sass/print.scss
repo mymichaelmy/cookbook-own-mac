@@ -2,88 +2,90 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
 
-header,footer{
-  display: none;
-}
+@media print {
 
-img {
-	max-width: 500px !important;
-}
-
-@page
-{
-	margin:50px 0 40px;
-}
-
-@page:first
-{
-	margin:0px 0 40px;
-}
-button
-{
-	display:none;
-}
-
-.card-head {
-	-webkit-print-color-adjust: exact !important ;
-	background-color:#e98562 !important;
-	// color:#ffffff !important;
-	
-	padding:80px 50px 30px !important;
-
-	.cta
-	{
-		display: none;
+	header,footer{
+	  display: none;
 	}
 
-	h4,h2,div,div span
+	img {
+		max-width: 500px !important;
+	}
+
+	@page
 	{
+		margin:50px 0 40px;
+	}
+
+	@page:first
+	{
+		margin:0px 0 40px;
+	}
+	button
+	{
+		display:none;
+	}
+
+	.card-head {
+		-webkit-print-color-adjust: exact !important ;
+		background-color:#e98562 !important;
 		// color:#ffffff !important;
-	}
-
-	h4
-	{
-		margin-top: 0px !important;
-	}
-
-	img
-	{
 		
-		display: inline-block !important;
-		vertical-align: middle;
+		padding:80px 50px 30px !important;
+
+		.cta
+		{
+			display: none;
+		}
+
+		h4,h2,div,div span
+		{
+			// color:#ffffff !important;
+		}
+
+		h4
+		{
+			margin-top: 0px !important;
+		}
+
+		img
+		{
+			
+			display: inline-block !important;
+			vertical-align: middle;
+		}
+
+		.col-md-8
+		{
+			display: inline-block;
+			vertical-align: middle;
+		}
 	}
 
-	.col-md-8
+	.lower-content
 	{
-		display: inline-block;
-		vertical-align: middle;
+		padding-left:50px !important;
+		padding-right:50px !important;
+
+		.right-content
+		{
+			padding-left:10px;
+			border-left-style:none;
+		}
+	}
+
+
+	.print
+	{
+		display:block;
+		padding:0 60px;
+
+		.small
+		{
+			margin-top: 20px;
+			font-size:12px;
+
+		}
 	}
 }
-
-.lower-content
-{
-	padding-left:50px !important;
-	padding-right:50px !important;
-
-	.right-content
-	{
-		padding-left:10px;
-		border-left-style:none;
-	}
-}
-
-
-.print
-{
-	display:block;
-	padding:0 60px;
-
-	.small
-	{
-		margin-top: 20px;
-		font-size:12px;
-
-	}
-}
-
 
