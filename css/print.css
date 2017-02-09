@@ -62,11 +62,11 @@
   /* line 78, ../sass/print.scss */
   .print {
     display: block;
-    padding: 0 60px;
+    margin-top: 100px;
   }
-  /* line 83, ../sass/print.scss */
-  .print .small {
-    margin-top: 20px;
+  /* line 84, ../sass/print.scss */
+  .print .small, .print a {
+    margin-top: 10px;
     font-size: 12px;
   }
 }
