@@ -884,6 +884,11 @@ form.search
 		button
 		{
 			background-color:$methodColor1;
+
+			&:hover
+			{
+				background-color:#F47346;
+			}
 		}
 	}
 	
@@ -913,6 +918,11 @@ form.search
 		button
 		{
 			background-color:$tipColor1;
+
+			&:hover
+			{
+				background-color:$tipColor2;
+			}
 		}
 	}
 	
@@ -941,6 +951,11 @@ form.search
 		button
 		{
 			background-color:$mindsetColor1;
+			
+			&:hover
+			{
+				background-color:$mindsetColor2;
+			}
 		}
 	}
 }
@@ -1219,11 +1234,6 @@ form.search
 				color:#ffffff;
 				// font-size: 1.4rem;
 				transition: all ease 0.3s;
-
-				&:hover
-				{
-					background-color:#F47346;
-				}
 
 				&.cancel-button
 				{
