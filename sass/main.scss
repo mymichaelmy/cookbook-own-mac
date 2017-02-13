@@ -878,6 +878,14 @@ form.search
 	{
 		background-color:#e98562;
 	}
+
+	.contribute-form
+	{
+		button
+		{
+			background-color:$methodColor1;
+		}
+	}
 	
 
 }
@@ -898,6 +906,15 @@ form.search
 	{
 		background-color:#69B4DE;
 	}
+
+
+	.contribute-form
+	{
+		button
+		{
+			background-color:$tipColor1;
+		}
+	}
 	
 
 }
@@ -905,7 +922,7 @@ form.search
 .stoke-wrapper   //seperate style for creative mindset
 {
 
-	ine-height:1.5;
+	line-height:1.5;
 
 	strong
 	{
@@ -917,6 +934,14 @@ form.search
 	.card-head.container-fluid
 	{
 		background-color:$mindsetColor1;
+	}
+
+	.contribute-form
+	{
+		button
+		{
+			background-color:$mindsetColor1;
+		}
 	}
 }
 
@@ -1188,7 +1213,7 @@ form.search
 			button
 			{
 				padding:4px 18px;
-				background-color: $methodColor1;
+				
 				@include border-radius(2px,2px);
 				border-style:none;
 				color:#ffffff;

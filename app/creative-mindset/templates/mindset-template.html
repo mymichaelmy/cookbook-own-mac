@@ -74,11 +74,6 @@
 						
 						</div>
 						
-						<!-- <form>
-							<input type="text" name="title" placeholder="{{link.title}}" required ng-model="form.title"><br />
-							<input type="text" name="link" placeholder="{{link.url}}"required ng-model="form.link"><br />
-							<input type="text" name="name" placeholder="{{link.attributes.title}}" required ng-model="form.name">
-						</form> -->
 
 					</li>
 
@@ -136,6 +131,20 @@
 					<li ng-repeat="note in card.field_notes_text.und" class="clearfix"><strong class="figure">{{$index+1}} </strong><p ng-bind-html="toTrustedHTML(note.safe_value)"></p></li>
 					
 				</ul>
+			</div>
+			
+			<!-- copy info only for print -->
+			<div class="print copy-info">
+				<div class="left">
+				
+					<img class="copy-image" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+				
+				</div>
+
+				<div>
+				<p class="small">The cookbook is a collaboration between SAP and the Design Lab at UC San Diego. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+				</div>
 			</div>
 
 			<div ng-controller="DisqusController as disqus" identifier="disIdentifier">

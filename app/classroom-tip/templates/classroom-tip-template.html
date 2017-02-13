@@ -49,10 +49,32 @@
 			</div>
 			
 			
-			<div ng-show="card.field_links.und">
+			<div class="also-see">
 				<ul>
 				<h4>Also see</h4>
-					<li ng-repeat="link in card.field_links.und"><a ng-href="{{link.url}}" target="_blank">{{link.title}}</a></li>
+					<li ng-repeat="link in card.field_links.und" ng-controller="singleLinkController">
+						<div>
+
+							<div class="link-left" ng-hide="editShow">
+								<a ng-href="{{link.url}}" target="_blank" >{{link.title}}</a>
+								<div class="contributer"  ng-show="link.attributes.title">Contributed by {{link.attributes.title||SAP}}</div>
+
+								
+							</div>
+							<edit-form></edit-form>
+							<div class="edit-buttons-set">
+								<button type="button" class="edit-button" ng-show="!editShow" ng-click="toggleShowEdit($index)">Edit</button>
+								<button type="button" class="remove-button" ng-show="!editShow" ng-click="removeLink($index)">
+									Remove
+								</button>
+							</div>
+						
+						</div>
+						
+						
+
+					</li>
+					<contribute-form></contribute-form>
 				</ul>
 			</div>
 
@@ -118,7 +140,7 @@
 
 				</div>
 			</div>
-			
+
 			<div ng-controller="DisqusController as disqus" identifier="disIdentifier">
 			<dir-disqus config="disqusConfig"></dir-disqus>
 			</div>

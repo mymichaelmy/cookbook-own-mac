@@ -14,12 +14,12 @@
 
 	@page
 	{
-		margin:50px 0 40px;
+		margin:0.5in 0 0.4in;
 	}
 
 	@page:first
 	{
-		margin:0px 0 40px;
+		margin:0 0 0.4in;
 	}
 	button
 	{
@@ -66,6 +66,12 @@
 	{
 		padding-left:50px !important;
 		padding-right:50px !important;
+		
+
+		.left-sidebar
+		{
+			page-break-after: always;
+		}
 
 		.right-content
 		{
@@ -74,7 +80,7 @@
 		}
 	}
 
-
+	
 	.print
 	{
 		display:block;
