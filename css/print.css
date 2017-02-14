@@ -2,73 +2,79 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
 @media print {
-  /* line 7, ../sass/print.scss */
+  /* line 9, ../sass/print.scss */
+  html, body, .lower-content {
+    position: static !important;
+  }
+
+  /* line 13, ../sass/print.scss */
   header, footer {
     display: none;
   }
 
-  /* line 11, ../sass/print.scss */
+  /* line 17, ../sass/print.scss */
   img {
     max-width: 500px !important;
   }
 
   @page {
-    margin: 0.5in 0 0.4in;
+    margin: 1.2cm;
   }
-  @page :first {
-    margin: 0 0 0.4in;
-  }
-  /* line 24, ../sass/print.scss */
+  /* line 27, ../sass/print.scss */
   button {
     display: none;
   }
 
-  /* line 29, ../sass/print.scss */
+  /* line 32, ../sass/print.scss */
   .card-head {
     -webkit-print-color-adjust: exact !important;
     background-color: #e98562 !important;
     padding: 80px 50px 30px !important;
   }
-  /* line 36, ../sass/print.scss */
+  /* line 39, ../sass/print.scss */
   .card-head .cta {
     display: none;
   }
-  /* line 46, ../sass/print.scss */
+  /* line 49, ../sass/print.scss */
   .card-head h4 {
     margin-top: 0px !important;
   }
-  /* line 51, ../sass/print.scss */
+  /* line 54, ../sass/print.scss */
   .card-head img {
     display: inline-block !important;
     vertical-align: middle;
   }
-  /* line 58, ../sass/print.scss */
+  /* line 61, ../sass/print.scss */
   .card-head .col-md-8 {
     display: inline-block;
     vertical-align: middle;
   }
 
-  /* line 65, ../sass/print.scss */
+  /* line 68, ../sass/print.scss */
   .lower-content {
+    width: 100% !important;
     padding-left: 50px !important;
     padding-right: 50px !important;
   }
-  /* line 71, ../sass/print.scss */
+  /* line 75, ../sass/print.scss */
   .lower-content .left-sidebar {
-    page-break-after: always;
+    width: 100% !important;
+    float: none !important;
   }
-  /* line 76, ../sass/print.scss */
+  /* line 85, ../sass/print.scss */
   .lower-content .right-content {
+    width: 100% !important;
     padding-left: 10px;
     border-left-style: none;
+    page-break-before: always;
   }
 
-  /* line 84, ../sass/print.scss */
+  /* line 95, ../sass/print.scss */
   .print {
     display: block;
     margin-top: 100px;
   }
-  /* line 90, ../sass/print.scss */
+  /* line 101, ../sass/print.scss */
   .print .small, .print a {
     margin-top: 10px;
     font-size: 12px;
