@@ -35,6 +35,8 @@ var solrPort=":443";
 var searchFragsize=200;
 var numberPerPage=12;     //num of items on a serach page
 
+var cookbookTitle="Cookbook"; //title for cookbook
+
 /*init part*/
 
 //init cookie

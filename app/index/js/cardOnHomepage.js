@@ -17,6 +17,9 @@ angular.module('cookbook').directive('cardOnHomepage',function()
 
 angular.module('cookbook').controller('homeCardsController',function($http,$scope)
 {
+	//reset title to cookbook
+	document.title = cookbookTitle;
+	
 	$http.get('/drupal/content/'+$scope.categoryurl).success(function(data)
     {
         $scope.cards=(function()

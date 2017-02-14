@@ -52,7 +52,8 @@ angular.module('cookbook')
             controller:'recipeListController'
         })
         .when('/about/',{
-            templateUrl:'/app/about/templates/about.html'
+            templateUrl:'/app/about/templates/about.html',
+            controller: 'aboutController'
         })
         .when('/login/',{
             templateUrl:'/app/login/templates/login-template.html'

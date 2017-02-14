@@ -4,6 +4,9 @@ angular.module('cookbook').controller('collectionController',function($scope,$ht
 	var outputArray=[]; //prepare output for cards
 	$scope.selectArray=[]; //array for select box
 
+	//reset title to cookbook
+	document.title = cookbookTitle;
+	
 	collectionArray.forEach(function(value,index)
 	{
 		

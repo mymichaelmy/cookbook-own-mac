@@ -17,11 +17,15 @@ angular.module('cookbook').controller('cardDetailController',  function($scope, 
     $scope.contributeForm.hide=true;
 
 
+
     $http.get('/drupal/rest/node/'+$routeParams.cardUid).success(function(data)
     {
         $scope.card=data;
         $scope.disIdentifier=data.type+data.nid;   //temperarily put here but it's hard to pass parameter before the next controller is loaded
         // $scope.linkArray=$scope.card.field_links.und;
+
+        //change page title for printing
+        document.title = 'Cookbook: '+data.title;
 
         $scope.addToCollection=function(cardType, cardID)
         {

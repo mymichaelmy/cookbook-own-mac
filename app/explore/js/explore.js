@@ -3,6 +3,9 @@ angular.module('cookbook').controller('exploreController',  function($scope, $ht
 
 	//init
 	$scope.currentTab.name='explore';//change the tab
+	
+	//reset the title for cookbook
+    document.title = cookbookTitle;
 
 	var url=$scope.currentUrl=rootURL+solrPort+"/solr/drupal/select?"+"wt=json&json.nl=arrarr&indent=true&hl=true&hl.fragsize="+searchFragsize+"&rows="+numberPerPage+"&fq=ss_language:und&facet=on&facet.field=bundle&facet.field=sm_field_author&facet.field=sm_field_endorse";
 	$scope.currentCategory="all";

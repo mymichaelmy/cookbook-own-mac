@@ -6,6 +6,9 @@ angular.module('cookbook').controller('tipDetailController',  function($scope, $
         $scope.card=data;
         $scope.disIdentifier=data.type+data.nid;   //temperarily put here but it's hard to pass parameter before the next controller is loaded
 
+        //change page title for printing
+        document.title = 'Cookbook: '+data.title;
+        
         $scope.addToCollection=function(cardType, cardID)
         {
             //should check if added

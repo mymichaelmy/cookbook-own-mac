@@ -23,6 +23,9 @@ angular.module('cookbook').controller('mindsetDetailController',  function($scop
         $scope.disIdentifier=data.type+data.nid;   //temperarily put here but it's hard to pass parameter before the next controller is loaded
         // $scope.linkArray=$scope.card.field_links.und;
 
+        //change page title for printing
+        document.title = 'Cookbook: '+data.title;
+        
         $scope.addToCollection=function(cardType, cardID)
         {
             //should check if added
