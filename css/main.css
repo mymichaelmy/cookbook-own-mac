@@ -1574,5 +1574,9 @@ footer .mail:hover {
 /*end of register page*/
 /* line 1964, ../sass/main.scss */
 .print {
-  display: none;
+  margin-top: 30px;
+}
+/* line 1968, ../sass/main.scss */
+.print .small {
+  font-size: 1.2rem;
 }

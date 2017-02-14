@@ -1963,5 +1963,11 @@ footer
 //for print content only
 .print
 {
-	display:none;
+	margin-top:30px;
+
+	.small
+	{
+		font-size:1.2rem;
+	// display:inline-block;
+	}
 }
