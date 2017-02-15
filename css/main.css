@@ -1573,10 +1573,10 @@ footer .mail:hover {
 
 /*end of register page*/
 /* line 1964, ../sass/main.scss */
-.print {
-  margin-top: 30px;
+.print.copy-info {
+  margin-top: 80px;
 }
 /* line 1968, ../sass/main.scss */
-.print .small {
+.print.copy-info .small {
   font-size: 1.2rem;
 }
