@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(-1);
+ini_set('display_errors','On');
 // $fileDir="http://127.0.0.1:8080/drupal/sites/default/files/";
 
 if(isset($_POST['files']))
