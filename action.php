@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(-1);
+error_reporting(E_ALL);
 ini_set('display_errors','On');
 // $fileDir="http://127.0.0.1:8080/drupal/sites/default/files/";
 
