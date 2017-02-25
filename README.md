@@ -4,7 +4,7 @@ Cookbook is an educational website to help professors to teach creative process 
 ##Branches
 
 production: This is the stable version which is deployed on AWS (http://54.153.57.8/). We announced it to several professors for testing.<br/> <br/>
-production-monsoon: This is the version posted on Monsoon (http://172.18.0.22/ only available on corporate network). Some new feature and small fixes are added to this version.<br/>One problem for this version is that, the zip download function failed in collection page. I assume the problem is on server side since it works well on AWS and local server. There must be some configuration or installation needed on monsoon. I have debugged this for many days but haven't figured it out because of limited experience with server.
+production-monsoon: This is the version posted on Monsoon (http://172.18.0.22/ only available on corporate network). Some new feature and small fixes are added to this version (New category of cards, improved printing version, etc.).<br/>One problem for this version is that, the zip download function failed in collection page. I assume the problem is on server side since it works well on AWS and local server. There must be some configuration or installation needed on monsoon. I have debugged this for many days but haven't figured it out because of limited experience with server.
 
 ##Installation
 
@@ -19,57 +19,57 @@ Then you move the whole content in the repository to your root directory of your
 ```
 ├── 503.html
 ├── README.md
-├── action.php
-├── app
-│   ├── about
+├── action.php           //php used to genertated zip files to pack up recipe cards on server side and return this zip file to user
+├── app              //all angular templates and js for each kind of pages 
+│   ├── about       //about page
 │   │   ├── js
 │   │   │   └── about.js
 │   │   └── templates
 │   │       └── about.html
-│   ├── classroom-tip
+│   ├── classroom-tip     //for classroom management card
 │   │   ├── js
 │   │   │   └── tipDetail.js
 │   │   └── templates
 │   │       ├── classroom-tip-template-backup.html
 │   │       └── classroom-tip-template.html
-│   ├── collection
+│   ├── collection      //for collection page
 │   │   ├── collection-template.html
 │   │   └── collection.js
-│   ├── common
+│   ├── common         //for common services shared by different controllers
 │   │   └── js
 │   │       └── commonService.js
-│   ├── creative-mindset
+│   ├── creative-mindset        //for creative-mindset page
 │   │   ├── js
 │   │   │   └── mindsetDetail.js
 │   │   └── templates
 │   │       └── mindset-template.html
-│   ├── explore
+│   ├── explore         //explore page
 │   │   ├── js
 │   │   │   └── explore.js
 │   │   └── templates
 │   │       └── explore-template.html
-│   ├── index
+│   ├── index       //index page
 │   │   ├── js
 │   │   │   └── cardOnHomepage.js
 │   │   └── templates
 │   │       ├── index-card-template.html
 │   │       └── index-template.html
-│   ├── login
+│   ├── login       //login function which has not been published yet.
 │   │   ├── js
 │   │   │   └── login.js
 │   │   └── templates
 │   │       └── login-template.html
-│   ├── method-card
+│   ├── method-card     //for method card 
 │   │   ├── js
 │   │   │   └── cardDetail.js
 │   │   └── templates
 │   │       └── methods-template.html
-│   ├── recipe-list
+│   ├── recipe-list     //outdated 
 │   │   ├── js
 │   │   │   └── recipe-list.js
 │   │   └── templates
 │   │       └── recipe-list-template.html
-│   ├── register
+│   ├── register        //register function which has not been published yet.
 │   │   ├── js
 │   │   │   ├── activation.js
 │   │   │   ├── register.js
@@ -78,60 +78,35 @@ Then you move the whole content in the repository to your root directory of your
 │   │       ├── activation-template.html
 │   │       ├── register-template.html
 │   │       └── reset-password-template.html
-│   ├── search
+│   ├── search      //search function
 │   │   ├── search-template.html
 │   │   └── search.js
-│   └── shared
-│       ├── contribute-form
+│   └── shared      //shared components used in different pages
+│       ├── contribute-form     //contribute form on cards used to submit other links
 │       │   ├── contributeFormDirective.html
 │       │   └── contributeFormDirective.js
-│       ├── nav
-│       ├── signup
-│       │   ├── signupDirective.html
+│       ├── nav     //outdated
+│       ├── signup      //signup function is under development, outdated
+│       │   ├── signupDirective.html        
 │       │   └── signupDirective.js
-│       └── vendor
+│       └── vendor      //open-source code used for uploading files
 │           └── angular-base64-upload.js
-├── assets
+├── assets      //angular related open source code
 │   ├── angular-1.5.8.min.js
 │   ├── angular-animate.min.js
 │   ├── angular-route-1.5.8.min.js
 │   └── angular-spinkit
-│       ├── LICENSE.md
-│       ├── README.md
-│       ├── bower.json
-│       ├── build
-│       │   ├── angular-spinkit.js
-│       │   ├── angular-spinkit.min.css
-│       │   ├── angular-spinkit.min.js
-│       │   ├── index.js
-│       │   └── templates.js
-│       ├── gruntfile.js
-│       ├── package.json
-│       └── src
-│           ├── angular-spinkit.css
-│           ├── angular-spinkit.js
-│           └── templates
-│               ├── chasingDotsSpinner.html
-│               ├── circleSpinner.html
-│               ├── cubeGridSpinner.html
-│               ├── doubleBounceSpinner.html
-│               ├── fadingCircleSpinner.html
-│               ├── pulseSpinner.html
-│               ├── rotatingPlaneSpinner.html
-│               ├── threeBounceSpinner.html
-│               ├── wanderingCubesSpinner.html
-│               ├── waveSpinner.html
-│               └── wordPressSpinner.html
-├── bitnami.css
-├── config.rb
-├── css
+│    
+├── bitnami.css     //bitnami default file after installation, have no use
+├── config.rb       //sass configuration file
+├── css         //compass output directory for stylesheet 
 │   ├── bootstrap-theme.min.css
 │   ├── bootstrap.min.css
 │   ├── ie.css
 │   ├── main.css
 │   ├── print.css
 │   └── recipes.css
-├── disqus
+├── disqus      //disqus plugin and controller
 │   ├── dirDisqus.js
 │   └── disqusController.js
 ├── favicon.ico
@@ -142,99 +117,29 @@ Then you move the whole content in the repository to your root directory of your
 │   ├── glyphicons-halflings-regular.woff
 │   └── glyphicons-halflings-regular.woff2
 ├── images
-│   ├── Brainstorming.jpg
-│   ├── Interviewing.jpg
-│   ├── Star-hollow.png
-│   ├── Star-solid.png
-│   ├── Synthesis.jpg
-│   ├── arrow-down.png
-│   ├── coming-soon.png
-│   ├── course-background-thumbnail.png
-│   ├── course-head.png
-│   ├── icons
-│   │   ├── add.png
-│   │   ├── blue-add.png
-│   │   ├── blue-download.png
-│   │   ├── blue-rec.png
-│   │   ├── blue-share.png
-│   │   ├── download.png
-│   │   ├── green-add.png
-│   │   ├── green-download.png
-│   │   ├── green-rec.png
-│   │   ├── green-share.png
-│   │   ├── paper.png
-│   │   ├── pencil.png
-│   │   ├── rec.png
-│   │   ├── red-add.png
-│   │   ├── red-download.png
-│   │   ├── red-rec.png
-│   │   ├── red-share.png
-│   │   ├── share.png
-│   │   └── video.png
-│   ├── icons-s47e4bb7315.png
-│   ├── index-banner.png
-│   ├── index-classroom.png
-│   ├── index-course.png
-│   ├── index-method.png
-│   ├── method-background-thumbnail.png
-│   ├── method-head.png
-│   ├── nothing-yet.png
-│   ├── quit.png
-│   ├── sap.png
-│   ├── tip-background-thumbnail.png
-│   ├── tip-head.png
-│   ├── tip-home.png
-│   ├── ucsd.png
-│   └── what-is-recipes.png
+│   └── icons
+│   
 ├── index.html
-├── js
+├── js      //some shared configuration and function across the site
 │   ├── bootstrap.min.js
 │   ├── cookbook.js
 │   ├── routes.js
 │   ├── test.js
 │   └── utility.js
 ├── php
-│   ├── action.php
-│   ├── doc.php
-│   └── rtf.php
-├── sass
+│   ├── action.php     //duplicate as the action.php in the root directory
+│   ├── doc.php     //outdated
+│   └── rtf.php     //for rtf generation for each card
+├── sass            //input folder for compass
 │   ├── ie.scss
-│   ├── main.scss
-│   ├── print.scss
+│   ├── main.scss       //main scss file
+│   ├── print.scss      //style for printing
 │   └── recipes.scss
-├── stylesheets
+├── stylesheets     //default output folder for compass, not used anymore, can be deleted
 │   ├── ie.css
 │   ├── main.css
 │   ├── print.css
 │   └── screen.css
 └── test
-    ├── 1470353932\ copy.zip
-    ├── 1470353932.zip
-    ├── Archive
-    │   ├── 1470353932\ copy.zip
-    │   └── 1470353932.zip
-    ├── Archive.zip
-    ├── Create_a_Zip_File_Using_PHP
-    │   ├── files
-    │   │   ├── HTML5.png
-    │   │   ├── SampleFile.docx
-    │   │   └── SampleFile.pdf
-    │   └── index.php
-    ├── Create_a_Zip_File_Using_PHP\ 2
-    │   ├── files
-    │   │   ├── HTML5.png
-    │   │   ├── SampleFile.docx
-    │   │   └── SampleFile.pdf
-    │   └── index.php
-    ├── Create_a_Zip_File_Using_PHP.zip
-    ├── HTML5.png
-    ├── SampleFile.docx
-    ├── SampleFile.pdf
-    ├── action.php
-    ├── files
-    │   ├── HTML5.png
-    │   ├── SampleFile.docx
-    │   └── SampleFile.pdf
-    ├── index.html
-    └── test.php
+    
 ```
